@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_CONTACTS">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_CONTACTS_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_created_by"
+					label="GUIDEMAN_JSEARCH_FILTER_CREATED_BY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_USER"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="thirdusers"
+					labelKey="name"/>
+
+			<field name="filter_type"
+					label="GUIDEMAN_JSEARCH_FILTER_RECORD_TYPE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_RECORD_TYPE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_RECORD_TYPE"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

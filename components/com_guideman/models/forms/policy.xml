@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="policy.usrpolicydetailform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_DETAILED_POLICY_INFORMATION">
+
+		<field name="name"
+				alias="name"
+				label="GUIDEMAN_FIELD_NAME"
+				filter="STRING"
+				size="50"
+				type="cktext"/>
+
+		<field name="alias"
+				alias="alias"
+				label="GUIDEMAN_FIELD_ALIAS"
+				filter="STRING"
+				size="50"
+				unique="true"
+				type="cktext"
+				validate="default"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="company_id"
+				alias="_company_id_name"
+				label="GUIDEMAN_FIELD_COMPANY"
+				filter="INT"
+				description="GUIDEMAN_FIELD_COMPANY_ID"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_COMPANY"
+				validate="default"
+				msg-info="GUIDEMAN_VALIDATOR_COMPANY_ID"
+				class=""/>
+
+		<field name="conditions"
+				alias="conditions"
+				label="GUIDEMAN_FIELD_CONDITIONS"
+				filter="RAW"
+				type="ckeditor"/>
+
+		<field name="time_1"
+				alias="time_1"
+				label="GUIDEMAN_FIELD_TIME_1"
+				filter="INT"
+				size="20"
+				type="cktext"
+				validate="positiveinteger"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEAS_ENTER_A_VALID_NUMBER_OF_DAYS"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="percent_1"
+				default="0,0"
+				alias="percent_1"
+				label="GUIDEMAN_FIELD_PERCENT_1"
+				filter="FLOAT"
+				size="20"
+				numericFormat="2,2"
+				type="cktext"
+				validate="percent"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_ENTER_A_VALID_PERCENTAGE"
+				class="validate[custom[percent]]"/>
+
+		<field name="time_2"
+				alias="time_2"
+				label="GUIDEMAN_FIELD_TIME_2"
+				filter="INT"
+				size="20"
+				type="cktext"
+				validate="numeric"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEAS_ENTER_A_VALID_NUMBER_OF_DAYS"
+				ruleInstance="numeric_6885"
+				class="validate[custom[numeric_6885]]"/>
+
+		<field name="percent_2"
+				default="0,0"
+				alias="percent_2"
+				label="GUIDEMAN_FIELD_PERCENT_2"
+				filter="FLOAT"
+				size="20"
+				numericFormat="2,2"
+				type="cktext"
+				validate="percent"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_PROVIDE_A_VALID_PERCENTAGE"
+				class="validate[custom[percent]]"/>
+
+		<field name="time_3"
+				alias="time_3"
+				label="GUIDEMAN_FIELD_TIME_3"
+				filter="INT"
+				size="20"
+				type="cktext"
+				validate="positiveinteger"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEAS_ENTER_A_VALID_NUMBER_OF_DAYS"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="percent_3"
+				default="0,0"
+				alias="percent_3"
+				label="GUIDEMAN_FIELD_PERCENT_3"
+				filter="FLOAT"
+				size="20"
+				numericFormat="2,2"
+				type="cktext"
+				validate="percent"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_ENTER_A_VALID_PERCENTAGE"
+				class="validate[custom[percent]]"/>
+
+		<field name="language"
+				alias="_language_title"
+				label="GUIDEMAN_FIELD_LANGUAGE"
+				filter="INT"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_LANGUAGE"
+				validate="default"
+				class=""/>
+
+		<field name="published"
+				default="0"
+				alias="published"
+				label="GUIDEMAN_FIELD_STATE"
+				filter="INT"
+				access="core.edit.state"
+				listKey="value"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_created_by"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_CREATED_BY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_CREATED_BY"
+				ui="chosen"/>
+
+		<field name="filter_language"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_LANGUAGE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_LANGUAGE"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="GUIDEMAN_FILTER_NULL_NAME_ALIAS"
+				label="GUIDEMAN_JSEARCH_NAME_ALIAS"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

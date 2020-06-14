@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_SOCIAL">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_SOCIAL_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_user_id"
+					label="GUIDEMAN_JSEARCH_FILTER_USER_ID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_ALIAS"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_labelid"
+					label="GUIDEMAN_JSEARCH_FILTER_LABELID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_SOCIAL_LABELS_ITEM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_TYPE"
+					type="modalpicker"
+					model="sociallabels"
+					labelKey="type"/>
+		</fieldset>
+	</fields>
+</metadata>

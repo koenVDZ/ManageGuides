@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEADM_LAYOUT_BUSINESS_TYPE_DETAIL">
+	<message>
+		<![CDATA[GUIDEADM_LAYOUT_SHOW_BUSINESS_TYPE_DETAIL_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+			<field name="cid"
+					type="modal_businesstype"
+					label="GUIDEADM_JSEARCH_SELECT_BUSINESSTYPE"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_BUSINESSTYPE"/>
+		</fieldset>
+	</fields>
+</metadata>

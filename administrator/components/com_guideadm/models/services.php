@@ -1,0 +1,397 @@
+<?php
+/**                               ______________________________________________
+*                          o O   |                                              |
+*                 (((((  o      <    Generated with Cook Self Service  V3.1.9   |
+*                ( o o )         |______________________________________________|
+* --------oOOO-----(_)-----OOOo---------------------------------- www.j-cook.pro --- +
+* @version		2.2.1
+* @package		GuideAdmV2
+* @subpackage	Services
+* @copyright	ManageGuides.com
+* @author		Koenraad Vandezande - www.manageguides.com - koen@rioguides.com
+* @license		GNU
+*
+*             .oooO  Oooo.
+*             (   )  (   )
+* -------------\ (----) /----------------------------------------------------------- +
+*               \_)  (_/
+*/
+
+// no direct access
+defined('_JEXEC') or die('Restricted access');
+
+
+
+/**
+* Guideadm List Model
+*
+* @package	Guideadm
+* @subpackage	Classes
+*/
+class GuideadmCkModelServices extends GuideadmClassModelList
+{
+	/**
+	* Default item layout.
+	*
+	* @var array
+	*/
+	public $itemDefaultLayout = 'service';
+
+	/**
+	* The URL view item variable.
+	*
+	* @var string
+	*/
+	protected $view_item = 'service';
+
+	/**
+	* Constructor
+	*
+	* @access	public
+	* @param	array	$config	An optional associative array of configuration settings.
+	*
+	* @return	void
+	*/
+	public function __construct($config = array())
+	{
+		//Define the sortables fields (in lists)
+		if (empty($config['filter_fields'])) {
+			$config['filter_fields'] = array(
+				'a.company', 'company',
+				'ordering', 'a.ordering',
+
+			);
+		}
+
+		//Define the filterable fields
+		$this->set('filter_vars', array(
+			'published' => 'cmd',
+			'sortTable' => 'cmd',
+			'directionTable' => 'cmd',
+			'limit' => 'cmd',
+			'company' => 'cmd',
+			'country' => 'cmd',
+			'state' => 'cmd',
+			'remunaration' => 'cmd',
+			'costs' => 'cmd',
+			'policy' => 'cmd',
+			'created_by' => 'cmd',
+			'creation_date_from' => 'varchar',
+			'creation_date_to' => 'varchar',
+			'modified_by' => 'cmd',
+			'modification_date_from' => 'varchar',
+			'modification_date_to' => 'varchar'
+				));
+
+		//Define the searchable fields
+		$this->set('search_vars', array(
+			'search' => 'string'
+				));
+
+
+		parent::__construct($config);
+
+		$this->hasOne('company', // name
+			'contacts', // foreignModelClass
+			'company', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('country', // name
+			'countries', // foreignModelClass
+			'country', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('state', // name
+			'states', // foreignModelClass
+			'state', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('remunaration', // name
+			'prices', // foreignModelClass
+			'remunaration', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('costs', // name
+			'prices', // foreignModelClass
+			'costs', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('policy', // name
+			'policies', // foreignModelClass
+			'policy', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('created_by', // name
+			'.users', // foreignModelClass
+			'created_by', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('modified_by', // name
+			'.users', // foreignModelClass
+			'modified_by', // localKey
+			'id' // foreignKey
+		);
+	}
+
+	/**
+	* Method to get the layout (including default).
+	*
+	* @access	public
+	*
+	* @return	string	The layout alias.
+	*/
+	public function getLayout()
+	{
+		$jinput = JFactory::getApplication()->input;
+		return $jinput->get('layout', 'default', 'STRING');
+	}
+
+	/**
+	* Method to get a store id based on model configuration state.
+	* 
+	* This is necessary because the model is used by the component and different
+	* modules that might need different sets of data or differen ordering
+	* requirements.
+	*
+	* @access	protected
+	* @param	string	$id	A prefix for the store id.
+	*
+	*
+	* @since	1.6
+	*
+	* @return	void
+	*/
+	protected function getStoreId($id = '')
+	{
+		// Compile the store id.
+
+		$id	.= ':'.$this->getState('sortTable');
+		$id	.= ':'.$this->getState('directionTable');
+		$id	.= ':'.$this->getState('limit');
+		$id	.= ':'.$this->getState('search.search');
+		$id	.= ':'.$this->getState('filter.published');
+		$id	.= ':'.$this->getState('filter.company');
+		$id	.= ':'.$this->getState('filter.country');
+		$id	.= ':'.$this->getState('filter.state');
+		$id	.= ':'.$this->getState('filter.remunaration');
+		$id	.= ':'.$this->getState('filter.costs');
+		$id	.= ':'.$this->getState('filter.policy');
+		$id	.= ':'.$this->getState('filter.created_by');
+		$id	.= ':'.$this->getState('filter.creation_date');
+		$id	.= ':'.$this->getState('filter.modified_by');
+		$id	.= ':'.$this->getState('filter.modification_date');
+		return parent::getStoreId($id);
+	}
+
+	/**
+	* Preparation of the list query.
+	*
+	* @access	protected
+	* @param	object	&$query	returns a filled query object.
+	*
+	* @return	void
+	*/
+	protected function prepareQuery(&$query)
+	{
+		//FROM : Main table
+		$query->from('#__guideman_services AS a');
+
+		// Primary Key is always required
+		$this->addSelect('a.id');
+
+
+		switch($this->getState('context', 'all'))
+		{
+			case 'layout.default':
+
+
+				break;
+
+			case 'layout.modal':
+
+
+				break;
+
+			case 'all':
+				//SELECT : raw complete query without joins
+				$this->addSelect('a.*');
+
+				// Disable the pagination
+				$this->setState('list.limit', null);
+				$this->setState('list.start', null);
+				break;
+		}
+
+		// SELECT required fields for all profiles
+		$this->orm->select(array(
+			'company',
+			'created_by',
+			'published'
+		));
+
+		// ACCESS : Restricts accesses over the local table
+		$this->orm->access('a', array(
+			'publish' => 'published',
+			'author' => 'created_by'
+		));
+
+		// SEARCH : Internal Service ID + Service Name
+		$this->orm->search('search', array(
+			'on' => array(
+				'internal_service_id' => 'like',
+				'service_name' => 'like'
+			)
+		));
+
+		//WHERE - FILTER : Publish state
+		$published = $this->getState('filter.published');
+		if (is_numeric($published))
+		{
+			$allowAuthor = '';
+			if (($published == 1) && !$acl->get('core.edit.state')) //ACL Limit to publish = 1
+			{
+				//Allow the author to see its own unpublished/archived/trashed items
+				if ($acl->get('core.edit.own') || $acl->get('core.view.own'))
+					$allowAuthor = ' OR a.created_by = ' . (int)JFactory::getUser()->get('id');
+			}
+			$query->where('(a.published = ' . (int) $published . $allowAuthor . ')');
+		}
+		elseif (!$published)
+		{
+			$query->where('(a.published = 0 OR a.published = 1 OR a.published IS NULL)');
+		}
+
+		// FILTER : Company > Name
+		if($filter_company = $this->getState('filter.company'))
+		{
+			if ($filter_company > 0){
+				$this->addWhere("a.company = " . (int)$filter_company);
+			}
+		}
+
+		// FILTER : Country > Country Name
+		if($filter_country = $this->getState('filter.country'))
+		{
+			if ($filter_country > 0){
+				$this->addWhere("a.country = " . (int)$filter_country);
+			}
+		}
+
+		// FILTER : State > State
+		if($filter_state = $this->getState('filter.state'))
+		{
+			if ($filter_state > 0){
+				$this->addWhere("a.state = " . (int)$filter_state);
+			}
+		}
+
+		// FILTER : Company > ID
+		if($filter_remunaration_company = $this->getState('filter.remunaration_company'))
+		{
+			$this->addJoin("`#__guideman_prices` AS _remunaration_ ON _remunaration_.id = a.remunaration", 'LEFT');
+			if ($filter_remunaration_company > 0){
+				$this->addWhere("_remunaration_.company = " . (int)$filter_remunaration_company);
+			}
+		}
+
+		// FILTER : Company > ID
+		if($filter_costs_company = $this->getState('filter.costs_company'))
+		{
+			$this->addJoin("`#__guideman_prices` AS _costs_ ON _costs_.id = a.costs", 'LEFT');
+			if ($filter_costs_company > 0){
+				$this->addWhere("_costs_.company = " . (int)$filter_costs_company);
+			}
+		}
+
+		// FILTER : Policy > Name
+		if($filter_policy = $this->getState('filter.policy'))
+		{
+			if ($filter_policy > 0){
+				$this->addWhere("a.policy = " . (int)$filter_policy);
+			}
+		}
+
+		// FILTER : Created By > Name
+		if($filter_created_by = $this->getState('filter.created_by'))
+		{
+			if ($filter_created_by == 'auto'){
+				$this->addWhere('a.created_by = ' . (int)JFactory::getUser()->get('id'));
+			}
+			else 
+			if ($filter_created_by > 0){
+				$this->addWhere("a.created_by = " . (int)$filter_created_by);
+			}
+		}
+
+		// FILTER (Range) : Creation date
+		if($filter_creation_date_from = $this->getState('filter.creation_date_from'))
+		{
+			if ($filter_creation_date_from !== null){
+				$this->addWhere("a.creation_date >= " . $this->_db->Quote($filter_creation_date_from));
+			}
+		}
+
+		// FILTER (Range) : Creation date
+		if($filter_creation_date_to = $this->getState('filter.creation_date_to'))
+		{
+			if ($filter_creation_date_to !== null){
+				$this->addWhere("a.creation_date <= " . $this->_db->Quote($filter_creation_date_to));
+			}
+		}
+
+		// FILTER : Modified by > Name
+		if($filter_modified_by = $this->getState('filter.modified_by'))
+		{
+			if ($filter_modified_by == 'auto'){
+				$this->addWhere('a.modified_by = ' . (int)JFactory::getUser()->get('id'));
+			}
+			else 
+			if ($filter_modified_by > 0){
+				$this->addWhere("a.modified_by = " . (int)$filter_modified_by);
+			}
+		}
+
+		// FILTER (Range) : Modification date
+		if($filter_modification_date_from = $this->getState('filter.modification_date_from'))
+		{
+			if ($filter_modification_date_from !== null){
+				$this->addWhere("a.modification_date >= " . $this->_db->Quote($filter_modification_date_from));
+			}
+		}
+
+		// FILTER (Range) : Modification date
+		if($filter_modification_date_to = $this->getState('filter.modification_date_to'))
+		{
+			if ($filter_modification_date_to !== null){
+				$this->addWhere("a.modification_date <= " . $this->_db->Quote($filter_modification_date_to));
+			}
+		}
+
+		// ORDERING
+		$orderCol = $this->getState('list.ordering', 'company');
+		$orderDir = $this->getState('list.direction', 'ASC');
+
+		if ($orderCol)
+			$this->orm->order(array($orderCol => $orderDir));
+
+
+		// Apply all SQL directives to the query
+		$this->applySqlStates($query);
+	}
+
+
+}
+
+// Load the fork
+GuideadmHelper::loadFork(__FILE__);
+
+// Fallback if no fork has been found
+if (!class_exists('GuideadmModelServices')){ class GuideadmModelServices extends GuideadmCkModelServices{} }
+

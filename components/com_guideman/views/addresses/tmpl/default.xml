@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_CONTACT_ADDRESSES">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_CONTACT_ADDRESSES_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_address_label"
+					label="GUIDEMAN_JSEARCH_FILTER_ADDRESS_LABEL"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_ADDRESS_LABEL"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_TYPE"
+					type="modalpicker"
+					model="addresslabels"
+					labelKey="type"/>
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="contactlangitem.admcontactlangitemform"
+			addfieldpath="/administrator/components/com_guideadm/models/fields"
+			label="GUIDEADM_JFORM_USERS_LANGUAGE">
+
+		<field name="user_id"
+				alias="_user_id_name"
+				label="GUIDEADM_FIELD_NAME"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_NAME"
+				validate="default"
+				class=""/>
+
+		<field name="language"
+				alias="_language_name"
+				label="GUIDEADM_FIELD_LANGUAGE"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_LANGUAGE"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="prof_level"
+				alias="prof_level"
+				label="GUIDEADM_FIELD_PROFICIENCY"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_PROFICIENCY"
+				enum="contactlang_prof_level"
+				validate="default"
+				class=""/>
+
+		<field name="creation_date"
+				alias="creation_date"
+				label="GUIDEADM_FIELD_CREATION_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%Y-%m-%d"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="created_by"
+				alias="_created_by_name"
+				label="GUIDEADM_FIELD_CREATED_BY"
+				filter="INT"
+				access="core.edit"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_CREATED_BY"
+				validate="default"
+				class=""/>
+
+		<field name="modification_date"
+				alias="modification_date"
+				label="GUIDEADM_FIELD_MODIFICATION_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%Y-%m-%d"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="modified_by"
+				alias="_modified_by_name"
+				label="GUIDEADM_FIELD_MODIFIED_BY"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_MODIFIED_BY"/>
+
+		<field name="published"
+				default="0"
+				alias="published"
+				label="GUIDEADM_FIELD_PUBLISHED"
+				filter="INT"
+				access="core.edit.state"
+				listKey="value"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="ordering"
+				alias="ordering"
+				label="GUIDEADM_FIELD_ORDERING"
+				filter="INT"
+				access="core.edit.state"
+				type="ckordering"
+				labelKey="user_id"
+				validate="default"
+				class=""/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_user_id"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_USER_NAME"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_USER_NAME"
+				ui="chosen"/>
+
+		<field name="filter_language"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_LANGAGE"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_LANGAGE"
+				ui="chosen"/>
+
+		<field name="filter_creation_date"
+				type="calendar"
+				placeholder="GUIDEADM_FILTER_NULL_CREATION_DATE"
+				format="%Y-%m-%d"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"
+				onchange="this.form.submit();"
+				label="GUIDEADM_JSEARCH_CREATION_DATE"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_created_by"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_CREATED_BY"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_CREATED_BY"
+				ui="chosen"/>
+
+		<field name="filter_modification_date"
+				type="calendar"
+				placeholder="GUIDEADM_FILTER_NULL_MODIFICATION_DATE"
+				format="%Y-%m-%d"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"
+				onchange="this.form.submit();"
+				label="GUIDEADM_JSEARCH_MODIFICATION_DATE"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_modified_by"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_MODIFIED_BY"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_MODIFIED_BY"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

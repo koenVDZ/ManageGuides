@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="usrbankaccount.usrbankaccount"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_CONTACT_BANK_ACCOUNT">
+
+		<field name="user_id"
+				alias="_user_id_name"
+				label="GUIDEMAN_FIELD_USER_NAME"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_USER_NAME"
+				validate="default"
+				class=""/>
+
+		<field name="bank_id"
+				alias="_bank_id_name"
+				label="GUIDEMAN_FIELD_BANK_NAME"
+				filter="INT"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.groupby1"
+				validate="default"
+				class=""/>
+
+		<field name="account_type"
+				alias="account_type"
+				label="GUIDEMAN_FIELD_ACCOUNT_TYPE"
+				filter="STRING"
+				description="GUIDEMAN_FIELD_PLEASE_PROVIDE_THE_TYPE_OF_BANK_ACCOUNT"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_ACCOUNT_TYPE"
+				enum="accounts_account_type"
+				msg-info="GUIDEMAN_VALIDATOR_PLEASE_PROVIDE_THE_TYPE_OF_BANK_ACCOUNT"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="agency"
+				alias="agency"
+				label="GUIDEMAN_FIELD_AGENCY"
+				filter="STRING"
+				type="cktext"
+				validate="length12"
+				class=""/>
+
+		<field name="account"
+				alias="account"
+				label="GUIDEMAN_FIELD_ACCOUNT"
+				filter="STRING"
+				type="cktext"
+				validate="length32"
+				class=""/>
+
+		<field name="swift"
+				alias="swift"
+				label="GUIDEMAN_FIELD_SWIFT"
+				filter="STRING"
+				type="cktext"
+				validate="length11"
+				class=""/>
+
+		<field name="iban"
+				alias="iban"
+				label="GUIDEMAN_FIELD_IBAN"
+				filter="STRING"
+				type="cktext"/>
+	</fieldset>
+
+	<fieldset name="usrownbankaccount.usrownbankaccountform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_BANK_ACCOUNT">
+
+		<field name="user_id"
+				alias="_user_id_name"
+				label="GUIDEMAN_FIELD_USER_NAME"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_USER_NAME"
+				validate="default"
+				class=""/>
+
+		<field name="bank_id"
+				alias="_bank_id_name"
+				label="GUIDEMAN_FIELD_BANK_NAME"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_BANK_NAME"
+				validate="default"
+				class=""/>
+
+		<field name="account_type"
+				alias="account_type"
+				label="GUIDEMAN_FIELD_ACCOUNT_TYPE"
+				filter="STRING"
+				description="GUIDEMAN_FIELD_PLEASE_PROVIDE_THE_TYPE_OF_BANK_ACCOUNT"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_ACCOUNT_TYPE"
+				enum="accounts_account_type"
+				msg-info="GUIDEMAN_VALIDATOR_PLEASE_PROVIDE_THE_TYPE_OF_BANK_ACCOUNT"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="agency"
+				alias="agency"
+				label="GUIDEMAN_FIELD_AGENCY"
+				filter="STRING"
+				type="cktext"
+				validate="length12"
+				class=""/>
+
+		<field name="account"
+				alias="account"
+				label="GUIDEMAN_FIELD_ACCOUNT"
+				filter="STRING"
+				type="cktext"
+				validate="length32"
+				class=""/>
+
+		<field name="swift"
+				alias="swift"
+				label="GUIDEMAN_FIELD_SWIFT"
+				filter="STRING"
+				type="cktext"
+				validate="length11"
+				class=""/>
+
+		<field name="iban"
+				alias="iban"
+				label="GUIDEMAN_FIELD_IBAN"
+				filter="STRING"
+				type="cktext"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_user_id"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_USER_NAME"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_USER_NAME"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="GUIDEMAN_FILTER_NULL_AGENCY_ACCOUNT_SWIFT_IBAN"
+				label="GUIDEMAN_JSEARCH_AGENCY_ACCOUNT_SWIFT_IBAN"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

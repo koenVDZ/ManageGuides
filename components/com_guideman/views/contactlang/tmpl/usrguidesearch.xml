@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_GUIDE_SEARCH">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_GUIDE_SEARCH_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_user_id_state_id"
+					label="GUIDEMAN_JSEARCH_FILTER_STATEID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_STATE_1"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_STATE"
+					type="modalpicker"
+					model="states"
+					labelKey="state"/>
+
+			<field name="filter_user_id_country_id"
+					label="GUIDEMAN_JSEARCH_FILTER_COUNTRYID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_COUNTRY"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_COUNTRY_NAME"
+					type="modalpicker"
+					model="countries"
+					labelKey="country_name"/>
+
+			<field name="filter_language"
+					label="GUIDEMAN_JSEARCH_FILTER_LANGUAGE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_LANGUAGE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="languages"
+					labelKey="name"/>
+
+			<field name="filter_prof_level"
+					label="GUIDEMAN_JSEARCH_FILTER_PROFICIENCY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PROFICIENCY"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PROFICIENCY"
+					type="enum"
+					enum="contactlang_prof_level"/>
+
+			<field name="filter_user_id_driverguide"
+					label="GUIDEMAN_JSEARCH_FILTER_USER_ID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_DRIVERGUIDE"
+					type="ckcombo"
+					model="contacts"
+					labelKey="name"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

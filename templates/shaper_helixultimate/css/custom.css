@@ -1,0 +1,52 @@
+.fab {
+	font-family: 'FontAwesome Brands';
+	font-weight:400;
+	font-style:Normal;
+}
+.fas {
+	font-family: 'FontAwesome Solid';
+	font-weight:900;
+	font-style:Normal;
+}
+.far {
+	font-family: 'FontAwesome Regular';
+	font-weight:400;
+	font-style:Normal;
+}
+.fal {
+	font-family: 'FontAwesome Light';
+	font-weight:300;
+	font-style:Normal;
+}
+
+.breadcrumb {
+  background-color: #ffd600 !important;
+}
+
+.body {
+  line-height: 1!important;
+}
+
+jform_image-view.input-large.inputfix {
+  width: 80%!important;
+}
+
+.chzn-container {
+  font-size: 15px!important;
+}
+#contents > div.row {
+  font-size: 13px!important;
+}
+#grid-jobs > thead, #grid-prices > thead, #grid-services > thead, #grid-addresses > thead, #grid-contacts > thead, #grid-phones > thead, #grid-documents > thead, #grid-contactlang > thead, #grid-social > thead, #grid-policies > thead, #grid-addresslabels > thead, #grid-phonelabels > thead {
+  font-size: 13px!important;
+  background-color: #ffd600!important;
+}
+#grid-jobs > tbody, #grid-services > tbody, #grid-prices > tbody, #grid-addresses > tbody, #grid-contacts > tbody, #grid-phones > tbody, #grid-documents > tbody, #grid-contactlang > tbody, #grid-social > tbody, #grid-policies > tbody, #grid-addresslabels > tbody, #grid-phonelabels > tbody {
+  font-size: 13px!important;
+}
+#grid-group-title {
+  font-size: 18px!important;
+}
+#toolbar {
+  border: #00ad52!important;
+}

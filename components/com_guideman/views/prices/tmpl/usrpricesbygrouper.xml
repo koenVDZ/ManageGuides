@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_PRICES_SERVICES_BY_TYPE_OF_SERVICE">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_PRICES_SERVICES_BY_TYPE_OF_SERVICE_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_company"
+					label="GUIDEMAN_JSEARCH_FILTER_COMPANY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_night_shift_from"
+					label="GUIDEMAN_JSEARCH_FILTER_NIGHT_SHIFT_FROM"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT_FROM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_night_shift_to"
+					label="GUIDEMAN_JSEARCH_FILTER_NIGHT_SHIFT_TO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT_TO"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_remuneration"
+					label="GUIDEMAN_JSEARCH_FILTER_REMUNERATION"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_REMUNERATION"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_REMUNERATION"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

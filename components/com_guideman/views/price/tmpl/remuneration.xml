@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_REMUNERATION">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_REMUNERATION_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="cid"
+					type="modalpicker"
+					label="GUIDEMAN_JSEARCH_SELECT_PRICE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PRICE"
+					model="prices"
+					labelKey="company"/>
+		</fieldset>
+	</fields>
+</metadata>

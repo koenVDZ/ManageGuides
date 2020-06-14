@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="contactlangitem.usrlangskillform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_LANGUAGE_PROFICIENCY_LEVEL_INFORMATION">
+
+		<field name="user_id"
+				alias="_user_id_alias"
+				label="GUIDEMAN_FIELD_CONTACT"
+				filter="INT"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+				validate="default"
+				class=""/>
+
+		<field name="language"
+				alias="_language_name"
+				label="GUIDEMAN_FIELD_LANGUAGE"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_LANGUAGE"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="prof_level"
+				alias="prof_level"
+				label="GUIDEMAN_FIELD_PROFICIENCY"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_PROFICIENCY"
+				enum="contactlang_prof_level"
+				validate="default"
+				class=""/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_language"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_LANGUAGE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_LANGUAGE"
+				ui="chosen"/>
+
+		<field name="filter_created_by"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_CREATED_BY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_CREATED_BY"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="usrguidesearch.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_user_id_state_id"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.filter1"
+				label="GUIDEMAN_JSEARCH_STATE_PROVINCE"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_user_id_country_id"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_COUNTRY_ONLY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_COUNTRY_ONLY"
+				ui="chosen"/>
+
+		<field name="filter_language"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_LANGUAGE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_LANGUAGE"
+				ui="chosen"/>
+
+		<field name="filter_prof_level"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_PROFICIENCY_LEVEL"
+				enum="contactlang_prof_level"
+				label="GUIDEMAN_JSEARCH_PROFICIENCY_LEVEL"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_user_id_driverguide"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_DRIVERGUIDE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_DRIVERGUIDE"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

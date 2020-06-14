@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEADM_LAYOUT_REMUNERATIONS">
+	<message>
+		<![CDATA[GUIDEADM_LAYOUT_SHOW_REMUNERATIONS_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEADM_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_from_date"
+					label="GUIDEADM_JSEARCH_FILTER_FROM_DATE"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_FROM_DATE"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_FROM_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_until_date"
+					label="GUIDEADM_JSEARCH_FILTER_UNTIL_DATE"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_UNTIL_DATE"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_UNTIL_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_pax_01_from"
+					label="GUIDEADM_JSEARCH_FILTER_PAX_01_FROM"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_PAX_01_FROM"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_PAX_01"/>
+
+			<field name="filter_pax_01_to"
+					label="GUIDEADM_JSEARCH_FILTER_PAX_01_TO"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_PAX_01_TO"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_PAX_01"/>
+
+			<field name="filter_currency"
+					label="GUIDEADM_JSEARCH_FILTER_CURRENCY"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_CURRENCY"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_TITLE"
+					type="modal_currency"/>
+
+			<field name="filter_min_time_from"
+					label="GUIDEADM_JSEARCH_FILTER_MIN_TIME_FROM"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_MIN_TIME_FROM"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_MIN_TIME"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_min_time_to"
+					label="GUIDEADM_JSEARCH_FILTER_MIN_TIME_TO"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_MIN_TIME_TO"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_MIN_TIME"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_night_shift_from"
+					label="GUIDEADM_JSEARCH_FILTER_NIGHT_SHIFT_FROM"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_NIGHT_SHIFT_FROM"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NIGHT_SHIFT"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_night_shift_to"
+					label="GUIDEADM_JSEARCH_FILTER_NIGHT_SHIFT_TO"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_NIGHT_SHIFT_TO"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NIGHT_SHIFT"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_search"
+					label="GUIDEADM_JSEARCH_FILTER_NAME"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_NAME"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NAME"/>
+		</fieldset>
+	</fields>
+</metadata>

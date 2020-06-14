@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="usraddress.usraddressform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_USER_ADDRESS_DETAILED_INFORMATION">
+
+		<field name="user_id"
+				alias="_user_id_alias"
+				label="GUIDEMAN_FIELD_USER_NAME"
+				filter="INT"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_USER_NAME"
+				validate="default"
+				class=""/>
+
+		<field name="default_address"
+				alias="default_address"
+				label="GUIDEMAN_FIELD_DEFAULT_ADDRESS"
+				filter="BOOL"
+				listKey="value"
+				type="ckcheckbox"
+				validate="default"
+				class="">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="address_label"
+				alias="_address_label_type"
+				label="GUIDEMAN_FIELD_ADDRESS_TYPE"
+				filter="INT"
+				listKey="id"
+				labelKey="type"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_ADDRESS_TYPE"/>
+
+		<field name="address"
+				alias="address"
+				label="GUIDEMAN_FIELD_ADDRESS"
+				filter="STRING"
+				size="50"
+				type="cktext"/>
+
+		<field name="suburb"
+				alias="suburb"
+				label="GUIDEMAN_FIELD_SUBURB"
+				filter="STRING"
+				size="50"
+				type="cktext"/>
+
+		<field name="zipcode"
+				alias="zipcode"
+				label="GUIDEMAN_FIELD_ZIPCODE"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="city"
+				alias="city"
+				label="GUIDEMAN_FIELD_CITY"
+				filter="STRING"
+				size="50"
+				type="cktext"/>
+
+		<field name="state_id"
+				alias="_state_id_state"
+				label="GUIDEMAN_FIELD_STATE"
+				filter="INT"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.groupby2"
+				validate="default"
+				class=""/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_address_label"
+				listKey="id"
+				labelKey="type"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_ADDRESS_TYPE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_ADDRESS_TYPE"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="GUIDEMAN_FILTER_NULL_ADDRESS_SUBURB_ZIPCODE_CITY"
+				label="GUIDEMAN_JSEARCH_ADDRESS_SUBURB_ZIPCODE_CITY"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

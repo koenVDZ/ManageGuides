@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_VEHICLES">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_VEHICLES_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_user_id"
+					label="GUIDEMAN_JSEARCH_FILTER_USER_ID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_brand_id"
+					label="GUIDEMAN_JSEARCH_FILTER_BRAND_ID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_BRANDS_ITEM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="brands"
+					labelKey="name"/>
+
+			<field name="filter_year_of_build"
+					label="GUIDEMAN_JSEARCH_FILTER_YEAR_OF_BUILD"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_YEAR_OF_BUILD"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_YEAR_OF_BUILD"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_created_by"
+					label="GUIDEMAN_JSEARCH_FILTER_CREATED_BY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_USER"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="thirdusers"
+					labelKey="name"/>
+		</fieldset>
+	</fields>
+</metadata>

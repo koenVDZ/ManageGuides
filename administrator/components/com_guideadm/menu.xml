@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<config>
+
+	<menu name="cpanel">
+
+		<item		label="GUIDEADM_LAYOUT_BANK_ACCOUNTS"
+				description="GUIDEADM_LAYOUT_SHOW_BANK_ACCOUNTS_LAYOUT"
+				type="layout"
+				view="accounts"
+				layout="default"
+				icon="guideadm_accounts"/>
+
+		<item		label="GUIDEADM_LAYOUT_ADDRESS_LABELS"
+				description="GUIDEADM_LAYOUT_SHOW_ADDRESS_LABELS_LAYOUT"
+				type="layout"
+				view="addresslabels"
+				layout="default"
+				icon="guideadm_addresslabels"/>
+
+		<item		label="GUIDEADM_LAYOUT_ADDRESSES"
+				description="GUIDEADM_LAYOUT_SHOW_ADDRESSES_LAYOUT"
+				type="layout"
+				view="addresses"
+				layout="default"
+				icon="guideadm_addresses"/>
+
+		<item		label="GUIDEADM_LAYOUT_BRANDS"
+				description="GUIDEADM_LAYOUT_SHOW_BRANDS_LAYOUT"
+				type="layout"
+				view="brands"
+				layout="default"
+				icon="guideadm_brands"/>
+
+		<item		label="GUIDEADM_LAYOUT_BUSINESSTYPES"
+				description="GUIDEADM_LAYOUT_SHOW_BUSINESSTYPES_LAYOUT"
+				type="layout"
+				view="businesstypes"
+				layout="default"
+				icon="guideadm_businesstypes"/>
+
+		<item		label="GUIDEADM_LAYOUT_CONTACTLANG"
+				description="GUIDEADM_LAYOUT_SHOW_CONTACTLANG_LAYOUT"
+				type="layout"
+				view="contactlang"
+				layout="default"
+				icon="guideadm_contactlang"/>
+
+		<item		label="GUIDEADM_LAYOUT_CURRENCIES"
+				description="GUIDEADM_LAYOUT_SHOW_CURRENCIES_LAYOUT"
+				type="layout"
+				view="currencies"
+				layout="default"
+				icon="guideadm_currencies"/>
+
+		<item		label="GUIDEADM_LAYOUT_COUNTRIES"
+				description="GUIDEADM_LAYOUT_SHOW_COUNTRIES_LAYOUT"
+				type="layout"
+				view="countries"
+				layout="default"
+				icon="guideadm_countries"/>
+
+		<item		label="GUIDEADM_LAYOUT_CONTACTS"
+				description="GUIDEADM_LAYOUT_SHOW_CONTACTS_LAYOUT"
+				type="layout"
+				view="contacts"
+				layout="default"
+				icon="guideadm_contacts"/>
+
+		<item		label="GUIDEADM_LAYOUT_DOC_LABELS"
+				description="GUIDEADM_LAYOUT_SHOW_DOC_LABELS_LAYOUT"
+				type="layout"
+				view="doclabels"
+				layout="default"
+				icon="guideadm_doclabels"/>
+
+		<item		label="GUIDEADM_LAYOUT_DOCUMENTS"
+				description="GUIDEADM_LAYOUT_SHOW_DOCUMENTS_LAYOUT"
+				type="layout"
+				view="documents"
+				layout="default"
+				icon="guideadm_documents"/>
+
+		<item		label="GUIDEADM_LAYOUT_JOBS"
+				description="GUIDEADM_LAYOUT_SHOW_JOBS_LAYOUT"
+				type="layout"
+				view="jobs"
+				layout="default"
+				icon="guideadm_jobs"/>
+
+		<item		label="GUIDEADM_LAYOUT_JOB_ITEMS"
+				description="GUIDEADM_LAYOUT_SHOW_JOB_ITEMS_LAYOUT"
+				type="layout"
+				view="jobitems"
+				layout="default"
+				icon="guideadm_jobitems"/>
+
+		<item		label="GUIDEADM_LAYOUT_LANG"
+				description="GUIDEADM_LAYOUT_SHOW_LANG_LAYOUT"
+				type="layout"
+				view="lang"
+				layout="default"
+				icon="guideadm_lang"/>
+
+		<item		label="GUIDEADM_LAYOUT_LANGUAGES"
+				description="GUIDEADM_LAYOUT_SHOW_LANGUAGES_LAYOUT"
+				type="layout"
+				view="languages"
+				layout="default"
+				icon="guideadm_languages"/>
+
+		<item		label="GUIDEADM_LAYOUT_OPERATORS"
+				description="GUIDEADM_LAYOUT_SHOW_OPERATORS_LAYOUT"
+				type="layout"
+				view="operators"
+				layout="default"
+				icon="guideadm_operators"/>
+
+		<item		label="GUIDEADM_LAYOUT_PHONE_LABELS"
+				description="GUIDEADM_LAYOUT_SHOW_PHONE_LABELS_LAYOUT"
+				type="layout"
+				view="phonelabels"
+				layout="default"
+				icon="guideadm_phonelabels"/>
+
+		<item		label="GUIDEADM_LAYOUT_PHONES"
+				description="GUIDEADM_LAYOUT_SHOW_PHONES_LAYOUT"
+				type="layout"
+				view="phones"
+				layout="default"
+				icon="guideadm_phones"/>
+
+		<item		label="GUIDEADM_LAYOUT_POLICIES"
+				description="GUIDEADM_LAYOUT_SHOW_POLICIES_LAYOUT"
+				type="layout"
+				view="policies"
+				layout="default"
+				icon="guideadm_policies"/>
+
+		<item		label="GUIDEADM_LAYOUT_PRICES"
+				description="GUIDEADM_LAYOUT_SHOW_PRICES_LAYOUT"
+				type="layout"
+				view="prices"
+				layout="default"
+				icon="guideadm_prices"/>
+
+		<item		label="GUIDEADM_LAYOUT_SERVICES"
+				description="GUIDEADM_LAYOUT_SHOW_SERVICES_LAYOUT"
+				type="layout"
+				view="services"
+				layout="default"
+				icon="guideadm_services"/>
+
+		<item		label="GUIDEADM_LAYOUT_SERVICOS"
+				description="GUIDEADM_LAYOUT_SHOW_SERVICOS_LAYOUT"
+				type="layout"
+				view="servicos"
+				layout="default"
+				icon="guideadm_servicos"/>
+
+		<item		label="GUIDEADM_LAYOUT_SOCIAL"
+				description="GUIDEADM_LAYOUT_SHOW_SOCIAL_LAYOUT"
+				type="layout"
+				view="social"
+				layout="default"
+				icon="guideadm_social"/>
+
+		<item		label="GUIDEADM_LAYOUT_SOCIAL_LABELS"
+				description="GUIDEADM_LAYOUT_SHOW_SOCIAL_LABELS_LAYOUT"
+				type="layout"
+				view="sociallabels"
+				layout="default"
+				icon="guideadm_sociallabels"/>
+
+		<item		label="GUIDEADM_LAYOUT_STATES"
+				description="GUIDEADM_LAYOUT_SHOW_STATES_LAYOUT"
+				type="layout"
+				view="states"
+				layout="default"
+				icon="guideadm_states"/>
+
+		<item		label="GUIDEADM_LAYOUT_VEHICLES"
+				description="GUIDEADM_LAYOUT_SHOW_VEHICLES_LAYOUT"
+				type="layout"
+				view="vehicles"
+				layout="default"
+				icon="guideadm_vehicles"/>
+	</menu>
+
+	<menu name="menu">
+
+		<item		label="GUIDEADM_LAYOUT_CONTROL_PANEL"
+				description="GUIDEADM_LAYOUT_SHOW_CONTROL_PANEL_LAYOUT"
+				type="layout"
+				view="cpanel"
+				layout="default"
+				icon="guideadm_cpanel"/>
+
+		<item		label="GUIDEADM_LAYOUT_BANK_ACCOUNTS"
+				description="GUIDEADM_LAYOUT_SHOW_BANK_ACCOUNTS_LAYOUT"
+				type="layout"
+				view="accounts"
+				layout="default"
+				icon="guideadm_accounts"/>
+
+		<item		label="GUIDEADM_LAYOUT_ADDRESS_LABELS"
+				description="GUIDEADM_LAYOUT_SHOW_ADDRESS_LABELS_LAYOUT"
+				type="layout"
+				view="addresslabels"
+				layout="default"
+				icon="guideadm_addresslabels"/>
+
+		<item		label="GUIDEADM_LAYOUT_ADDRESSES"
+				description="GUIDEADM_LAYOUT_SHOW_ADDRESSES_LAYOUT"
+				type="layout"
+				view="addresses"
+				layout="default"
+				icon="guideadm_addresses"/>
+
+		<item		label="GUIDEADM_LAYOUT_BRANDS"
+				description="GUIDEADM_LAYOUT_SHOW_BRANDS_LAYOUT"
+				type="layout"
+				view="brands"
+				layout="default"
+				icon="guideadm_brands"/>
+
+		<item		label="GUIDEADM_LAYOUT_BUSINESSTYPES"
+				description="GUIDEADM_LAYOUT_SHOW_BUSINESSTYPES_LAYOUT"
+				type="layout"
+				view="businesstypes"
+				layout="default"
+				icon="guideadm_businesstypes"/>
+
+		<item		label="GUIDEADM_LAYOUT_CONTACTLANG"
+				description="GUIDEADM_LAYOUT_SHOW_CONTACTLANG_LAYOUT"
+				type="layout"
+				view="contactlang"
+				layout="default"
+				icon="guideadm_contactlang"/>
+
+		<item		label="GUIDEADM_LAYOUT_CURRENCIES"
+				description="GUIDEADM_LAYOUT_SHOW_CURRENCIES_LAYOUT"
+				type="layout"
+				view="currencies"
+				layout="default"
+				icon="guideadm_currencies"/>
+
+		<item		label="GUIDEADM_LAYOUT_COUNTRIES"
+				description="GUIDEADM_LAYOUT_SHOW_COUNTRIES_LAYOUT"
+				type="layout"
+				view="countries"
+				layout="default"
+				icon="guideadm_countries"/>
+
+		<item		label="GUIDEADM_LAYOUT_CONTACTS"
+				description="GUIDEADM_LAYOUT_SHOW_CONTACTS_LAYOUT"
+				type="layout"
+				view="contacts"
+				layout="default"
+				icon="guideadm_contacts"/>
+
+		<item		label="GUIDEADM_LAYOUT_DOC_LABELS"
+				description="GUIDEADM_LAYOUT_SHOW_DOC_LABELS_LAYOUT"
+				type="layout"
+				view="doclabels"
+				layout="default"
+				icon="guideadm_doclabels"/>
+
+		<item		label="GUIDEADM_LAYOUT_DOCUMENTS"
+				description="GUIDEADM_LAYOUT_SHOW_DOCUMENTS_LAYOUT"
+				type="layout"
+				view="documents"
+				layout="default"
+				icon="guideadm_documents"/>
+
+		<item		label="GUIDEADM_LAYOUT_JOBS"
+				description="GUIDEADM_LAYOUT_SHOW_JOBS_LAYOUT"
+				type="layout"
+				view="jobs"
+				layout="default"
+				icon="guideadm_jobs"/>
+
+		<item		label="GUIDEADM_LAYOUT_JOB_ITEMS"
+				description="GUIDEADM_LAYOUT_SHOW_JOB_ITEMS_LAYOUT"
+				type="layout"
+				view="jobitems"
+				layout="default"
+				icon="guideadm_jobitems"/>
+
+		<item		label="GUIDEADM_LAYOUT_LANG"
+				description="GUIDEADM_LAYOUT_SHOW_LANG_LAYOUT"
+				type="layout"
+				view="lang"
+				layout="default"
+				icon="guideadm_lang"/>
+
+		<item		label="GUIDEADM_LAYOUT_LANGUAGES"
+				description="GUIDEADM_LAYOUT_SHOW_LANGUAGES_LAYOUT"
+				type="layout"
+				view="languages"
+				layout="default"
+				icon="guideadm_languages"/>
+
+		<item		label="GUIDEADM_LAYOUT_OPERATORS"
+				description="GUIDEADM_LAYOUT_SHOW_OPERATORS_LAYOUT"
+				type="layout"
+				view="operators"
+				layout="default"
+				icon="guideadm_operators"/>
+
+		<item		label="GUIDEADM_LAYOUT_PHONE_LABELS"
+				description="GUIDEADM_LAYOUT_SHOW_PHONE_LABELS_LAYOUT"
+				type="layout"
+				view="phonelabels"
+				layout="default"
+				icon="guideadm_phonelabels"/>
+
+		<item		label="GUIDEADM_LAYOUT_PHONES"
+				description="GUIDEADM_LAYOUT_SHOW_PHONES_LAYOUT"
+				type="layout"
+				view="phones"
+				layout="default"
+				icon="guideadm_phones"/>
+
+		<item		label="GUIDEADM_LAYOUT_POLICIES"
+				description="GUIDEADM_LAYOUT_SHOW_POLICIES_LAYOUT"
+				type="layout"
+				view="policies"
+				layout="default"
+				icon="guideadm_policies"/>
+
+		<item		label="GUIDEADM_LAYOUT_PRICES"
+				description="GUIDEADM_LAYOUT_SHOW_PRICES_LAYOUT"
+				type="layout"
+				view="prices"
+				layout="default"
+				icon="guideadm_prices"/>
+
+		<item		label="GUIDEADM_LAYOUT_SERVICES"
+				description="GUIDEADM_LAYOUT_SHOW_SERVICES_LAYOUT"
+				type="layout"
+				view="services"
+				layout="default"
+				icon="guideadm_services"/>
+
+		<item		label="GUIDEADM_LAYOUT_SERVICOS"
+				description="GUIDEADM_LAYOUT_SHOW_SERVICOS_LAYOUT"
+				type="layout"
+				view="servicos"
+				layout="default"
+				icon="guideadm_servicos"/>
+
+		<item		label="GUIDEADM_LAYOUT_SOCIAL"
+				description="GUIDEADM_LAYOUT_SHOW_SOCIAL_LAYOUT"
+				type="layout"
+				view="social"
+				layout="default"
+				icon="guideadm_social"/>
+
+		<item		label="GUIDEADM_LAYOUT_SOCIAL_LABELS"
+				description="GUIDEADM_LAYOUT_SHOW_SOCIAL_LABELS_LAYOUT"
+				type="layout"
+				view="sociallabels"
+				layout="default"
+				icon="guideadm_sociallabels"/>
+
+		<item		label="GUIDEADM_LAYOUT_STATES"
+				description="GUIDEADM_LAYOUT_SHOW_STATES_LAYOUT"
+				type="layout"
+				view="states"
+				layout="default"
+				icon="guideadm_states"/>
+
+		<item		label="GUIDEADM_LAYOUT_VEHICLES"
+				description="GUIDEADM_LAYOUT_SHOW_VEHICLES_LAYOUT"
+				type="layout"
+				view="vehicles"
+				layout="default"
+				icon="guideadm_vehicles"/>
+	</menu>
+</config>

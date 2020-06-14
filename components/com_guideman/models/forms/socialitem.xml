@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="socialitem.usrsocialdetailform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_SOCIAL_NETWORKING_DETAIL">
+
+		<field name="user_id"
+				alias="_user_id_alias"
+				label="GUIDEMAN_FIELD_USER_NAME"
+				filter="INT"
+				description="GUIDEMAN_FIELD_USER_ID"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_USER_NAME"
+				validate="default"
+				msg-info="GUIDEMAN_VALIDATOR_USER_ID"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="labelid"
+				alias="_labelid_type"
+				label="GUIDEMAN_FIELD_SOCIAL_LABEL"
+				filter="INT"
+				listKey="id"
+				labelKey="type"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_SOCIAL_LABEL"
+				validate="default"
+				class=""/>
+
+		<field name="name"
+				alias="name"
+				label="GUIDEMAN_FIELD_SOCIAL_NETWORK"
+				filter="STRING"
+				type="cktext"
+				required="true"
+				class="validate[required]"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_user_id"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SEARCH_ON_USER_NAME"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_USER_NAME"
+				ui="chosen"/>
+
+		<field name="filter_labelid"
+				listKey="id"
+				labelKey="type"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SEARCH_ON_SOCIAL_NETWORK"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_LABEL_TYPE"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

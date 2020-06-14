@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="usrcountrydata.usrcountrydataform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_DETAILED_COUNTRY_INFORMATION">
+
+		<field name="continent"
+				alias="continent"
+				label="GUIDEMAN_FIELD_CONTINENT"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_CONTINENT"
+				enum="countries_continent"
+				validate="default"
+				class=""/>
+
+		<field name="country_name"
+				alias="country_name"
+				label="GUIDEMAN_FIELD_COUNTRY_NAME"
+				filter="STRING"
+				description="GUIDEMAN_FIELD_COUNTRY_NAME"
+				type="cktext"
+				validate="length80"
+				msg-info="GUIDEMAN_VALIDATOR_COUNTRY_NAME"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_ENTER_A_VALID_NAME"
+				class=""/>
+
+		<field name="long_name"
+				alias="long_name"
+				label="GUIDEMAN_FIELD_LONG_NAME"
+				filter="STRING"
+				description="GUIDEMAN_FIELD_COUNTRY_FULL_NAME"
+				type="cktext"
+				validate="length80"
+				msg-info="GUIDEMAN_VALIDATOR_COUNTRY_FULL_NAME"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_ENTER_THE_NAME_OF_THE_COUNTRY"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="flag"
+				alias="flag"
+				label="GUIDEMAN_FIELD_FLAG"
+				filter="STRING"
+				type="ckfile"
+				view="country"
+				indirect="false"
+				root="[DIR_COUNTRIES_FLAG]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.bmp|*.gif|*.jpg|*.jpeg|*.png"/>
+
+		<field name="iso_2"
+				alias="iso_2"
+				label="GUIDEMAN_FIELD_ISO_2"
+				filter="STRING"
+				description="GUIDEMAN_FIELD_ISO_3166_ALPHA2_CODE_COUNTRY_CODES_2_CHARACTERS"
+				size="2"
+				type="cktext"
+				validate="default"
+				msg-info="GUIDEMAN_VALIDATOR_ISO_3166_ALPHA2_CODE_COUNTRY_CODES_2_CHARACTERS"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_ENTER_A_CORRECT_VALUE"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="iso_3"
+				alias="iso_3"
+				label="GUIDEMAN_FIELD_ISO_3"
+				filter="STRING"
+				description="GUIDEMAN_FIELD_ISO_3166_ALPHA3_CODE_COUNTRY_CODES_3_CHARACTERS"
+				size="3"
+				unique="true"
+				type="cktext"
+				validate="default"
+				msg-info="GUIDEMAN_VALIDATOR_ISO_3166_ALPHA3_CODE_COUNTRY_CODES_3_CHARACTERS"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_ENTER_A_CORRECT_VALUE"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="numeric_code"
+				alias="numeric_code"
+				label="GUIDEMAN_FIELD_NUMERIC_CODE"
+				filter="STRING"
+				description="GUIDEMAN_FIELD_ISO_3166_NUMERIC_CODE_COUNTRY_CODES_NUMRIC"
+				type="cktext"
+				validate="positiveinteger"
+				msg-info="GUIDEMAN_VALIDATOR_ISO_3166_NUMERIC_CODE_COUNTRY_CODES_NUMRIC"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_ENTER_A_CORRECT_VALUE"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="un_member"
+				alias="un_member"
+				label="GUIDEMAN_FIELD_UN_MEMBER"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				viewType="both">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="calling_code"
+				alias="calling_code"
+				label="GUIDEMAN_FIELD_CALLING_CODE"
+				filter="STRING"
+				description="GUIDEMAN_FIELD_THE_INTERNATIONAL_DIALING_CODE_FOR_THE_COUNTRY"
+				type="cktext"
+				validate="length8"
+				msg-info="GUIDEMAN_VALIDATOR_THE_INTERNATIONAL_DIALING_CODE_FOR_THE_COUNTRY"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_ENTER_A_CORRECT_VALUE"
+				class=""/>
+
+		<field name="cctld"
+				alias="cctld"
+				label="GUIDEMAN_FIELD_CCTLD"
+				filter="STRING"
+				description="GUIDEMAN_FIELD_COUNTRY_CODE_TOPLEVEL_DOMAIN"
+				type="cktext"
+				validate="length5"
+				msg-info="GUIDEMAN_VALIDATOR_COUNTRY_CODE_TOPLEVEL_DOMAIN"
+				msg-incorrect="GUIDEMAN_VALIDATOR_FORMAT_BE_NL"
+				class=""/>
+
+		<field name="population"
+				alias="population"
+				label="GUIDEMAN_FIELD_POPULATION"
+				filter="INT"
+				description="GUIDEMAN_FIELD_POPULATION"
+				type="cktext"
+				validate="positiveinteger"
+				msg-info="GUIDEMAN_VALIDATOR_POPULATION"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="total_area"
+				alias="total_area"
+				label="GUIDEMAN_FIELD_TOTAL_AREA"
+				filter="INT"
+				description="GUIDEMAN_FIELD_TOTAL_GRAPHICAL_AREA_IN_SQUARE_KM"
+				type="cktext"
+				validate="positiveinteger"
+				msg-info="GUIDEMAN_VALIDATOR_TOTAL_GRAPHICAL_AREA_IN_SQUARE_KM"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="land_area"
+				alias="land_area"
+				label="GUIDEMAN_FIELD_LAND_AREA"
+				filter="INT"
+				description="GUIDEMAN_FIELD_LAND_AREA_IN_SQUARE_KM"
+				type="cktext"
+				validate="positiveinteger"
+				msg-info="GUIDEMAN_VALIDATOR_LAND_AREA_IN_SQUARE_KM"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="water_area"
+				alias="water_area"
+				label="GUIDEMAN_FIELD_WATER_AREA"
+				filter="INT"
+				description="GUIDEMAN_FIELD_WATER_AREA_IN_SQUARE_KM"
+				type="cktext"
+				validate="positiveinteger"
+				msg-info="GUIDEMAN_VALIDATOR_WATER_AREA_IN_SQUARE_KM"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="language"
+				alias="_language_lang_code"
+				label="GUIDEMAN_FIELD_LANGUAGE"
+				filter="INT"
+				listKey="id"
+				labelKey="lang_code"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_LANGUAGE"/>
+	</fieldset>
+
+	<fieldset name="countriesdata.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_language"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_LANGUAGE_TITLE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_LANGUAGE_TITLE"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="GUIDEMAN_FILTER_NULL_ISO_2_COUNTRY_NAME_LONG_NAME_ISO_3_NUMERIC_CODE_CALLING_CODE_CCTLD"
+				label="GUIDEMAN_JSEARCH_ISO_2_COUNTRY_NAME_LONG_NAME_ISO_3_NUMERIC_CODE_CALLING_CODE_CCTLD"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_language"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_LANGUAGE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_LANGUAGE"
+				ui="chosen"/>
+
+		<field name="search_search_1"
+				type="cksearch"
+				placeholder="GUIDEMAN_FILTER_NULL_ISO_2_COUNTRY_NAME_LONG_NAME_ISO_3_NUMERIC_CODE_CALLING_CODE_CCTLD"
+				label="GUIDEMAN_JSEARCH_ISO_2_COUNTRY_NAME_LONG_NAME_ISO_3_NUMERIC_CODE_CALLING_CODE_CCTLD"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

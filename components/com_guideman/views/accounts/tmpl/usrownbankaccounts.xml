@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_BANK_ACCOUNTS">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_BANK_ACCOUNTS_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_user_id"
+					label="GUIDEMAN_JSEARCH_FILTER_USER_ID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modal_contact"/>
+
+			<field name="filter_bank_id"
+					label="GUIDEMAN_JSEARCH_FILTER_BANK_ID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modal_contact"/>
+
+			<field name="filter_created_by"
+					label="GUIDEMAN_JSEARCH_FILTER_CREATED_BY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_USER"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modal_thirduser"/>
+
+			<field name="filter_search"
+					label="GUIDEMAN_JSEARCH_FILTER_AGENCY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_AGENCY"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_AGENCY"/>
+		</fieldset>
+	</fields>
+</metadata>

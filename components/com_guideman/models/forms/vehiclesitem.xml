@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="vehicleitem.usrvehiclesdetailform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_VEHICLE_DETAILED_INFORMATION">
+
+		<field name="user_id"
+				alias="_user_id_alias"
+				label="GUIDEMAN_FIELD_USER_NAME"
+				filter="INT"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_USER_NAME"
+				validate="default"
+				class=""/>
+
+		<field name="vehicle_type"
+				default="1"
+				alias="vehicle_type"
+				label="GUIDEMAN_FIELD_VEHICLE_TYPE"
+				filter="STRING"
+				description="GUIDEMAN_FIELD_TYPE_OF_VEHICLE"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_VEHICLE_TYPE"
+				enum="vehicles_vehicle_type"
+				validate="default"
+				msg-info="GUIDEMAN_VALIDATOR_TYPE_OF_VEHICLE"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_CHOOSE_ONE_OF_THE_VEHICLE_TYPES_ABOVE"
+				class=""/>
+
+		<field name="brand_id"
+				alias="_brand_id_name"
+				label="GUIDEMAN_FIELD_MAKE"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_MAKE"
+				validate="default"
+				class=""/>
+
+		<field name="model"
+				alias="model"
+				label="GUIDEMAN_FIELD_MODEL"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="pax"
+				alias="pax"
+				label="GUIDEMAN_FIELD_PAX"
+				filter="INT"
+				size="10"
+				type="cktext"
+				validate="positiveinteger"
+				required="true"
+				class="validate[required,custom[positiveinteger]]"/>
+
+		<field name="number_plate"
+				alias="number_plate"
+				label="GUIDEMAN_FIELD_NUMBER_PLATE"
+				filter="STRING"
+				size="20"
+				type="cktext"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="year_of_build"
+				alias="year_of_build"
+				label="GUIDEMAN_FIELD_YEAR_OF_BUILD"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="color"
+				alias="color"
+				label="GUIDEMAN_FIELD_COLOR"
+				filter="STRING"
+				type="ckcolor"/>
+
+		<field name="car_insurance"
+				alias="car_insurance"
+				label="GUIDEMAN_FIELD_CAR_INSURANCE"
+				filter="BOOL"
+				listKey="value"
+				type="ckcheckbox">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="insurance_for_third_parties"
+				alias="insurance_for_third_parties"
+				label="GUIDEMAN_FIELD_INSURANCE_FOR_THIRD_PARTIES"
+				filter="BOOL"
+				listKey="value"
+				type="ckcheckbox">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="fuel"
+				alias="fuel"
+				label="GUIDEMAN_FIELD_FUEL"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_FUEL"
+				enum="vehicles_fuel"/>
+
+		<field name="remarks"
+				alias="remarks"
+				label="GUIDEMAN_FIELD_REMARKS"
+				filter="STRING"
+				type="cktextarea"
+				width="250px"
+				height="100px"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_user_id"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_CONTACT"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_CONTACT"
+				ui="chosen"/>
+
+		<field name="filter_brand_id"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_MAKE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_MAKE"
+				ui="chosen"/>
+
+		<field name="filter_year_of_build"
+				type="calendar"
+				placeholder="GUIDEMAN_FILTER_NULL_YEAR_OF_BUILD"
+				format="%d-%m-%Y"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"
+				onchange="this.form.submit();"
+				label="GUIDEMAN_JSEARCH_YEAR_OF_BUILD"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_created_by"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_CREATED_BY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_CREATED_BY"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="GUIDEMAN_FILTER_NULL_MODEL_NUMBER_PLATE"
+				label="GUIDEMAN_JSEARCH_MODEL_NUMBER_PLATE"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

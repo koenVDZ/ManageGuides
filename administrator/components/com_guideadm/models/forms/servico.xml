@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="servico.form" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="internal_service_id"
+				alias="internal_service_id"
+				label="GUIDEADM_FIELD_INTERNAL_SERVICE_ID"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="service_name"
+				alias="service_name"
+				label="GUIDEADM_FIELD_SERVICE_NAME"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="private_tour"
+				alias="private_tour"
+				label="GUIDEADM_FIELD_PRIVATE_TOUR"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="entrance_fees"
+				alias="entrance_fees"
+				label="GUIDEADM_FIELD_ENTRANCE_FEES"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="duration"
+				alias="duration"
+				label="GUIDEADM_FIELD_DURATION"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="company"
+				alias="company"
+				label="GUIDEADM_FIELD_COMPANY"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="meals"
+				alias="meals"
+				label="GUIDEADM_FIELD_MEALS"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="description"
+				alias="description"
+				label="GUIDEADM_FIELD_DESCRIPTION"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="country"
+				alias="_country_country_name"
+				label="GUIDEADM_FIELD_COUNTRY_COUNTRY_NAME"
+				filter="INT"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_COUNTRY_COUNTRY_NAME"/>
+
+		<field name="state"
+				alias="_state_state"
+				label="GUIDEADM_FIELD_STATE_STATE"
+				filter="INT"
+				listKey="id"
+				labelKey="state"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_STATE_STATE"/>
+
+		<field name="kid_friendly"
+				alias="kid_friendly"
+				label="GUIDEADM_FIELD_KID_FRIENDLY"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="kid_comment"
+				alias="kid_comment"
+				label="GUIDEADM_FIELD_KID_COMMENT"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="disabled_friendly"
+				alias="disabled_friendly"
+				label="GUIDEADM_FIELD_DISABLED_FRIENDLY"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="disabled_comment"
+				alias="disabled_comment"
+				label="GUIDEADM_FIELD_DISABLED_COMMENT"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="activity_level"
+				alias="activity_level"
+				label="GUIDEADM_FIELD_ACTIVITY_LEVEL"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="activity_comment"
+				alias="activity_comment"
+				label="GUIDEADM_FIELD_ACTIVITY_COMMENT"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="min_pax"
+				alias="min_pax"
+				label="GUIDEADM_FIELD_MIN_PAX"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="max_pax"
+				alias="max_pax"
+				label="GUIDEADM_FIELD_MAX_PAX"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="visits"
+				alias="visits"
+				label="GUIDEADM_FIELD_VISITS"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="remunaration"
+				alias="remunaration"
+				label="GUIDEADM_FIELD_REMUNARATION"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="costs"
+				alias="costs"
+				label="GUIDEADM_FIELD_COSTS"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="policy"
+				alias="_policy_name"
+				label="GUIDEADM_FIELD_POLICY_NAME"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_POLICY_NAME"/>
+
+		<field name="image_01"
+				alias="image_01"
+				label="GUIDEADM_FIELD_IMAGE_01"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="image_02"
+				alias="image_02"
+				label="GUIDEADM_FIELD_IMAGE_02"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="image_03"
+				alias="image_03"
+				label="GUIDEADM_FIELD_IMAGE_03"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="image_04"
+				alias="image_04"
+				label="GUIDEADM_FIELD_IMAGE_04"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="image_05"
+				alias="image_05"
+				label="GUIDEADM_FIELD_IMAGE_05"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="created_by"
+				alias="created_by"
+				label="GUIDEADM_FIELD_CREATED_BY_1"
+				filter="INT"
+				access="core.edit"
+				type="cktext"/>
+
+		<field name="creation_date"
+				alias="creation_date"
+				label="GUIDEADM_FIELD_CREATION_DATE"
+				filter="USER_UTC"
+				type="calendar"
+				format="%Y-%m-%d %H:%M"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				timeformat="24"/>
+
+		<field name="modified_by"
+				alias="modified_by"
+				label="GUIDEADM_FIELD_MODIFIED_BY_1"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="modification_date"
+				alias="modification_date"
+				label="GUIDEADM_FIELD_MODIFICATION_DATE"
+				filter="USER_UTC"
+				type="calendar"
+				format="%Y-%m-%d %H:%M"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				timeformat="24"/>
+
+		<field name="hits"
+				alias="hits"
+				label="GUIDEADM_FIELD_HITS"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="ordering"
+				alias="ordering"
+				label="GUIDEADM_FIELD_ORDERING"
+				filter="INT"
+				access="core.edit.state"
+				type="ckordering"
+				labelKey="internal_service_id"/>
+
+		<field name="published"
+				default="0"
+				alias="published"
+				label="GUIDEADM_FIELD_PUBLISHED"
+				filter="INT"
+				access="core.edit.state"
+				listKey="value"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_country"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_COUNTRY_COUNTRY_NAME"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_COUNTRY_COUNTRY_NAME"
+				ui="chosen"/>
+
+		<field name="filter_state"
+				listKey="id"
+				labelKey="state"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_STATE_STATE"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_STATE_STATE"
+				ui="chosen"/>
+
+		<field name="filter_policy"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_POLICY_NAME"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_POLICY_NAME"
+				ui="chosen"/>
+
+		<field name="filter_creation_date_from"
+				placeholder="GUIDEADM_FILTER_CREATION_DATE_CREATION_DATE_FROM"
+				type="calendar"
+				format="%Y-%m-%d %H:%M"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				timeformat="24"
+				onchange="this.form.submit();"
+				label="GUIDEADM_JSEARCH_CREATION_DATE"
+				class="element-filter input-small"
+				ui="chosen"/>
+
+		<field name="filter_creation_date_to"
+				placeholder="GUIDEADM_FILTER_CREATION_DATE_CREATION_DATE_TO"
+				type="calendar"
+				format="%Y-%m-%d %H:%M"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				timeformat="24"
+				onchange="this.form.submit();"
+				label="GUIDEADM_JSEARCH_CREATION_DATE"
+				class="element-filter input-small"
+				ui="chosen"/>
+
+		<field name="filter_modification_date_from"
+				placeholder="GUIDEADM_FILTER_MODIFICATION_DATE_MODIFICATION_DATE_FROM"
+				type="calendar"
+				format="%Y-%m-%d %H:%M"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				timeformat="24"
+				onchange="this.form.submit();"
+				label="GUIDEADM_JSEARCH_MODIFICATION_DATE"
+				class="element-filter input-small"
+				ui="chosen"/>
+
+		<field name="filter_modification_date_to"
+				placeholder="GUIDEADM_FILTER_MODIFICATION_DATE_MODIFICATION_DATE_TO"
+				type="calendar"
+				format="%Y-%m-%d %H:%M"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				timeformat="24"
+				onchange="this.form.submit();"
+				label="GUIDEADM_JSEARCH_MODIFICATION_DATE"
+				class="element-filter input-small"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="GUIDEADM_FILTER_NULL_INTERNAL_SERVICE_ID_SERVICE_NAME_DURATION_MEALS_ACTIVITY_LEVEL_IMAGE_01_IMAGE_02_IMAGE_03_IMAGE_04_IMAGE_05"
+				label="GUIDEADM_JSEARCH_INTERNAL_SERVICE_ID_SERVICE_NAME_DURATION_MEALS_ACTIVITY_LEVEL_IMAGE_01_IMAGE_02_IMAGE_03_IMAGE_04_IMAGE_05"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

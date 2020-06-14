@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="contact.usrcontactsdetailform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_DETAILED_CONTACT_INFORMATION">
+
+		<field name="image"
+				alias="image"
+				label="GUIDEMAN_FIELD_PROFILE_PICTURE"
+				filter="STRING"
+				class="Foto_picker Foto_picker"
+				description="GUIDEMAN_FIELD_PICTURE_OF_CONTACT"
+				type="ckfile"
+				width="auto"
+				height="50"
+				view="contact"
+				indirect="false"
+				root="[DIR_CONTACTS_IMAGE]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.bmp|*.gif|*.jpg|*.jpeg|*.png"
+				msg-info="GUIDEMAN_VALIDATOR_PICTURE_OF_CONTACT"/>
+
+		<field name="name"
+				alias="name"
+				label="GUIDEMAN_FIELD_NAME"
+				filter="STRING"
+				class="mg_input mg_input"
+				size="50"
+				type="cktext"/>
+
+		<field name="email"
+				alias="email"
+				label="GUIDEMAN_FIELD_EMAIL"
+				filter="STRING"
+				class="mg_email mg_email mg_email mg_email"
+				size="50"
+				type="cktext"
+				validate="default"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_ENTER_A_VALID_EMAIL_ADDRESS"/>
+
+		<field name="gender"
+				alias="gender"
+				label="GUIDEMAN_FIELD_GENDER"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				enum="contacts_gender"
+				validate="default"/>
+
+		<field name="birthdate"
+				alias="birthdate"
+				label="GUIDEMAN_FIELD_BIRTHDATE"
+				filter="STRING"
+				class="Datum_picker Datum_picker"
+				type="ckcalendar"
+				format="d-m-Y"/>
+
+		<field name="driverguide"
+				alias="driverguide"
+				label="GUIDEMAN_FIELD_DRIVERGUIDE"
+				filter="BOOL"
+				class="DriverGuide_picker DriverGuide_picker"
+				listKey="value"
+				type="ckcheckbox">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="nationality"
+				alias="_nationality_country_name"
+				label="GUIDEMAN_FIELD_NATIONALITY"
+				filter="INT"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_NATIONALITY"/>
+
+		<field name="state_id"
+				alias="_state_id_state"
+				label="GUIDEMAN_FIELD_AREA_OF_OPERATION"
+				filter="INT"
+				class="area_picker area_picker area_picker area_picker"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.area_ajax"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_AREA_OF_OPERATION"
+				validate="default"/>
+
+		<field name="company_id"
+				alias="_company_id_name"
+				label="GUIDEMAN_FIELD_COMPANY"
+				filter="INT"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.companies_ajax"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_COMPANY"
+				validate="default"
+				class=""/>
+
+		<field name="con_position"
+				alias="con_position"
+				label="GUIDEMAN_FIELD_CONTACT_POSITION"
+				filter="STRING"
+				class="mg_input mg_input mg_input mg_input validate[custom[quote]]"
+				size="50"
+				type="cktext"
+				validate="quote"/>
+
+		<field name="published"
+				alias="published"
+				label="GUIDEMAN_FIELD_PUBLISHED"
+				filter="INT"
+				class="Publish_picker Publish_picker"
+				access="core.edit.state"
+				type="ckstate"/>
+	</fieldset>
+
+	<fieldset name="contact.usrcontactssettings"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_SETTINGS"/>
+
+	<fieldset name="company.usrcompanydetailform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_DETAILED_COMPANY_INFORMATION">
+
+		<field name="catid"
+				alias="_catid_mgcat"
+				label="GUIDEMAN_FIELD_CATEGORY"
+				filter="INT"
+				class="cat_picker cat_picker cat_picker cat_picker"
+				listKey="id"
+				labelKey="mgcat"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_CATEGORY"
+				validate="default"/>
+
+		<field name="name"
+				alias="name"
+				label="GUIDEMAN_FIELD_COMPANY"
+				filter="STRING"
+				class="mg_input mg_input"
+				size="150"
+				type="cktext"/>
+
+		<field name="surname"
+				alias="surname"
+				label="GUIDEMAN_FIELD_OFFICIAL_NAME"
+				filter="STRING"
+				class="mg_input mg_input"
+				size="150"
+				type="cktext"/>
+
+		<field name="company_id"
+				alias="_company_id_name"
+				label="GUIDEMAN_FIELD_MOTHER_COMPANY"
+				filter="INT"
+				class="Company_picker Company_picker Company_picker Company_picker"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_MOTHER_COMPANY"
+				validate="default"/>
+
+		<field name="business_type"
+				alias="_business_type_type_name"
+				label="GUIDEMAN_FIELD_BUSINESS_TYPE"
+				filter="INT"
+				class="Java_picker Java_picker"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.groupby6"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_BUSINESS_TYPE"/>
+
+		<field name="image"
+				alias="image"
+				label="GUIDEMAN_FIELD_LOGO"
+				filter="STRING"
+				class="Foto_picker Foto_picker"
+				description="GUIDEMAN_FIELD_PICTURE_OF_CONTACT"
+				type="ckfile"
+				width="auto"
+				height="50"
+				view="contact"
+				indirect="false"
+				root="[DIR_CONTACTS_IMAGE]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.bmp|*.gif|*.jpg|*.jpeg|*.png"
+				msg-info="GUIDEMAN_VALIDATOR_PICTURE_OF_CONTACT"/>
+
+		<field name="email"
+				alias="email"
+				label="GUIDEMAN_FIELD_COMPANY_EMAIL"
+				filter="STRING"
+				type="cktext"
+				validate="default"
+				msg-incorrect="GUIDEMAN_VALIDATOR_PLEASE_ENTER_A_VALID_EMAIL_ADDRESS"
+				class=""/>
+
+		<field name="state_id"
+				alias="_state_id_state"
+				label="GUIDEMAN_FIELD_AREA_OF_OPERATION"
+				filter="INT"
+				class="Java_picker Java_picker Java_picker Java_picker"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.groupby7"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_AREA_OF_OPERATION"
+				validate="default"/>
+
+		<field name="nationality"
+				alias="_nationality_country_name"
+				label="GUIDEMAN_FIELD_CORPORATE_NATIONALITY"
+				filter="INT"
+				class="Country_picker Country_picker"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_CORPORATE_NATIONALITY"/>
+
+		<field name="birthdate"
+				alias="birthdate"
+				label="GUIDEMAN_FIELD_FOUNDATION_DATE"
+				filter="STRING"
+				class="Datum_picker Datum_picker"
+				type="ckcalendar"
+				format="d-m-Y"/>
+
+		<field name="published"
+				alias="published"
+				label="GUIDEMAN_FIELD_STATE"
+				filter="INT"
+				class="Publish_picker Publish_picker"
+				access="core.edit.state"
+				type="ckstate"/>
+	</fieldset>
+
+	<fieldset name="company.usrcompanysettings"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_SETTINGS"/>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_created_by"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_CREATED_BY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_CREATED_BY"
+				ui="chosen"/>
+
+		<field name="filter_type"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_RECORD_TYPE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_RECORD_TYPE"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="companies.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_created_by"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_CREATED_BY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_CREATED_BY"
+				ui="chosen"/>
+
+		<field name="filter_type"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_RECORD_TYPE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_RECORD_TYPE"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fields name="settings"/>
+</form>

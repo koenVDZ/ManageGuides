@@ -1,0 +1,69 @@
+/* ANY RTL SPECIFIC RESPONSIVE CALLS GO HERE
+----------------------------------------------------------- */
+
+#s5_responsive_mobile_top_bar_wrap {
+direction:rtl;
+}
+
+#s5_responsive_mobile_drop_down_menu {
+text-align:left;
+}
+
+#s5_responsive_menu_button {
+float:right;
+margin-left:7%;
+margin-right:0px;
+}
+
+@media screen and (max-width: 1300px){
+	
+	#s5_logo_wrap {
+	margin-right:0px;
+	margin-left:20px;
+	}
+	
+}
+
+
+@media screen and (max-width: 1100px){
+
+	#s5_logo_wrap {
+	float:left;
+	margin:0px;
+	}
+
+}
+
+@media screen and (max-width: 1100px){
+
+	#s5_logo_wrap {
+	float:right;
+	}
+
+	#s5_pos_cart {
+	float:left;
+	}
+
+	#s5_cart_search_wrap {
+	float:left;
+	}
+	
+	.ul_stats li {
+	margin-right:8.5%;
+	margin-left:0px;
+	}
+	
+}
+
+
+@media screen and (max-width: 750px){
+	
+	ul.s5_masonry_articles li {
+	float:right !important;
+	}
+	
+	ul.s5_masonry_articles {
+	float:right !important;
+	}
+	
+}

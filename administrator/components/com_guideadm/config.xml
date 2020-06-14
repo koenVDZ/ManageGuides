@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<config>
+
+	<fieldset name="configuration"
+			label="GUIDEADM_CONFIG_COMPONENT_CONFIGURATION"
+			description="GUIDEADM_CONFIG_COMPONENT_CONFIGURATION_1"
+			addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="upload_maxsize"
+				label="GUIDEADM_FIELD_UPLOAD_MAX_SIZE"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_MAX_SIZE_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_check_mime"
+				default="1"
+				label="GUIDEADM_FIELD_CHECK_MIME_TYPE"
+				filter="INT"
+				description="GUIDEADM_FIELD_UPLOAD_CHECK_MIME"
+				listKey="value"
+				type="ckradio"
+				viewType="both">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="trash_dir"
+				default="[COM_ADMIN]/images/trash"
+				label="GUIDEADM_FIELD_TRASH_DIR"
+				filter="STRING"
+				description="GUIDEADM_FIELD_TRASH_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_countries_flag"
+				default="[COM_SITE]/files/countries_flag"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_COUNTRIES_FLAG"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_contacts_image"
+				default="[COM_SITE]/files/contacts_image"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_CONTACTS_IMAGE"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_documents_image"
+				default="[COM_SITE]/files/documents_image"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_DOCUMENTS_RECTO"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_documents_image2"
+				default="[COM_SITE]/files/documents_image2"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_DOCUMENTS_VERSO"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_services_image_01"
+				default="[COM_SITE]/files/services_image_01"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_SERVICES_IMAGE_01"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_services_image_02"
+				default="[COM_SITE]/files/services_image_02"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_SERVICES_IMAGE_02"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_services_image_03"
+				default="[COM_SITE]/files/services_image_03"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_SERVICES_IMAGE_03"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_services_image_04"
+				default="[COM_SITE]/files/services_image_04"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_SERVICES_IMAGE_04"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_services_image_05"
+				default="[COM_SITE]/files/services_image_05"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_SERVICES_IMAGE_05"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_sociallabels_logo"
+				default="[COM_SITE]/files/sociallabels_logo"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_SOCIAL_LABELS_LOGO"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_states_flag"
+				default="[COM_SITE]/files/states_flag"
+				label="GUIDEADM_FIELD_UPLOAD_DIR_STATES_FLAG"
+				filter="STRING"
+				description="GUIDEADM_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+	</fieldset>
+
+	<fieldset name="permissions"
+			label="GUIDEADM_CONFIG_PERMISSIONS"
+			description="GUIDEADM_CONFIG_DEFAULT_PERMISSIONS_USED_FOR_ALL_CONTENT_IN_THIS_COMPONENT"
+			addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="rules"
+				label="GUIDEADM_FIELD_PERMISSIONS"
+				filter="rules"
+				type="rules"
+				validate="rules"
+				section="component"
+				component="com_guideadm"/>
+	</fieldset>
+</config>

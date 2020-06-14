@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="contact.admcontactform"
+			addfieldpath="/administrator/components/com_guideadm/models/fields"
+			label="GUIDEADM_JFORM_DETAILED_CONTACT_INFORMATION">
+
+		<field name="image"
+				alias="image"
+				label="GUIDEADM_FIELD_IMAGE"
+				filter="STRING"
+				description="GUIDEADM_FIELD_PICTURE_OF_CONTACT"
+				type="ckfile"
+				view="contact"
+				indirect="false"
+				root="[DIR_CONTACTS_IMAGE]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.bmp|*.gif|*.jpg|*.jpeg|*.png"
+				msg-info="GUIDEADM_VALIDATOR_PICTURE_OF_CONTACT"/>
+
+		<field name="type"
+				alias="type"
+				label="GUIDEADM_FIELD_RECORD_TYPE"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				viewType="both">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="catid"
+				alias="_catid_MGcat"
+				label="GUIDEADM_FIELD_CATEGORY"
+				filter="INT"
+				listKey="id"
+				labelKey="MGcat"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_CATEGORY"
+				validate="default"
+				class=""/>
+
+		<field name="user_id"
+				alias="user_id"
+				label="GUIDEADM_FIELD_USER_ID"
+				filter="INT"
+				type="cktext"
+				validate="default"
+				class=""/>
+
+		<field name="name"
+				alias="name"
+				label="GUIDEADM_FIELD_NAME"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="surname"
+				alias="surname"
+				label="GUIDEADM_FIELD_SURNAME"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="alias"
+				alias="alias"
+				label="GUIDEADM_FIELD_ALIAS"
+				filter="STRING"
+				unique="true"
+				type="cktext"
+				validate="default"
+				class=""/>
+
+		<field name="company_id"
+				alias="_company_id_name"
+				label="GUIDEADM_FIELD_COMPANY"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_COMPANY"
+				validate="default"
+				class=""/>
+
+		<field name="business_type"
+				alias="_business_type_country_id"
+				label="GUIDEADM_FIELD_COUNTRY"
+				filter="INT"
+				listKey="id"
+				labelKey="country_id"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_COUNTRY"/>
+
+		<field name="con_position"
+				alias="con_position"
+				label="GUIDEADM_FIELD_CONTACT_POSITION"
+				filter="STRING"
+				type="cktext"
+				validate="quote"
+				class="validate[custom[quote]]"/>
+
+		<field name="gender"
+				alias="gender"
+				label="GUIDEADM_FIELD_GENDER"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_GENDER"
+				enum="contacts_gender"/>
+
+		<field name="driverguide"
+				alias="driverguide"
+				label="GUIDEADM_FIELD_DRIVERGUIDE"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				viewType="both">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="email"
+				alias="email"
+				label="GUIDEADM_FIELD_EMAIL"
+				filter="STRING"
+				type="cktext"
+				validate="default"
+				msg-incorrect="GUIDEADM_VALIDATOR_PLEASE_ENTER_A_VALID_EMAIL_ADDRESS"
+				class=""/>
+
+		<field name="birthdate"
+				alias="birthdate"
+				label="GUIDEADM_FIELD_BIRTHDATE"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="nationality"
+				alias="_nationality_country_name"
+				label="GUIDEADM_FIELD_NATIONALITY"
+				filter="INT"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_NATIONALITY"/>
+
+		<field name="country_id"
+				alias="_country_id_country_name"
+				label="GUIDEADM_FIELD_COUNTRY"
+				filter="INT"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_COUNTRY"
+				validate="default"
+				class=""/>
+
+		<field name="state_id"
+				alias="_state_id_state"
+				label="GUIDEADM_FIELD_STATE"
+				filter="INT"
+				listKey="id"
+				labelKey="state"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_STATE"
+				validate="default"
+				class=""/>
+
+		<field name="ce_details_id"
+				alias="ce_details_id"
+				label="GUIDEADM_FIELD_CE_DETAILS_ID"
+				filter="INT"
+				description="GUIDEADM_FIELD_CONTACT_ENHANCED_ID"
+				type="cktext"
+				validate="default"
+				msg-info="GUIDEADM_VALIDATOR_CONTACT_ENHANCED_ID"
+				msg-incorrect="GUIDEADM_VALIDATOR_NUMERIC_VALUES_ONLY"
+				class=""/>
+
+		<field name="progress"
+				alias="progress"
+				label="GUIDEADM_FIELD_PROGRESS"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="visits_id"
+				alias="_visits_id_MGcat"
+				label="GUIDEADM_FIELD_CATEGORY_VISITS"
+				filter="INT"
+				description="GUIDEADM_FIELD_VISITS_ID"
+				listKey="id"
+				labelKey="MGcat"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_CATEGORY_VISITS"
+				msg-info="GUIDEADM_VALIDATOR_VISITS_ID"/>
+
+		<field name="creation_date"
+				alias="creation_date"
+				label="GUIDEADM_FIELD_CREATION_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%Y-%m-%d"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="created_by"
+				alias="_created_by_name"
+				label="GUIDEADM_FIELD_CREATED_BY"
+				filter="INT"
+				access="core.edit"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_CREATED_BY"
+				validate="default"
+				class=""/>
+
+		<field name="modification_date"
+				alias="modification_date"
+				label="GUIDEADM_FIELD_MODIFICATION_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%Y-%m-%d"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="modified_by"
+				alias="_modified_by_name"
+				label="GUIDEADM_FIELD_MODIFIED_BY"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_MODIFIED_BY"/>
+
+		<field name="ordering"
+				alias="ordering"
+				label="GUIDEADM_FIELD_ORDERING"
+				filter="INT"
+				access="core.edit.state"
+				type="ckordering"
+				labelKey="name"
+				validate="default"
+				class=""/>
+
+		<field name="hits"
+				alias="hits"
+				label="GUIDEADM_FIELD_HITS"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="published"
+				default="0"
+				alias="published"
+				label="GUIDEADM_FIELD_PUBLISHED"
+				filter="INT"
+				access="core.edit.state"
+				listKey="value"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="my_joomla_access"
+				alias="_my_joomla_access_title"
+				label="GUIDEADM_FIELD_VIEWLEVELS"
+				filter="INT"
+				type="accesslevel"/>
+
+		<field name="my_joomla_user"
+				alias="_my_joomla_user_name"
+				label="GUIDEADM_FIELD_JOOMLA_USER"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_JOOMLA_USER"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_catid"
+				listKey="id"
+				labelKey="MGcat"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_CATEGORY"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_CATEGORY"
+				ui="chosen"/>
+
+		<field name="filter_company_id"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_COMPANY"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_COMPANY"
+				ui="chosen"/>
+
+		<field name="filter_business_type_country_id"
+				listKey="id"
+				labelKey="id"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_COUNTRY"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_COUNTRY"
+				ui="chosen"/>
+
+		<field name="filter_birthdate"
+				type="calendar"
+				placeholder="GUIDEADM_FILTER_NULL_BIRTHDATE"
+				format="%d-%m-%Y"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"
+				onchange="this.form.submit();"
+				label="GUIDEADM_JSEARCH_BIRTHDATE"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_nationality"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_NATIONALITY"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_NATIONALITY"
+				ui="chosen"/>
+
+		<field name="filter_country_id"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_COUNTRY_NAME"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_COUNTRY_NAME"
+				ui="chosen"/>
+
+		<field name="filter_state_id"
+				listKey="id"
+				labelKey="state"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_STATE_PROVINCE"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_STATE_PROVINCE"
+				ui="chosen"/>
+
+		<field name="filter_visits_id"
+				listKey="id"
+				labelKey="MGcat"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_CATEGORY"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_CATEGORY"
+				ui="chosen"/>
+
+		<field name="filter_creation_date"
+				type="calendar"
+				placeholder="GUIDEADM_FILTER_NULL_CREATION_DATE"
+				format="%Y-%m-%d"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"
+				onchange="this.form.submit();"
+				label="GUIDEADM_JSEARCH_CREATION_DATE"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_created_by"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_CREATED_BY"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_CREATED_BY"
+				ui="chosen"/>
+
+		<field name="filter_modification_date"
+				type="calendar"
+				placeholder="GUIDEADM_FILTER_NULL_MODIFICATION_DATE"
+				format="%Y-%m-%d"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"
+				onchange="this.form.submit();"
+				label="GUIDEADM_JSEARCH_MODIFICATION_DATE"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_modified_by"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_MODIFIED_BY"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_MODIFIED_BY"
+				ui="chosen"/>
+
+		<field name="filter_my_joomla_access"
+				listKey="id"
+				labelKey="title"
+				type="ckaccesslevel"
+				submit="true"
+				display="combo"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_ACCESS"
+				label="GUIDEADM_JSEARCH_VIEWLEVELS"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_my_joomla_user"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_JOOMLA_USER"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_JOOMLA_USER"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="GUIDEADM_FILTER_NULL_NAME_SURNAME_ALIAS_CONTACT_POSITION_EMAIL"
+				label="GUIDEADM_JSEARCH_NAME_SURNAME_ALIAS_CONTACT_POSITION_EMAIL"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fields name="settings"/>
+</form>

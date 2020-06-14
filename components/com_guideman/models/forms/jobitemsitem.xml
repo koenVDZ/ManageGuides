@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="jobitemsitem.jobitemfform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_SERVICE">
+
+		<field name="job_id"
+				alias="_job_id_file_number"
+				label="GUIDEMAN_FIELD_FILE_NUMBER"
+				filter="INT"
+				listKey="id"
+				labelKey="file_number"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_FILE_NUMBER"
+				validate="default"
+				class=""/>
+
+		<field name="type"
+				alias="type"
+				label="GUIDEMAN_FIELD_TYPE"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_TYPE"
+				enum="jobitems_type"
+				validate="default"
+				class=""/>
+
+		<field name="item_status"
+				alias="item_status"
+				label="GUIDEMAN_FIELD_ITEM_STATUS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_ITEM_STATUS"
+				enum="jobitems_item_status"/>
+
+		<field name="start_date"
+				alias="start_date"
+				label="GUIDEMAN_FIELD_START_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="start_time"
+				alias="start_time"
+				label="GUIDEMAN_FIELD_START_TIME"
+				filter="STRING"
+				type="cktime"
+				format="H:i"/>
+
+		<field name="end_date"
+				alias="end_date"
+				label="GUIDEMAN_FIELD_END_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="end_time"
+				alias="end_time"
+				label="GUIDEMAN_FIELD_END_TIME"
+				filter="STRING"
+				type="cktime"
+				format="H:i"/>
+
+		<field name="service"
+				alias="_service_service_name"
+				label="GUIDEMAN_FIELD_SERVICE_NAME"
+				filter="INT"
+				type="ckajax"
+				ajaxContext="guideman.contacts.ajax.groupby7"
+				validate="default"
+				class=""/>
+
+		<field name="service_provider"
+				alias="_service_provider_name"
+				label="GUIDEMAN_FIELD_SERVICE_PROVIDER"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_SERVICE_PROVIDER"
+				validate="default"
+				class=""/>
+
+		<field name="service_provider_status"
+				alias="service_provider_status"
+				label="GUIDEMAN_FIELD_SERVICE_PROVIDER_STATUS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_SERVICE_PROVIDER_STATUS"
+				enum="jobitems_service_provider_status"
+				validate="default"
+				class=""/>
+
+		<field name="guide"
+				alias="_guide_alias"
+				label="GUIDEMAN_FIELD_GUIDE"
+				filter="INT"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_GUIDE"
+				validate="default"
+				class=""/>
+
+		<field name="guide_status"
+				alias="guide_status"
+				label="GUIDEMAN_FIELD_GUIDE_STATUS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_GUIDE_STATUS"
+				enum="jobitems_guide_status"
+				validate="default"
+				class=""/>
+
+		<field name="optional"
+				alias="optional"
+				label="GUIDEMAN_FIELD_OPTIONAL_SOLD_BY_GUIDE"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				viewType="both"
+				validate="default"
+				class="">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="transport"
+				alias="_transport_name"
+				label="GUIDEMAN_FIELD_TRANSPORT_COMPANY"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_TRANSPORT_COMPANY"
+				validate="default"
+				class=""/>
+
+		<field name="transport_status"
+				alias="transport_status"
+				label="GUIDEMAN_FIELD_TRANSPORT_STATUS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_TRANSPORT_STATUS"
+				enum="jobitems_transport_status"
+				validate="default"
+				class=""/>
+
+		<field name="driver"
+				alias="_driver_alias"
+				label="GUIDEMAN_FIELD_DRIVER"
+				filter="INT"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_DRIVER"
+				validate="default"
+				class=""/>
+
+		<field name="pax"
+				alias="pax"
+				label="GUIDEMAN_FIELD_PAX"
+				filter="INT"
+				size="5"
+				type="cktext"
+				validate="positiveinteger"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="total_debet"
+				alias="total_debet"
+				label="GUIDEMAN_FIELD_TOTAL_DEBET"
+				filter="FLOAT"
+				numericFormat="10,2"
+				type="cktext"
+				validate="positivedecimal"
+				class="validate[custom[positivedecimal]]"/>
+
+		<field name="total_credit"
+				alias="total_credit"
+				label="GUIDEMAN_FIELD_TOTAL_CREDIT"
+				filter="FLOAT"
+				numericFormat="10,2"
+				type="cktext"
+				validate="positivedecimal"
+				class="validate[custom[positivedecimal]]"/>
+
+		<field name="published"
+				default="0"
+				alias="published"
+				label="GUIDEMAN_FIELD_PUBLISHED"
+				filter="INT"
+				access="core.edit.state"
+				listKey="value"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="hotel.hotelform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_ACOMODATIONS">
+
+		<field name="type"
+				alias="type"
+				label="GUIDEMAN_FIELD_TYPE"
+				filter="STRING"
+				class="readonly"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_TYPE"
+				enum="jobitems_type"
+				validate="default"/>
+
+		<field name="job_id"
+				alias="_job_id_file_number"
+				label="GUIDEMAN_FIELD_FILE_NUMBER"
+				filter="INT"
+				listKey="id"
+				labelKey="file_number"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_FILE_NUMBER"
+				validate="default"
+				class=""/>
+
+		<field name="item_status"
+				alias="item_status"
+				label="GUIDEMAN_FIELD_ITEM_STATUS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_ITEM_STATUS"
+				enum="jobitems_item_status"/>
+
+		<field name="service_provider"
+				alias="_service_provider_name"
+				label="GUIDEMAN_FIELD_HOTEL"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_HOTEL"
+				validate="default"
+				class=""/>
+
+		<field name="service_provider_status"
+				alias="service_provider_status"
+				label="GUIDEMAN_FIELD_SERVICE_PROVIDER_STATUS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_SERVICE_PROVIDER_STATUS"
+				enum="jobitems_service_provider_status"
+				validate="default"
+				class=""/>
+
+		<field name="start_date"
+				alias="start_date"
+				label="GUIDEMAN_FIELD_START_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="start_time"
+				alias="start_time"
+				label="GUIDEMAN_FIELD_START_TIME"
+				filter="STRING"
+				type="cktime"
+				format="H:i"/>
+
+		<field name="end_date"
+				alias="end_date"
+				label="GUIDEMAN_FIELD_END_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="end_time"
+				alias="end_time"
+				label="GUIDEMAN_FIELD_END_TIME"
+				filter="STRING"
+				type="cktime"
+				format="H:i"/>
+
+		<field name="pax"
+				alias="pax"
+				label="GUIDEMAN_FIELD_PAX"
+				filter="INT"
+				type="cktext"
+				validate="positiveinteger"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="total_debet"
+				alias="total_debet"
+				label="GUIDEMAN_FIELD_TOTAL_DEBET"
+				filter="FLOAT"
+				numericFormat="10,2"
+				type="cktext"
+				validate="positivedecimal"
+				class="validate[custom[positivedecimal]]"/>
+
+		<field name="total_credit"
+				alias="total_credit"
+				label="GUIDEMAN_FIELD_TOTAL_CREDIT"
+				filter="FLOAT"
+				numericFormat="10,2"
+				type="cktext"
+				validate="positivedecimal"
+				class="validate[custom[positivedecimal]]"/>
+
+		<field name="remark"
+				alias="remark"
+				label="GUIDEMAN_FIELD_REMARK"
+				filter="STRING"
+				type="cktextarea"/>
+	</fieldset>
+
+	<fieldset name="restaurant.restaurantform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_RESTAURANT">
+
+		<field name="job_id"
+				alias="_job_id_file_number"
+				label="GUIDEMAN_FIELD_FILE_NUMBER"
+				filter="INT"
+				listKey="id"
+				labelKey="file_number"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_FILE_NUMBER"
+				validate="default"
+				class=""/>
+
+		<field name="type"
+				alias="type"
+				label="GUIDEMAN_FIELD_TYPE"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_TYPE"
+				enum="jobitems_type"
+				validate="default"
+				class=""/>
+
+		<field name="item_status"
+				alias="item_status"
+				label="GUIDEMAN_FIELD_ITEM_STATUS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_ITEM_STATUS"
+				enum="jobitems_item_status"/>
+
+		<field name="service_provider"
+				alias="_service_provider_name"
+				label="GUIDEMAN_FIELD_RESTAURANT"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_RESTAURANT"
+				validate="default"
+				class=""/>
+
+		<field name="service_provider_status"
+				alias="service_provider_status"
+				label="GUIDEMAN_FIELD_RESTAURANT_STATUS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_RESTAURANT_STATUS"
+				enum="jobitems_service_provider_status"
+				validate="default"
+				class=""/>
+
+		<field name="start_date"
+				alias="start_date"
+				label="GUIDEMAN_FIELD_START_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="start_time"
+				alias="start_time"
+				label="GUIDEMAN_FIELD_START_TIME"
+				filter="STRING"
+				type="cktime"
+				format="H:i"/>
+
+		<field name="end_time"
+				alias="end_time"
+				label="GUIDEMAN_FIELD_END_TIME"
+				filter="STRING"
+				type="cktime"
+				format="H:i"/>
+
+		<field name="pax"
+				alias="pax"
+				label="GUIDEMAN_FIELD_PAX"
+				filter="INT"
+				type="cktext"
+				validate="positiveinteger"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="guide"
+				alias="_guide_alias"
+				label="GUIDEMAN_FIELD_GUIDE"
+				filter="INT"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_GUIDE"
+				validate="default"
+				class=""/>
+
+		<field name="total_debet"
+				alias="total_debet"
+				label="GUIDEMAN_FIELD_TOTAL_DEBET"
+				filter="FLOAT"
+				numericFormat="10,2"
+				type="cktext"
+				validate="positivedecimal"
+				class="validate[custom[positivedecimal]]"/>
+
+		<field name="total_credit"
+				alias="total_credit"
+				label="GUIDEMAN_FIELD_TOTAL_CREDIT"
+				filter="FLOAT"
+				numericFormat="10,2"
+				type="cktext"
+				validate="positivedecimal"
+				class="validate[custom[positivedecimal]]"/>
+
+		<field name="remark"
+				alias="remark"
+				label="GUIDEMAN_FIELD_REMARK"
+				filter="STRING"
+				type="cktextarea"/>
+	</fieldset>
+
+	<fieldset name="attraction.attractionform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_ATTRACTION">
+
+		<field name="job_id"
+				alias="_job_id_file_number"
+				label="GUIDEMAN_FIELD_FILE_NUMBER"
+				filter="INT"
+				listKey="id"
+				labelKey="file_number"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_FILE_NUMBER"
+				validate="default"
+				class=""/>
+
+		<field name="type"
+				alias="type"
+				label="GUIDEMAN_FIELD_TYPE"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_TYPE"
+				enum="jobitems_type"
+				validate="default"
+				class=""/>
+
+		<field name="item_status"
+				alias="item_status"
+				label="GUIDEMAN_FIELD_ITEM_STATUS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_ITEM_STATUS"
+				enum="jobitems_item_status"/>
+
+		<field name="service_provider"
+				alias="_service_provider_name"
+				label="GUIDEMAN_FIELD_ATTRACTION"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_ATTRACTION"
+				validate="default"
+				class=""/>
+
+		<field name="service_provider_status"
+				alias="service_provider_status"
+				label="GUIDEMAN_FIELD_ATTRACTION_STATUS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_ATTRACTION_STATUS"
+				enum="jobitems_service_provider_status"
+				validate="default"
+				class=""/>
+
+		<field name="start_date"
+				alias="start_date"
+				label="GUIDEMAN_FIELD_START_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="start_time"
+				alias="start_time"
+				label="GUIDEMAN_FIELD_START_TIME"
+				filter="STRING"
+				type="cktime"
+				format="H:i"/>
+
+		<field name="end_date"
+				alias="end_date"
+				label="GUIDEMAN_FIELD_END_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="end_time"
+				alias="end_time"
+				label="GUIDEMAN_FIELD_END_TIME"
+				filter="STRING"
+				type="cktime"
+				format="H:i"/>
+
+		<field name="pax"
+				alias="pax"
+				label="GUIDEMAN_FIELD_PAX"
+				filter="INT"
+				type="cktext"
+				validate="positiveinteger"
+				class="validate[custom[positiveinteger]]"/>
+
+		<field name="total_debet"
+				alias="total_debet"
+				label="GUIDEMAN_FIELD_TOTAL_DEBET"
+				filter="FLOAT"
+				numericFormat="10,2"
+				type="cktext"
+				validate="positivedecimal"
+				class="validate[custom[positivedecimal]]"/>
+
+		<field name="total_credit"
+				alias="total_credit"
+				label="GUIDEMAN_FIELD_TOTAL_CREDIT"
+				filter="FLOAT"
+				numericFormat="10,2"
+				type="cktext"
+				validate="positivedecimal"
+				class="validate[custom[positivedecimal]]"/>
+
+		<field name="remark"
+				alias="remark"
+				label="GUIDEMAN_FIELD_REMARK"
+				filter="STRING"
+				type="cktextarea"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_item_status"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SERVICE_STATUS"
+				enum="jobitems_item_status"
+				label="GUIDEMAN_JSEARCH_SERVICE_STATUS"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_job_id"
+				listKey="id"
+				labelKey="file_number"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SERVICE_ORDER"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_SERVICE_ORDER"
+				ui="chosen"/>
+
+		<field name="filter_job_id_company_id"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_COMPANY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_COMPANY"
+				ui="chosen"/>
+
+		<field name="filter_job_id_operator_name"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_OPERATOR"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_OPERATOR"
+				ui="chosen"/>
+
+		<field name="filter_transport"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_TRANSPORT_COMPANY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_TRANSPORT_COMPANY"
+				ui="chosen"/>
+
+		<field name="filter_driver"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_DRIVER"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_DRIVER"
+				ui="chosen"/>
+
+		<field name="filter_guide"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_GUIDE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_GUIDE"
+				ui="chosen"/>
+
+		<field name="filter_start_date"
+				type="calendar"
+				placeholder="GUIDEMAN_FILTER_NULL_START_DATE"
+				format="%d-%m-%Y"
+				filter="USER_UTC"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"
+				onchange="this.form.submit();"
+				label="GUIDEMAN_JSEARCH_START_DATE"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

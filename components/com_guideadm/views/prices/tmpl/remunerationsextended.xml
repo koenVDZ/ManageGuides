@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEADM_LAYOUT_REMUNERATIONS_EXTENDED">
+	<message>
+		<![CDATA[GUIDEADM_LAYOUT_SHOW_REMUNERATIONS_EXTENDED_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEADM_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_company"
+					label="GUIDEADM_JSEARCH_FILTER_COMPANY"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NAME"
+					type="modal_contact"/>
+
+			<field name="filter_currency"
+					label="GUIDEADM_JSEARCH_FILTER_CURRENCY"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_CURRENCY"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_CURRENCY_ID"
+					type="modal_currency"/>
+
+			<field name="filter_min_time_from"
+					label="GUIDEADM_JSEARCH_FILTER_MIN_TIME_FROM"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_MIN_TIME_FROM"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_MIN_TIME"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_min_time_to"
+					label="GUIDEADM_JSEARCH_FILTER_MIN_TIME_TO"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_MIN_TIME_TO"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_MIN_TIME"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_from_date"
+					label="GUIDEADM_JSEARCH_FILTER_FROM_DATE"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_FROM_DATE"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_FROM_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_until_date"
+					label="GUIDEADM_JSEARCH_FILTER_UNTIL_DATE"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_UNTIL_DATE"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_UNTIL_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_night_shift_from"
+					label="GUIDEADM_JSEARCH_FILTER_NIGHT_SHIFT_FROM"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_NIGHT_SHIFT_FROM"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NIGHT_SHIFT"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_night_shift_to"
+					label="GUIDEADM_JSEARCH_FILTER_NIGHT_SHIFT_TO"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_NIGHT_SHIFT_TO"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NIGHT_SHIFT"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_created_by"
+					label="GUIDEADM_JSEARCH_FILTER_CREATED_BY"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_USER"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NAME"
+					type="modal_thirduser"/>
+
+			<field name="filter_creation_date_from"
+					label="GUIDEADM_JSEARCH_FILTER_CREATION_DATE_FROM"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_CREATION_DATE_FROM"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_CREATION_DATE"
+					format="Y-m-d H:i:s"
+					type="ckcalendar"/>
+
+			<field name="filter_creation_date_to"
+					label="GUIDEADM_JSEARCH_FILTER_CREATION_DATE_TO"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_CREATION_DATE_TO"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_CREATION_DATE"
+					format="Y-m-d H:i:s"
+					type="ckcalendar"/>
+
+			<field name="filter_modified_by"
+					label="GUIDEADM_JSEARCH_FILTER_MODIFIED_BY"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_USER"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NAME"
+					type="modal_thirduser"/>
+
+			<field name="filter_modification_date_from"
+					label="GUIDEADM_JSEARCH_FILTER_MODIFICATION_DATE_FROM"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_MODIFICATION_DATE_FROM"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_MODIFICATION_DATE"
+					format="Y-m-d H:i:s"
+					type="ckcalendar"/>
+
+			<field name="filter_modification_date_to"
+					label="GUIDEADM_JSEARCH_FILTER_MODIFICATION_DATE_TO"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_MODIFICATION_DATE_TO"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_MODIFICATION_DATE"
+					format="Y-m-d H:i:s"
+					type="ckcalendar"/>
+
+			<field name="filter_access"
+					label="GUIDEADM_JSEARCH_FILTER_ACCESS"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_VIEWLEVEL"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_TITLE"
+					type="modal_thirdviewlevel"/>
+
+			<field name="filter_search_2"
+					label="GUIDEADM_JSEARCH_FILTER_NAME"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_NAME"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NAME"/>
+		</fieldset>
+	</fields>
+</metadata>

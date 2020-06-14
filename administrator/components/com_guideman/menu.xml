@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<config>
+
+	<menu name="cpanel"/>
+
+	<menu name="menu">
+
+		<item		label="GUIDEMAN_LAYOUT_CONTROL_PANEL"
+				description="GUIDEMAN_LAYOUT_SHOW_CONTROL_PANEL_LAYOUT"
+				type="layout"
+				view="cpanel"
+				layout="default"
+				icon="guideman_cpanel"/>
+	</menu>
+</config>

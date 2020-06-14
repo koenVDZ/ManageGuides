@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_SERVICES_WITH_PRICING">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_SERVICES_WITH_PRICING_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_company"
+					label="GUIDEMAN_JSEARCH_FILTER_COMPANY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_state"
+					label="GUIDEMAN_JSEARCH_FILTER_STATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_STATE_1"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_STATE"
+					type="modalpicker"
+					model="states"
+					labelKey="state"/>
+
+			<field name="filter_private_tour"
+					label="GUIDEMAN_JSEARCH_FILTER_PRIVATE_TOUR"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PRIVATE_TOUR"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PRIVATE_TOUR"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+			</field>
+
+			<field name="filter_entrance_fees"
+					label="GUIDEMAN_JSEARCH_FILTER_ENTRANCE_FEES"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_ENTRANCE_FEES"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_ENTRANCE_FEES"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+			</field>
+
+			<field name="filter_kid_friendly"
+					label="GUIDEMAN_JSEARCH_FILTER_KID_FRIENDLY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_KID_FRIENDLY"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_KID_FRIENDLY"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+			</field>
+
+			<field name="filter_disabled_friendly"
+					label="GUIDEMAN_JSEARCH_FILTER_DISABLED_FRIENDLY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_DISABLED_FRIENDLY"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_DISABLED_FRIENDLY"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+			</field>
+
+			<field name="filter_activity_level"
+					label="GUIDEMAN_JSEARCH_FILTER_ACTIVITY_LEVEL"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_ACTIVITY_LEVEL"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_ACTIVITY_LEVEL"
+					type="enum"
+					enum="services_activity_level"/>
+		</fieldset>
+	</fields>
+</metadata>

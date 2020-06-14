@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEADM_LAYOUT_PRICING">
+	<message>
+		<![CDATA[GUIDEADM_LAYOUT_SHOW_PRICING_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEADM_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_company"
+					label="GUIDEADM_JSEARCH_FILTER_COMPANY"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NAME"
+					type="modal_contact"/>
+
+			<field name="filter_remuneration"
+					label="GUIDEADM_JSEARCH_FILTER_REMUNERATION"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_REMUNERATION"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_REMUNERATION"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+			</field>
+
+			<field name="filter_from_date"
+					label="GUIDEADM_JSEARCH_FILTER_FROM_DATE"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_FROM_DATE"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_FROM_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_until_date"
+					label="GUIDEADM_JSEARCH_FILTER_UNTIL_DATE"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_UNTIL_DATE"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_UNTIL_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_search_1"
+					label="GUIDEADM_JSEARCH_FILTER_NAME"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_NAME"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NAME"/>
+		</fieldset>
+	</fields>
+</metadata>

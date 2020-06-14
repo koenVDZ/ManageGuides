@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_REMUNERATIONS">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_REMUNERATIONS_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_from_date"
+					label="GUIDEMAN_JSEARCH_FILTER_FROM_DATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_FROM_DATE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_FROM_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_until_date"
+					label="GUIDEMAN_JSEARCH_FILTER_UNTIL_DATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_UNTIL_DATE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_UNTIL_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_pax_01_from"
+					label="GUIDEMAN_JSEARCH_FILTER_PAX_01_FROM"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PAX_01_FROM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PAX_01"/>
+
+			<field name="filter_pax_01_to"
+					label="GUIDEMAN_JSEARCH_FILTER_PAX_01_TO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PAX_01_TO"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PAX_01"/>
+
+			<field name="filter_currency"
+					label="GUIDEMAN_JSEARCH_FILTER_CURRENCY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CURRENCY"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_TITLE"
+					type="modalpicker"
+					model="currencies"
+					labelKey="currency_id"/>
+
+			<field name="filter_min_time_from"
+					label="GUIDEMAN_JSEARCH_FILTER_MIN_TIME_FROM"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_MIN_TIME_FROM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_MIN_TIME"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_min_time_to"
+					label="GUIDEMAN_JSEARCH_FILTER_MIN_TIME_TO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_MIN_TIME_TO"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_MIN_TIME"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_night_shift_from"
+					label="GUIDEMAN_JSEARCH_FILTER_NIGHT_SHIFT_FROM"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT_FROM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_night_shift_to"
+					label="GUIDEMAN_JSEARCH_FILTER_NIGHT_SHIFT_TO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT_TO"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT"
+					format="H:i"
+					type="cktime"/>
+		</fieldset>
+	</fields>
+</metadata>

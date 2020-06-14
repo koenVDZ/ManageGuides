@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<config>
+
+	<menu name="cpanel">
+
+		<item		label="GUIDEMAN_LAYOUT_CONTACT_BANK_ACCOUNTS"
+				description="GUIDEMAN_LAYOUT_SHOW_CONTACT_BANK_ACCOUNTS_LAYOUT"
+				type="layout"
+				view="accounts"
+				layout="default"
+				icon="guideman_accounts"/>
+
+		<item		label="GUIDEMAN_LAYOUT_ADDRESS_LABELS"
+				description="GUIDEMAN_LAYOUT_SHOW_ADDRESS_LABELS_LAYOUT"
+				type="layout"
+				view="addresslabels"
+				layout="default"
+				icon="guideman_addresslabels"/>
+
+		<item		label="GUIDEMAN_LAYOUT_CONTACT_ADDRESSES"
+				description="GUIDEMAN_LAYOUT_SHOW_CONTACT_ADDRESSES_LAYOUT"
+				type="layout"
+				view="addresses"
+				layout="default"
+				icon="guideman_addresses"/>
+
+		<item		label="GUIDEMAN_LAYOUT_BUSINESS_TYPES_BY_COUNTRY"
+				description="GUIDEMAN_LAYOUT_SHOW_BUSINESS_TYPES_BY_COUNTRY_LAYOUT"
+				type="layout"
+				view="businesstypes"
+				layout="default"
+				icon="guideman_businesstypes"/>
+
+		<item		label="GUIDEMAN_LAYOUT_CONTACTLANG"
+				description="GUIDEMAN_LAYOUT_SHOW_CONTACTLANG_LAYOUT"
+				type="layout"
+				view="contactlang"
+				layout="default"
+				icon="guideman_contactlang"/>
+
+		<item		label="GUIDEMAN_LAYOUT_GUIDE_SEARCH"
+				description="GUIDEMAN_LAYOUT_SHOW_GUIDE_SEARCH_LAYOUT"
+				type="layout"
+				view="contactlang"
+				layout="usrguidesearch"
+				icon="guideman_contactlang"/>
+
+		<item		label="GUIDEMAN_LAYOUT_COUNTRIES_DATA"
+				description="GUIDEMAN_LAYOUT_SHOW_COUNTRIES_DATA_LAYOUT"
+				type="layout"
+				view="countries"
+				layout="countriesdata"
+				icon="guideman_countries"/>
+
+		<item		label="GUIDEMAN_LAYOUT_COUNTRIES"
+				description="GUIDEMAN_LAYOUT_SHOW_COUNTRIES_LAYOUT"
+				type="layout"
+				view="countries"
+				layout="default"
+				icon="guideman_countries"/>
+
+		<item		label="GUIDEMAN_LAYOUT_CONTACTS"
+				description="GUIDEMAN_LAYOUT_SHOW_CONTACTS_LAYOUT"
+				type="layout"
+				view="contacts"
+				layout="default"
+				icon="guideman_contacts"/>
+
+		<item		label="GUIDEMAN_LAYOUT_COMPANIES"
+				description="GUIDEMAN_LAYOUT_SHOW_COMPANIES_LAYOUT"
+				type="layout"
+				view="contacts"
+				layout="companies"
+				icon="guideman_contacts"/>
+
+		<item		label="GUIDEMAN_LAYOUT_DOCUMENT_LABEL_DEFINITIONS"
+				description="GUIDEMAN_LAYOUT_SHOW_DOCUMENT_LABEL_DEFINITIONS_LAYOUT"
+				type="layout"
+				view="doclabels"
+				layout="default"
+				icon="guideman_doclabels"/>
+
+		<item		label="GUIDEMAN_LAYOUT_DOCUMENTS"
+				description="GUIDEMAN_LAYOUT_SHOW_DOCUMENTS_LAYOUT"
+				type="layout"
+				view="documents"
+				layout="default"
+				icon="guideman_documents"/>
+
+		<item		label="GUIDEMAN_LAYOUT_JOBS_SERVICE_ORDERS"
+				description="GUIDEMAN_LAYOUT_SHOW_JOBS_SERVICE_ORDERS_LAYOUT"
+				type="layout"
+				view="jobs"
+				layout="default"
+				icon="guideman_jobs"/>
+
+		<item		label="GUIDEMAN_LAYOUT_JOB_ITEMS"
+				description="GUIDEMAN_LAYOUT_SHOW_JOB_ITEMS_LAYOUT"
+				type="layout"
+				view="jobitems"
+				layout="default"
+				icon="guideman_jobitems"/>
+
+		<item		label="GUIDEMAN_LAYOUT_PHONE_LABELS"
+				description="GUIDEMAN_LAYOUT_SHOW_PHONE_LABELS_LAYOUT"
+				type="layout"
+				view="phonelabels"
+				layout="default"
+				icon="guideman_phonelabels"/>
+
+		<item		label="GUIDEMAN_LAYOUT_PHONES"
+				description="GUIDEMAN_LAYOUT_SHOW_PHONES_LAYOUT"
+				type="layout"
+				view="phones"
+				layout="default"
+				icon="guideman_phones"/>
+
+		<item		label="GUIDEMAN_LAYOUT_POLICIES"
+				description="GUIDEMAN_LAYOUT_SHOW_POLICIES_LAYOUT"
+				type="layout"
+				view="policies"
+				layout="default"
+				icon="guideman_policies"/>
+
+		<item		label="GUIDEMAN_LAYOUT_REMUNERATIONS"
+				description="GUIDEMAN_LAYOUT_SHOW_REMUNERATIONS_LAYOUT"
+				type="layout"
+				view="prices"
+				layout="usrremun"
+				icon="guideman_prices"/>
+
+		<item		label="GUIDEMAN_LAYOUT_PRICES"
+				description="GUIDEMAN_LAYOUT_SHOW_PRICES_LAYOUT"
+				type="layout"
+				view="prices"
+				layout="default"
+				icon="guideman_prices"/>
+
+		<item		label="GUIDEMAN_LAYOUT_REMUNERATIONS_BY_TYPE_OF_SERVICE"
+				description="GUIDEMAN_LAYOUT_SHOW_REMUNERATIONS_BY_TYPE_OF_SERVICE_LAYOUT"
+				type="layout"
+				view="prices"
+				layout="useremunbygrouper"
+				icon="guideman_prices"/>
+
+		<item		label="GUIDEMAN_LAYOUT_PRICES_SERVICES_BY_TYPE_OF_SERVICE"
+				description="GUIDEMAN_LAYOUT_SHOW_PRICES_SERVICES_BY_TYPE_OF_SERVICE_LAYOUT"
+				type="layout"
+				view="prices"
+				layout="usrpricesbygrouper"
+				icon="guideman_prices"/>
+
+		<item		label="GUIDEMAN_LAYOUT_SERVICES_WITH_PRICING"
+				description="GUIDEMAN_LAYOUT_SHOW_SERVICES_WITH_PRICING_LAYOUT"
+				type="layout"
+				view="services"
+				layout="default"
+				icon="guideman_services"/>
+
+		<item		label="GUIDEMAN_LAYOUT_SERVICOS"
+				description="GUIDEMAN_LAYOUT_SHOW_SERVICOS_LAYOUT"
+				type="layout"
+				view="servicos"
+				layout="default"
+				icon="guideman_servicos"/>
+
+		<item		label="GUIDEMAN_LAYOUT_SOCIAL"
+				description="GUIDEMAN_LAYOUT_SHOW_SOCIAL_LAYOUT"
+				type="layout"
+				view="social"
+				layout="default"
+				icon="guideman_social"/>
+
+		<item		label="GUIDEMAN_LAYOUT_VEHICLES"
+				description="GUIDEMAN_LAYOUT_SHOW_VEHICLES_LAYOUT"
+				type="layout"
+				view="vehicles"
+				layout="default"
+				icon="guideman_vehicles"/>
+	</menu>
+
+	<menu name="menu">
+
+		<item		label="GUIDEMAN_LAYOUT_CONTROL_PANEL"
+				description="GUIDEMAN_LAYOUT_SHOW_CONTROL_PANEL_LAYOUT"
+				type="layout"
+				view="cpanel"
+				layout="default"
+				icon="guideman_cpanel"/>
+
+		<item		label="GUIDEMAN_LAYOUT_CONTACT_BANK_ACCOUNTS"
+				description="GUIDEMAN_LAYOUT_SHOW_CONTACT_BANK_ACCOUNTS_LAYOUT"
+				type="layout"
+				view="accounts"
+				layout="default"
+				icon="guideman_accounts"/>
+
+		<item		label="GUIDEMAN_LAYOUT_ADDRESS_LABELS"
+				description="GUIDEMAN_LAYOUT_SHOW_ADDRESS_LABELS_LAYOUT"
+				type="layout"
+				view="addresslabels"
+				layout="default"
+				icon="guideman_addresslabels"/>
+
+		<item		label="GUIDEMAN_LAYOUT_CONTACT_ADDRESSES"
+				description="GUIDEMAN_LAYOUT_SHOW_CONTACT_ADDRESSES_LAYOUT"
+				type="layout"
+				view="addresses"
+				layout="default"
+				icon="guideman_addresses"/>
+
+		<item		label="GUIDEMAN_LAYOUT_BUSINESS_TYPES_BY_COUNTRY"
+				description="GUIDEMAN_LAYOUT_SHOW_BUSINESS_TYPES_BY_COUNTRY_LAYOUT"
+				type="layout"
+				view="businesstypes"
+				layout="default"
+				icon="guideman_businesstypes"/>
+
+		<item		label="GUIDEMAN_LAYOUT_CONTACTLANG"
+				description="GUIDEMAN_LAYOUT_SHOW_CONTACTLANG_LAYOUT"
+				type="layout"
+				view="contactlang"
+				layout="default"
+				icon="guideman_contactlang"/>
+
+		<item		label="GUIDEMAN_LAYOUT_GUIDE_SEARCH"
+				description="GUIDEMAN_LAYOUT_SHOW_GUIDE_SEARCH_LAYOUT"
+				type="layout"
+				view="contactlang"
+				layout="usrguidesearch"
+				icon="guideman_contactlang"/>
+
+		<item		label="GUIDEMAN_LAYOUT_COUNTRIES_DATA"
+				description="GUIDEMAN_LAYOUT_SHOW_COUNTRIES_DATA_LAYOUT"
+				type="layout"
+				view="countries"
+				layout="countriesdata"
+				icon="guideman_countries"/>
+
+		<item		label="GUIDEMAN_LAYOUT_COUNTRIES"
+				description="GUIDEMAN_LAYOUT_SHOW_COUNTRIES_LAYOUT"
+				type="layout"
+				view="countries"
+				layout="default"
+				icon="guideman_countries"/>
+
+		<item		label="GUIDEMAN_LAYOUT_CONTACTS"
+				description="GUIDEMAN_LAYOUT_SHOW_CONTACTS_LAYOUT"
+				type="layout"
+				view="contacts"
+				layout="default"
+				icon="guideman_contacts"/>
+
+		<item		label="GUIDEMAN_LAYOUT_COMPANIES"
+				description="GUIDEMAN_LAYOUT_SHOW_COMPANIES_LAYOUT"
+				type="layout"
+				view="contacts"
+				layout="companies"
+				icon="guideman_contacts"/>
+
+		<item		label="GUIDEMAN_LAYOUT_DOCUMENT_LABEL_DEFINITIONS"
+				description="GUIDEMAN_LAYOUT_SHOW_DOCUMENT_LABEL_DEFINITIONS_LAYOUT"
+				type="layout"
+				view="doclabels"
+				layout="default"
+				icon="guideman_doclabels"/>
+
+		<item		label="GUIDEMAN_LAYOUT_DOCUMENTS"
+				description="GUIDEMAN_LAYOUT_SHOW_DOCUMENTS_LAYOUT"
+				type="layout"
+				view="documents"
+				layout="default"
+				icon="guideman_documents"/>
+
+		<item		label="GUIDEMAN_LAYOUT_JOBS_SERVICE_ORDERS"
+				description="GUIDEMAN_LAYOUT_SHOW_JOBS_SERVICE_ORDERS_LAYOUT"
+				type="layout"
+				view="jobs"
+				layout="default"
+				icon="guideman_jobs"/>
+
+		<item		label="GUIDEMAN_LAYOUT_JOB_ITEMS"
+				description="GUIDEMAN_LAYOUT_SHOW_JOB_ITEMS_LAYOUT"
+				type="layout"
+				view="jobitems"
+				layout="default"
+				icon="guideman_jobitems"/>
+
+		<item		label="GUIDEMAN_LAYOUT_PHONE_LABELS"
+				description="GUIDEMAN_LAYOUT_SHOW_PHONE_LABELS_LAYOUT"
+				type="layout"
+				view="phonelabels"
+				layout="default"
+				icon="guideman_phonelabels"/>
+
+		<item		label="GUIDEMAN_LAYOUT_PHONES"
+				description="GUIDEMAN_LAYOUT_SHOW_PHONES_LAYOUT"
+				type="layout"
+				view="phones"
+				layout="default"
+				icon="guideman_phones"/>
+
+		<item		label="GUIDEMAN_LAYOUT_POLICIES"
+				description="GUIDEMAN_LAYOUT_SHOW_POLICIES_LAYOUT"
+				type="layout"
+				view="policies"
+				layout="default"
+				icon="guideman_policies"/>
+
+		<item		label="GUIDEMAN_LAYOUT_REMUNERATIONS"
+				description="GUIDEMAN_LAYOUT_SHOW_REMUNERATIONS_LAYOUT"
+				type="layout"
+				view="prices"
+				layout="usrremun"
+				icon="guideman_prices"/>
+
+		<item		label="GUIDEMAN_LAYOUT_PRICES"
+				description="GUIDEMAN_LAYOUT_SHOW_PRICES_LAYOUT"
+				type="layout"
+				view="prices"
+				layout="default"
+				icon="guideman_prices"/>
+
+		<item		label="GUIDEMAN_LAYOUT_REMUNERATIONS_BY_TYPE_OF_SERVICE"
+				description="GUIDEMAN_LAYOUT_SHOW_REMUNERATIONS_BY_TYPE_OF_SERVICE_LAYOUT"
+				type="layout"
+				view="prices"
+				layout="useremunbygrouper"
+				icon="guideman_prices"/>
+
+		<item		label="GUIDEMAN_LAYOUT_PRICES_SERVICES_BY_TYPE_OF_SERVICE"
+				description="GUIDEMAN_LAYOUT_SHOW_PRICES_SERVICES_BY_TYPE_OF_SERVICE_LAYOUT"
+				type="layout"
+				view="prices"
+				layout="usrpricesbygrouper"
+				icon="guideman_prices"/>
+
+		<item		label="GUIDEMAN_LAYOUT_SERVICES_WITH_PRICING"
+				description="GUIDEMAN_LAYOUT_SHOW_SERVICES_WITH_PRICING_LAYOUT"
+				type="layout"
+				view="services"
+				layout="default"
+				icon="guideman_services"/>
+
+		<item		label="GUIDEMAN_LAYOUT_SERVICOS"
+				description="GUIDEMAN_LAYOUT_SHOW_SERVICOS_LAYOUT"
+				type="layout"
+				view="servicos"
+				layout="default"
+				icon="guideman_servicos"/>
+
+		<item		label="GUIDEMAN_LAYOUT_SOCIAL"
+				description="GUIDEMAN_LAYOUT_SHOW_SOCIAL_LAYOUT"
+				type="layout"
+				view="social"
+				layout="default"
+				icon="guideman_social"/>
+
+		<item		label="GUIDEMAN_LAYOUT_VEHICLES"
+				description="GUIDEMAN_LAYOUT_SHOW_VEHICLES_LAYOUT"
+				type="layout"
+				view="vehicles"
+				layout="default"
+				icon="guideman_vehicles"/>
+	</menu>
+</config>

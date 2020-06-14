@@ -1,0 +1,61 @@
+<div class="control-group field-jform_image">
+	<div class="control-label">
+		<label id="jform_image-lbl" for="jform_image">
+			Recto
+		</label>
+	</div>
+
+	<div class="controls">
+		<div style="border:dashed 3px #ccc; padding:5px; margin:5px;display:inline-block">
+			<img src="http://localhost/mg/images/guideman/documents_image/_cartao-habilitacao-koen-vandezande.jpg-0x50-cf.jpg">
+		</div>
+		<div class="clearfix"></div>
+		<input type="hidden" id="jform_image-current" name="jform[image-current]" value="cartao-habilitacao-koen-vandezande.jpg">
+		<input type="hidden" id="jform_image-remove" name="jform[image-remove]" value="">
+		<div class="btn-group">	
+			<div class="input-prepend input-append">
+				<span class="add-on">
+					<i class="icon-eye-open icomoon "></i>
+				</span>
+					<a class="btn dropdown-toggle" id="jform_image-deletebtn" data-toggle="dropdown">
+						<i class="icon-delete icomoon "></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a onclick="jQuery('input[id=jform_image-remove]').val('');jQuery('a[id=jform_image-deletebtn] i').attr('class', 'icon-cancel icomoon');">
+								<i style="margin-left:1em;float:right;" class="icon-cancel icomoon "></i>
+								Do not apply any changes.</a>
+						</li>
+						<li>
+							<a onclick="jQuery('input[id=jform_image-remove]').val('remove');jQuery('a[id=jform_image-deletebtn] i').attr('class', 'icon-out icomoon');">
+								<i style="margin-left:1em;float:right;" class="icon-out icomoon "></i>
+									Unlink and keep previous image file.
+							</a>
+						</li>
+						<li>
+							<a onclick="jQuery('input[id=jform_image-remove]').val('thumbs');jQuery('a[id=jform_image-deletebtn] i').attr('class', 'icon-pictures icomoon');">
+								<i style="margin-left:1em;float:right;" class="icon-pictures icomoon "></i>
+									Unlink and delete thumbs. Keep image file
+							</a>
+						</li>
+						<li>
+							<a onclick="jQuery('input[id=jform_image-remove]').val('trash');jQuery('a[id=jform_image-deletebtn] i').attr('class', 'icon-trash icomoon');>
+								<i style="margin-left:1em;float:right;" class="icon-trash icomoon "></i>
+								Trash image
+							</a>
+						</li>
+						<li>
+							<a onclick="jQuery('input[id=jform_image-remove]').val('delete');jQuery('a[id=jform_image-deletebtn] i').attr('class', 'icon-remove icomoon');">
+								<i style="margin-left:1em;float:right;" class="icon-remove icomoon "></i>
+									Delete all images and thumbs.
+							</a>
+						</li>
+					</ul>
+					<input onchange="jQuery(this).closest('div').find('#jform_image-view').val(jQuery(this).val());" type="file" id="jform_image" name="jform[image]" style="display:none;" value="cartao-habilitacao-koen-vandezande.jpg">
+					<input type="text" id="jform_image-view" name="" class="input-large inputfix " onfocus="jQuery(this).closest('div').find('input[id=\&quot;jform_image\&quot;]').trigger('click');" readonly="" value="cartao-habilitacao-koen-vandezande.jpg" size="32">
+						<a class="btn buttonfix" style="cursor:pointer;" onclick="jQuery('input[id=jform_image]').trigger(&quot;click&quot;);" type="button"><i class="icon-folder-open icomoon "></i></a>
+			</div>
+		</div>
+	Max : 1Mb		
+	</div>
+</div>

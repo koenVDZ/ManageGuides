@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_JOB_ITEMS">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_JOB_ITEMS_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_item_status"
+					label="GUIDEMAN_JSEARCH_FILTER_ITEM_STATUS"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_ITEM_STATUS"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_ITEM_STATUS"
+					type="enum"
+					enum="jobitems_item_status"/>
+
+			<field name="filter_job_id"
+					label="GUIDEMAN_JSEARCH_FILTER_JOB_ID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_JOBS_ITEM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_FILE_NUMBER"
+					type="modalpicker"
+					model="jobs"
+					labelKey="file_name"/>
+
+			<field name="filter_job_id_company_id"
+					label="GUIDEMAN_JSEARCH_FILTER_COMPANY_ID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_job_id_operator_name"
+					label="GUIDEMAN_JSEARCH_FILTER_OPERATOR_NAME"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_ALIAS"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_transport"
+					label="GUIDEMAN_JSEARCH_FILTER_TRANSPORT"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_driver"
+					label="GUIDEMAN_JSEARCH_FILTER_DRIVER"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_ALIAS"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_guide"
+					label="GUIDEMAN_JSEARCH_FILTER_GUIDE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_ALIAS"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_start_date"
+					label="GUIDEMAN_JSEARCH_FILTER_START_DATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_START_DATE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_START_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+		</fieldset>
+	</fields>
+</metadata>

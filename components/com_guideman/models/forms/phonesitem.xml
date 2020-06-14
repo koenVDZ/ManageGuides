@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="phonesitemown.usrphonesitemownform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_PHONE_DETAILED_INFORMATION">
+
+		<field name="user_id"
+				alias="_user_id_alias"
+				label="GUIDEMAN_FIELD_USER_NAME"
+				filter="INT"
+				description="GUIDEMAN_FIELD_USERID_OF_CONTACTS"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_USER_NAME"
+				validate="default"
+				msg-info="GUIDEMAN_VALIDATOR_USERID_OF_CONTACTS"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="default_phone"
+				alias="default_phone"
+				label="GUIDEMAN_FIELD_DEFAULT_PHONE"
+				filter="BOOL"
+				listKey="value"
+				type="ckcheckbox"
+				validate="default"
+				class="">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="label"
+				alias="_label_type"
+				label="GUIDEMAN_FIELD_LABEL"
+				filter="INT"
+				type="ckajax"
+				ajaxContext="guideman.lang.ajax.phones_label_ajax"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_LABEL"
+				validate="default"
+				class=""/>
+
+		<field name="cdc"
+				alias="_cdc_country_name"
+				label="GUIDEMAN_FIELD_COUNTRY_DIALING_CODE"
+				filter="INT"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_COUNTRY_DIALING_CODE"
+				validate="default"
+				class=""/>
+
+		<field name="number"
+				alias="number"
+				label="GUIDEMAN_FIELD_NUMBER"
+				filter="STRING"
+				type="cktext"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="operator"
+				alias="_operator_operator"
+				label="GUIDEMAN_FIELD_OPERATOR"
+				filter="INT"
+				description="GUIDEMAN_FIELD_OPERATOR_1"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.groupby9"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_OPERATOR"
+				validate="default"
+				msg-info="GUIDEMAN_VALIDATOR_OPERATOR"
+				class=""/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEADM_LAYOUT_PHONE_LABELS_ITEM_EDIT">
+	<message>
+		<![CDATA[GUIDEADM_LAYOUT_SHOW_PHONE_LABELS_ITEM_EDIT_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+			<field name="cid"
+					type="modal_phonelabelsitem"
+					label="GUIDEADM_JSEARCH_SELECT_PHONE_LABELS_ITEM"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_PHONE_LABELS_ITEM"/>
+		</fieldset>
+	</fields>
+</metadata>

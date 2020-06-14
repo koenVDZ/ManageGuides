@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="service.servicefform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_SERVICE_DETAIL">
+
+		<field name="company"
+				alias="_company_name"
+				label="GUIDEMAN_FIELD_COMPANY"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_COMPANY"
+				validate="default"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="service_name"
+				alias="service_name"
+				label="GUIDEMAN_FIELD_SERVICE_NAME_1"
+				filter="STRING"
+				size="50"
+				type="cktext"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="private_tour"
+				alias="private_tour"
+				label="GUIDEMAN_FIELD_PRIVATE_TOUR"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				viewType="both"
+				validate="default"
+				required="true"
+				class="validate[required]">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="entrance_fees"
+				default="1"
+				alias="entrance_fees"
+				label="GUIDEMAN_FIELD_ENTRANCE_FEES"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				viewType="both"
+				validate="default"
+				required="true"
+				class="validate[required]">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="duration"
+				alias="duration"
+				label="GUIDEMAN_FIELD_DURATION"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_DURATION"
+				enum="services_duration"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="meals"
+				alias="meals"
+				label="GUIDEMAN_FIELD_MEALS"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_MEALS"
+				enum="services_meals"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="description"
+				alias="description"
+				label="GUIDEMAN_FIELD_DESCRIPTION"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="state"
+				alias="_state_state"
+				label="GUIDEMAN_FIELD_COUNTRY_STATE"
+				filter="INT"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.groupby10"
+				validate="default"
+				class=""/>
+
+		<field name="kid_friendly"
+				default="1"
+				alias="kid_friendly"
+				label="GUIDEMAN_FIELD_KID_FRIENDLY"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				viewType="both"
+				validate="default"
+				required="true"
+				class="validate[required]">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="kid_comment"
+				alias="kid_comment"
+				label="GUIDEMAN_FIELD_KID_COMMENT"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="disabled_friendly"
+				default="1"
+				alias="disabled_friendly"
+				label="GUIDEMAN_FIELD_DISABLED_FRIENDLY"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				viewType="both"
+				validate="default"
+				required="true"
+				class="validate[required]">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="disabled_comment"
+				alias="disabled_comment"
+				label="GUIDEMAN_FIELD_DISABLED_COMMENT"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="activity_level"
+				alias="activity_level"
+				label="GUIDEMAN_FIELD_ACTIVITY_LEVEL"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_ACTIVITY_LEVEL"
+				enum="services_activity_level"
+				validate="default"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="activity_comment"
+				alias="activity_comment"
+				label="GUIDEMAN_FIELD_ACTIVITY_COMMENT"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="min_pax"
+				default="1"
+				alias="min_pax"
+				label="GUIDEMAN_FIELD_MIN_PAX"
+				filter="INT"
+				type="cktext"
+				validate="positiveinteger"
+				required="true"
+				class="validate[required,custom[positiveinteger]]"/>
+
+		<field name="max_pax"
+				default="1"
+				alias="max_pax"
+				label="GUIDEMAN_FIELD_MAX_PAX"
+				filter="INT"
+				type="cktext"
+				validate="positiveinteger"
+				required="true"
+				class="validate[required,custom[positiveinteger]]"/>
+
+		<field name="remunaration"
+				alias="_remunaration_name"
+				label="GUIDEMAN_FIELD_REMUNARATION"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_REMUNARATION"
+				validate="default"
+				class=""/>
+
+		<field name="costs"
+				alias="_costs_name"
+				label="GUIDEMAN_FIELD_SALES"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_SALES"
+				validate="default"
+				class=""/>
+
+		<field name="policy"
+				alias="_policy_name"
+				label="GUIDEMAN_FIELD_POLICY"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_POLICY"
+				validate="default"
+				class=""/>
+
+		<field name="image_01"
+				alias="image_01"
+				label="GUIDEMAN_FIELD_IMAGE_01"
+				filter="STRING"
+				type="ckfile"
+				view="service"
+				indirect="false"
+				root="[DIR_SERVICES_IMAGE_01]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.gif|*.jpg|*.jpeg|*.png"/>
+
+		<field name="image_02"
+				alias="image_02"
+				label="GUIDEMAN_FIELD_IMAGE_02"
+				filter="STRING"
+				type="ckfile"
+				view="service"
+				indirect="false"
+				root="[DIR_SERVICES_IMAGE_02]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.gif|*.jpg|*.jpeg|*.png"/>
+
+		<field name="image_03"
+				alias="image_03"
+				label="GUIDEMAN_FIELD_IMAGE_03"
+				filter="STRING"
+				type="ckfile"
+				view="service"
+				indirect="false"
+				root="[DIR_SERVICES_IMAGE_03]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.gif|*.jpg|*.jpeg|*.png"/>
+
+		<field name="image_04"
+				alias="image_04"
+				label="GUIDEMAN_FIELD_IMAGE_04"
+				filter="STRING"
+				type="ckfile"
+				view="service"
+				indirect="false"
+				root="[DIR_SERVICES_IMAGE_04]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.gif|*.jpg|*.jpeg|*.png"/>
+
+		<field name="image_05"
+				alias="image_05"
+				label="GUIDEMAN_FIELD_IMAGE_05"
+				filter="STRING"
+				type="ckfile"
+				view="service"
+				indirect="false"
+				root="[DIR_SERVICES_IMAGE_05]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.gif|*.jpg|*.jpeg|*.png"/>
+
+		<field name="published"
+				default="0"
+				alias="published"
+				label="GUIDEMAN_FIELD_STATE"
+				filter="INT"
+				access="core.edit.state"
+				listKey="value"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_company"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_COMPANY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_COMPANY"
+				ui="chosen"/>
+
+		<field name="filter_state"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.filter3"
+				label="GUIDEMAN_JSEARCH_STATE"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_private_tour"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_PRIVATE"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_PRIVATE"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="filter_entrance_fees"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_ENTRANCE_FEES"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_ENTRANCE_FEES"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="filter_kid_friendly"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_KID_FRIENDLY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_KID_FRIENDLY"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="filter_disabled_friendly"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_DISABLED_FRIENDLY"
+				class="span-2 element-filter"
+				label="GUIDEMAN_JSEARCH_DISABLED_FRIENDLY"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEMAN_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEMAN_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="filter_activity_level"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_ACTIVITY_LEVEL"
+				enum="services_activity_level"
+				label="GUIDEMAN_JSEARCH_ACTIVITY_LEVEL"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="GUIDEMAN_FILTER_NULL_SERVICE_NAME"
+				label="GUIDEMAN_JSEARCH_SERVICE_NAME"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

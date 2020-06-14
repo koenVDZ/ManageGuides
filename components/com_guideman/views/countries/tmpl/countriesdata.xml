@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_COUNTRIES_DATA">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_COUNTRIES_DATA_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_language"
+					label="GUIDEMAN_JSEARCH_FILTER_LANGUAGE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_LANGITEM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_TITLE"
+					type="modalpicker"
+					model="lang"
+					labelKey="title"/>
+		</fieldset>
+	</fields>
+</metadata>

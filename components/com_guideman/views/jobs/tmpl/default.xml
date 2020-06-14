@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_JOBS_SERVICE_ORDERS">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_JOBS_SERVICE_ORDERS_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_company_id"
+					label="GUIDEMAN_JSEARCH_FILTER_COMPANY_ID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_client_id"
+					label="GUIDEMAN_JSEARCH_FILTER_CLIENT_ID"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_requested_language"
+					label="GUIDEMAN_JSEARCH_FILTER_REQUESTED_LANGUAGE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_LANGUAGE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="languages"
+					labelKey="name"/>
+
+			<field name="filter_second_language_option"
+					label="GUIDEMAN_JSEARCH_FILTER_SECOND_LANGUAGE_OPTION"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_LANGUAGE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="languages"
+					labelKey="name"/>
+
+			<field name="filter_operator_name"
+					label="GUIDEMAN_JSEARCH_FILTER_OPERATOR_NAME"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_main_guide"
+					label="GUIDEMAN_JSEARCH_FILTER_MAIN_GUIDE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_trip_leader"
+					label="GUIDEMAN_JSEARCH_FILTER_TRIP_LEADER"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_remunerations_company"
+					label="GUIDEMAN_JSEARCH_FILTER_COMPANY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_ID"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_invoicing_company"
+					label="GUIDEMAN_JSEARCH_FILTER_COMPANY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_ID"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_start_date"
+					label="GUIDEMAN_JSEARCH_FILTER_START_DATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_START_DATE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_START_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_end_date"
+					label="GUIDEMAN_JSEARCH_FILTER_END_DATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_END_DATE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_END_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_creation_date"
+					label="GUIDEMAN_JSEARCH_FILTER_CREATION_DATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CREATION_DATE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_CREATION_DATE"
+					format="Y-m-d"
+					type="ckcalendar"/>
+
+			<field name="filter_created_by"
+					label="GUIDEMAN_JSEARCH_FILTER_CREATED_BY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_USER"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="thirdusers"
+					labelKey="name"/>
+
+			<field name="filter_modification_date"
+					label="GUIDEMAN_JSEARCH_FILTER_MODIFICATION_DATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_MODIFICATION_DATE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_MODIFICATION_DATE"
+					format="Y-m-d"
+					type="ckcalendar"/>
+
+			<field name="filter_modified_by"
+					label="GUIDEMAN_JSEARCH_FILTER_MODIFIED_BY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_USER"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="thirdusers"
+					labelKey="name"/>
+
+			<field name="filter_my_joomla_user"
+					label="GUIDEMAN_JSEARCH_FILTER_MY_JOOMLA_USER"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_USER"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="thirdusers"
+					labelKey="name"/>
+
+			<field name="filter_my_joomla_access"
+					label="GUIDEMAN_JSEARCH_FILTER_MY_JOOMLA_ACCESS"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_VIEWLEVEL"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_TITLE"
+					type="modalpicker"
+					model="thirdviewlevels"
+					labelKey="title"/>
+		</fieldset>
+	</fields>
+</metadata>

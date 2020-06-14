@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="operator.admoperatorform" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="type"
+				alias="type"
+				label="GUIDEADM_FIELD_TYPE"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_TYPE"
+				enum="operators_type"
+				validate="default"
+				class=""/>
+
+		<field name="operator"
+				alias="operator"
+				label="GUIDEADM_FIELD_OPERATOR"
+				filter="STRING"
+				type="cktext"
+				validate="length50"
+				class=""/>
+
+		<field name="contact_id"
+				alias="_contact_id_name"
+				label="GUIDEADM_FIELD_NAME"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_NAME"
+				validate="default"
+				class=""/>
+
+		<field name="country_id"
+				alias="_country_id_country_name"
+				label="GUIDEADM_FIELD_COUNTRY"
+				filter="INT"
+				description="GUIDEADM_FIELD_PLEAE_SELECT_THE_COUNTRY"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_COUNTRY"
+				validate="default"
+				msg-info="GUIDEADM_VALIDATOR_PLEAE_SELECT_THE_COUNTRY"
+				class=""/>
+
+		<field name="published"
+				default="0"
+				alias="published"
+				label="GUIDEADM_FIELD_PUBLISHED"
+				filter="INT"
+				description="GUIDEADM_FIELD_PUBLISHED"
+				access="core.edit.state"
+				listKey="value"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="ordering"
+				alias="ordering"
+				label="GUIDEADM_FIELD_ORDERING"
+				filter="INT"
+				access="core.edit.state"
+				type="ckordering"
+				labelKey="country_id"
+				validate="default"
+				class=""/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_contact_id"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_CONTACT_NAME"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_CONTACT_NAME"
+				ui="chosen"/>
+
+		<field name="filter_country_id"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_COUNTRY_ID_COUNTRY_NAME"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_COUNTRY_ID_COUNTRY_NAME"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="GUIDEADM_FILTER_NULL_OPERATOR_1"
+				label="GUIDEADM_JSEARCH_OPERATOR_1"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

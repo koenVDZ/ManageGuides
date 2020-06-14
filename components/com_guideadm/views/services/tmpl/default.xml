@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEADM_LAYOUT_SERVICES_WITH_PRICING">
+	<message>
+		<![CDATA[GUIDEADM_LAYOUT_SHOW_SERVICES_WITH_PRICING_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEADM_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_company"
+					label="GUIDEADM_JSEARCH_FILTER_COMPANY"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_NAME"
+					type="modal_contact"/>
+
+			<field name="filter_state"
+					label="GUIDEADM_JSEARCH_FILTER_STATE"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_STATE_1"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_STATE"
+					type="modal_state"/>
+
+			<field name="filter_search"
+					label="GUIDEADM_JSEARCH_FILTER_INTERNAL_SERVICE_ID"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_INTERNAL_SERVICE_ID"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_INTERNAL_SERVICE_ID"/>
+
+			<field name="filter_private_tour"
+					label="GUIDEADM_JSEARCH_FILTER_PRIVATE_TOUR"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_PRIVATE_TOUR"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_PRIVATE_TOUR"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+			</field>
+
+			<field name="filter_entrance_fees"
+					label="GUIDEADM_JSEARCH_FILTER_ENTRANCE_FEES"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_ENTRANCE_FEES"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_ENTRANCE_FEES"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+			</field>
+
+			<field name="filter_kid_friendly"
+					label="GUIDEADM_JSEARCH_FILTER_KID_FRIENDLY"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_KID_FRIENDLY"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_KID_FRIENDLY"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+			</field>
+
+			<field name="filter_disabled_friendly"
+					label="GUIDEADM_JSEARCH_FILTER_DISABLED_FRIENDLY"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_DISABLED_FRIENDLY"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_DISABLED_FRIENDLY"
+					type="ckcombo"
+					listKey="value">
+				<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+				<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+			</field>
+
+			<field name="filter_activity_level"
+					label="GUIDEADM_JSEARCH_FILTER_ACTIVITY_LEVEL"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_ACTIVITY_LEVEL"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_ACTIVITY_LEVEL"
+					type="enum"
+					enum="services_activity_level"/>
+		</fieldset>
+	</fields>
+</metadata>

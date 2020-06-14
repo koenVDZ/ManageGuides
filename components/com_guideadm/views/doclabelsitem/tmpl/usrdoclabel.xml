@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEADM_LAYOUT_DOCUMENT_LABEL_DEFINITION">
+	<message>
+		<![CDATA[GUIDEADM_LAYOUT_SHOW_DOCUMENT_LABEL_DEFINITION_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+			<field name="cid"
+					type="modal_doclabelsitem"
+					label="GUIDEADM_JSEARCH_SELECT_DOCLABELSITEM"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_DOCLABELSITEM"/>
+		</fieldset>
+	</fields>
+</metadata>

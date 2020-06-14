@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="state.admstatestateform"
+			addfieldpath="/administrator/components/com_guideadm/models/fields"
+			label="GUIDEADM_JFORM_STATE_PROVINCE_INFORMATION">
+
+		<field name="id"
+				alias="id"
+				label="GUIDEADM_FIELD_ID"
+				filter="INT"
+				type="ck"/>
+
+		<field name="country_id"
+				alias="_country_id_country_name"
+				label="GUIDEADM_FIELD_COUNTRY"
+				filter="INT"
+				description="GUIDEADM_FIELD_COUNTRY_NAME"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_COUNTRY"
+				validate="default"
+				msg-info="GUIDEADM_VALIDATOR_COUNTRY_NAME"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="state"
+				alias="state"
+				label="GUIDEADM_FIELD_STATE"
+				filter="STRING"
+				type="cktext"
+				validate="doublequote"
+				class="validate[custom[doublequote]]"/>
+
+		<field name="abbreviation"
+				alias="abbreviation"
+				label="GUIDEADM_FIELD_ABBREVIATION"
+				filter="STRING"
+				description="GUIDEADM_FIELD_ABBREVIATION_OF_THE_STATE_NAME"
+				type="cktext"
+				validate="doublequote"
+				msg-info="GUIDEADM_VALIDATOR_ABBREVIATION_OF_THE_STATE_NAME"
+				msg-incorrect="GUIDEADM_VALIDATOR_PLEASE_ENTER_A_VALID_STATE_NAME_ABBREVIATION"
+				class="validate[custom[doublequote]]"/>
+
+		<field name="capital"
+				alias="capital"
+				label="GUIDEADM_FIELD_CAPITAL"
+				filter="STRING"
+				description="GUIDEADM_FIELD_CAPITAL_OF_THE_STATE"
+				type="cktext"
+				msg-info="GUIDEADM_VALIDATOR_CAPITAL_OF_THE_STATE"/>
+
+		<field name="flag"
+				alias="flag"
+				label="GUIDEADM_FIELD_FLAG"
+				filter="STRING"
+				type="ckfile"
+				view="state"
+				indirect="false"
+				root="[DIR_STATES_FLAG]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.bmp|*.gif|*.jpg|*.jpeg|*.png"/>
+
+		<field name="language"
+				alias="_language_title"
+				label="GUIDEADM_FIELD_LANGUAGE"
+				filter="INT"
+				listKey="id"
+				labelKey="title"
+				type="cklist"
+				nullLabel="GUIDEADM_JSEARCH_SELECT_LANGUAGE"
+				validate="default"
+				class=""/>
+
+		<field name="ordering"
+				alias="ordering"
+				label="GUIDEADM_FIELD_ORDERING"
+				filter="INT"
+				access="core.edit.state"
+				type="ckordering"
+				labelKey="state"
+				validate="default"
+				class=""/>
+
+		<field name="published"
+				default="0"
+				alias="published"
+				label="GUIDEADM_FIELD_PUBLISHED"
+				filter="INT"
+				access="core.edit.state"
+				listKey="value"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">GUIDEADM_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GUIDEADM_FIELDS_BOOL_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_country_id"
+				listKey="id"
+				labelKey="country_name"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_COUNTRY_ID_COUNTRY_NAME"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_COUNTRY_ID_COUNTRY_NAME"
+				ui="chosen"/>
+
+		<field name="filter_language"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_LANGUAGE_TITLE"
+				class="span-2 element-filter"
+				label="GUIDEADM_JSEARCH_LANGUAGE_TITLE"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="GUIDEADM_FILTER_NULL_STATE_ABBREVIATION_CAPITAL"
+				label="GUIDEADM_JSEARCH_STATE_ABBREVIATION_CAPITAL"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEADM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

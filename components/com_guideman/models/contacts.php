@@ -1,0 +1,537 @@
+<?php
+/**                               ______________________________________________
+*                          o O   |                                              |
+*                 (((((  o      <    Generated with Cook Self Service  V3.1.9   |
+*                ( o o )         |______________________________________________|
+* --------oOOO-----(_)-----OOOo---------------------------------- www.j-cook.pro --- +
+* @version		2.2.7
+* @package		GuideManV2
+* @subpackage	Contacts
+* @copyright	ManageGuides.com
+* @author		Koenraad Vandezande - www.manageguides.com - koen@rioguides.com
+* @license		GNU
+*
+*             .oooO  Oooo.
+*             (   )  (   )
+* -------------\ (----) /----------------------------------------------------------- +
+*               \_)  (_/
+*/
+
+// no direct access
+defined('_JEXEC') or die('Restricted access');
+
+
+
+/**
+* Guideman List Model
+*
+* @package	Guideman
+* @subpackage	Classes
+*/
+class GuidemanCkModelContacts extends GuidemanClassModelList
+{
+	/**
+	* Default item layout.
+	*
+	* @var array
+	*/
+	public $itemDefaultLayout = 'contactall';
+
+	/**
+	* The URL view item variable.
+	*
+	* @var string
+	*/
+	protected $view_item = 'contact';
+
+	/**
+	* Constructor
+	*
+	* @access	public
+	* @param	array	$config	An optional associative array of configuration settings.
+	*
+	* @return	void
+	*/
+	public function __construct($config = array())
+	{
+		//Define the sortables fields (in lists)
+		if (empty($config['filter_fields'])) {
+			$config['filter_fields'] = array(
+				'a.ordering', 'ordering',
+				'_country_id_.iso_2', 'country_id.iso_2',
+				'ordering', 'a.ordering',
+
+			);
+		}
+
+		//Define the filterable fields
+		$this->set('filter_vars', array(
+			'published' => 'varchar',
+			'sortTable' => 'cmd',
+			'directionTable' => 'cmd',
+			'limit' => 'cmd',
+			'created_by' => 'cmd',
+			'type' => 'cmd',
+			'nationality' => 'cmd'
+				));
+
+
+		parent::__construct($config);
+
+		$this->hasOne('catid', // name
+			'categories', // foreignModelClass
+			'catid', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('company_id', // name
+			'contacts', // foreignModelClass
+			'company_id', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('business_type', // name
+			'businesstypes', // foreignModelClass
+			'business_type', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('nationality', // name
+			'countries', // foreignModelClass
+			'nationality', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('country_id', // name
+			'countries', // foreignModelClass
+			'country_id', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('state_id', // name
+			'states', // foreignModelClass
+			'state_id', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('visits_id', // name
+			'categories', // foreignModelClass
+			'visits_id', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('created_by', // name
+			'.users', // foreignModelClass
+			'created_by', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('modified_by', // name
+			'.users', // foreignModelClass
+			'modified_by', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('my_joomla_access', // name
+			'.viewlevels', // foreignModelClass
+			'my_joomla_access', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasOne('my_joomla_user', // name
+			'.users', // foreignModelClass
+			'my_joomla_user', // localKey
+			'id' // foreignKey
+		);
+
+		$this->hasMany('addresses', // name
+			'addresses', // foreignModelClass
+			'id', // localKey
+			'user_id' // foreignKey
+		);
+
+		$this->hasMany('phones', // name
+			'phones', // foreignModelClass
+			'id', // localKey
+			'user_id' // foreignKey
+		);
+
+		$this->hasMany('social', // name
+			'social', // foreignModelClass
+			'id', // localKey
+			'user_id' // foreignKey
+		);
+
+		$this->hasMany('vehicles', // name
+			'vehicles', // foreignModelClass
+			'id', // localKey
+			'user_id' // foreignKey
+		);
+
+		$this->hasMany('documents', // name
+			'documents', // foreignModelClass
+			'id', // localKey
+			'user_id' // foreignKey
+		);
+
+		$this->hasMany('accounts', // name
+			'accounts', // foreignModelClass
+			'id', // localKey
+			'user_id' // foreignKey
+		);
+
+		$this->belongsToMany('addresslabels', // name
+			'addresslabels', // foreignModelClass
+			'id', // localKey
+			'id', // foreignKey,
+			'addresses', // pivotModelClass,
+			'user_id', // pivotLocalKey
+			'address_label' // pivotForeignKey
+		);
+
+		$this->belongsToMany('countries_user_id', // name
+			'countries', // foreignModelClass
+			'id', // localKey
+			'id', // foreignKey,
+			'phones', // pivotModelClass,
+			'user_id', // pivotLocalKey
+			'cdc' // pivotForeignKey
+		);
+
+		$this->belongsToMany('states', // name
+			'states', // foreignModelClass
+			'id', // localKey
+			'id', // foreignKey,
+			'addresses', // pivotModelClass,
+			'user_id', // pivotLocalKey
+			'state_id' // pivotForeignKey
+		);
+
+		$this->belongsToMany('phonelabels', // name
+			'phonelabels', // foreignModelClass
+			'id', // localKey
+			'id', // foreignKey,
+			'phones', // pivotModelClass,
+			'user_id', // pivotLocalKey
+			'label' // pivotForeignKey
+		);
+
+		$this->belongsToMany('operators', // name
+			'operators', // foreignModelClass
+			'id', // localKey
+			'id', // foreignKey,
+			'phones', // pivotModelClass,
+			'user_id', // pivotLocalKey
+			'operator' // pivotForeignKey
+		);
+
+		$this->belongsToMany('sociallabels', // name
+			'sociallabels', // foreignModelClass
+			'id', // localKey
+			'id', // foreignKey,
+			'social', // pivotModelClass,
+			'user_id', // pivotLocalKey
+			'labelid' // pivotForeignKey
+		);
+
+		$this->belongsToMany('brands', // name
+			'brands', // foreignModelClass
+			'id', // localKey
+			'id', // foreignKey,
+			'vehicles', // pivotModelClass,
+			'user_id', // pivotLocalKey
+			'brand_id' // pivotForeignKey
+		);
+
+		$this->belongsToMany('doclabels', // name
+			'doclabels', // foreignModelClass
+			'id', // localKey
+			'id', // foreignKey,
+			'documents', // pivotModelClass,
+			'user_id', // pivotLocalKey
+			'label_id' // pivotForeignKey
+		);
+
+		$this->belongsToMany('contacts', // name
+			'contacts', // foreignModelClass
+			'id', // localKey
+			'id', // foreignKey,
+			'accounts', // pivotModelClass,
+			'user_id', // pivotLocalKey
+			'bank_id' // pivotForeignKey
+		);
+	}
+
+	/**
+	* Method to get the layout (including default).
+	*
+	* @access	public
+	*
+	* @return	string	The layout alias.
+	*/
+	public function getLayout()
+	{
+		$jinput = JFactory::getApplication()->input;
+		return $jinput->get('layout', 'default', 'STRING');
+	}
+
+	/**
+	* Method to get a store id based on model configuration state.
+	* 
+	* This is necessary because the model is used by the component and different
+	* modules that might need different sets of data or differen ordering
+	* requirements.
+	*
+	* @access	protected
+	* @param	string	$id	A prefix for the store id.
+	*
+	*
+	* @since	1.6
+	*
+	* @return	void
+	*/
+	protected function getStoreId($id = '')
+	{
+		// Compile the store id.
+
+		$id	.= ':'.$this->getState('sortTable');
+		$id	.= ':'.$this->getState('directionTable');
+		$id	.= ':'.$this->getState('limit');
+		$id	.= ':'.$this->getState('filter.created_by');
+		$id	.= ':'.$this->getState('filter.type');
+		$id	.= ':'.$this->getState('filter.nationality');
+		return parent::getStoreId($id);
+	}
+
+	/**
+	* Predefined query for the search plugin.
+	*
+	* @access	protected
+	*
+	*
+	* @since	Cook 3.1.4
+	*
+	* @return	void
+	*/
+	protected function ormSearchPlugin()
+	{
+		$method = $this->getState('search.plugin.method');
+		$ordering = $this->getState('search.plugin.ordering');
+
+		switch ( $ordering )
+		{
+			// Oldest first
+			case 'oldest':
+				$orderField = 'a.creation_date';
+				$orderDir = 'ASC';
+				break;
+
+			// Newest first
+			case 'newest':
+				$orderField = 'a.creation_date';
+				$orderDir = 'DESC';
+				break;
+
+			// Popular first
+			case 'popular':
+				$orderField = 'a.hits';
+				$orderDir = 'DESC';
+				break;
+
+			//Alphabetic, ascending
+			case 'alpha':
+			default:
+				$orderField = 'a.name';
+				$orderDir = 'ASC';
+				break;
+		}
+
+		$this->orm(array(
+			'select' => array(
+				'name' => 'title',
+				"{name}" => 'text',
+			),
+
+			'search' => array(
+
+				'plugin' => array(
+					'on' => array(
+						'{name}' => $method,
+					),
+				),
+			),
+			'order' => array(
+				$orderField => $orderDir
+			),
+		));
+	}
+
+	/**
+	* Prepare some additional derivated objects.
+	*
+	* @access	public
+	* @param	object	&$items	The items to populate.
+	*
+	*
+	* @since	Cook 2.0
+	*
+	* @return	void
+	*/
+	public function populateObjects(&$items)
+	{
+		if (!empty($item->settings) && is_string($item->settings))
+		{
+			$registry = new JRegistry;
+			$registry->loadString($item->settings);
+			$item->settings = $registry->toObject();
+		}
+
+		parent::populateObjects($items);
+	}
+
+	/**
+	* Populate the required fields for the search plugin.
+	*
+	* @access	protected
+	* @param	object	&$item	The object to populate.
+	*
+	* @return	void
+	*/
+	protected function populateSearchResult(&$item)
+	{
+		$item->section = JText::_('GUIDEMAN') . ' - ' . JText::_('GUIDEMAN_VIEW_CONTACT');
+		$item->href = $this->getRoute($item->id);
+	}
+
+	/**
+	* Preparation of the list query.
+	*
+	* @access	protected
+	* @param	object	&$query	returns a filled query object.
+	*
+	* @return	void
+	*/
+	protected function prepareQuery(&$query)
+	{
+		//FROM : Main table
+		$query->from('#__guideman_contacts AS a');
+
+		// Primary Key is always required
+		$this->addSelect('a.id');
+
+
+		switch($this->getState('context', 'all'))
+		{
+			case 'layout.default':
+
+				$this->orm->select(array(
+					'alias',
+					'catid',
+					'catid.MGcat',
+					'country_id',
+					'country_id.country_name',
+					'country_id.iso_2',
+					'hits',
+					'image',
+					'name',
+					'nationality',
+					'nationality.iso_2',
+					'ordering',
+					'state_id',
+					'state_id.state',
+					'surname',
+					'type'
+				));
+				break;
+
+			case 'layout.companies':
+
+				$this->orm->select(array(
+					'country_id',
+					'country_id.country_name',
+					'country_id.iso_2',
+					'image',
+					'name',
+					'nationality',
+					'nationality.iso_2',
+					'ordering',
+					'state_id',
+					'state_id.state',
+					'surname'
+				));
+
+				// PRIORITARY ORDER for grouping the list
+				$this->orm->groupOrder(array(
+					'name' => 'ASC'
+				));
+				break;
+
+			case 'layout.modal':
+
+				$this->orm->select(array(
+					'name'
+				));
+				break;
+
+			case 'all':
+				//SELECT : raw complete query without joins
+				$this->addSelect('a.*');
+
+				// Disable the pagination
+				$this->setState('list.limit', null);
+				$this->setState('list.start', null);
+				break;
+		}
+
+		// SELECT required fields for all profiles
+		$this->orm->select(array(
+			'created_by',
+			'published'
+		));
+
+		// ACCESS : Restricts accesses over the local table
+		$this->orm->access('a', array(
+			'publish' => 'published',
+			'author' => 'created_by'
+		));
+
+		// FILTER : Created By
+		if($filter_created_by = $this->getState('filter.created_by'))
+		{
+			if ($filter_created_by == 'auto'){
+				$this->addWhere('a.created_by = ' . (int)JFactory::getUser()->get('id'));
+			}
+			else 
+			if ($filter_created_by > 0){
+				$this->addWhere("a.created_by = " . (int)$filter_created_by);
+			}
+		}
+
+		// FILTER : Record Type
+		$filter_type = $this->getState('filter.type');
+
+		if ($filter_type !== null){
+			$this->addWhere("a.type = " . (int)$filter_type);
+		}
+
+		// ORDERING
+		$orderCol = $this->getState('list.ordering', 'name');
+		$orderDir = $this->getState('list.direction', 'ASC');
+
+		if ($orderCol)
+			$this->orm->order(array($orderCol => $orderDir));
+
+
+		// Apply all SQL directives to the query
+		$this->applySqlStates($query);
+	}
+
+
+}
+
+// Load the fork
+GuidemanHelper::loadFork(__FILE__);
+
+// Fallback if no fork has been found
+if (!class_exists('GuidemanModelContacts')){ class GuidemanModelContacts extends GuidemanCkModelContacts{} }
+

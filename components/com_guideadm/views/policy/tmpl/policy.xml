@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEADM_LAYOUT_POLICY">
+	<message>
+		<![CDATA[GUIDEADM_LAYOUT_SHOW_POLICY_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+			<field name="cid"
+					type="modal_policy"
+					label="GUIDEADM_JSEARCH_SELECT_POLICY"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_POLICY"/>
+		</fieldset>
+	</fields>
+</metadata>

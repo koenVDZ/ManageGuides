@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="documentsitem.usrdocsdetailform"
+			addfieldpath="/administrator/components/com_guideman/models/fields"
+			label="GUIDEMAN_JFORM_DOCUMENT_DETAILS">
+
+		<field name="user_id"
+				alias="_user_id_alias"
+				label="GUIDEMAN_FIELD_USER_NAME"
+				filter="INT"
+				listKey="id"
+				labelKey="alias"
+				type="ckcombo"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_USER_NAME"
+				validate="default"
+				class=""/>
+
+		<field name="label_id"
+				alias="_label_id_doc_type_name"
+				label="GUIDEMAN_FIELD_DOCUMENT_TYPE_NAME"
+				filter="INT"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.groupby6"
+				nullLabel="GUIDEMAN_JSEARCH_SELECT_DOCUMENT_TYPE_NAME"
+				validate="default"
+				class=""/>
+
+		<field name="number"
+				alias="number"
+				label="GUIDEMAN_FIELD_NUMBER"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="emission_date"
+				alias="emission_date"
+				label="GUIDEMAN_FIELD_EMISSION_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"/>
+
+		<field name="expiration_date"
+				alias="expiration_date"
+				label="GUIDEMAN_FIELD_EXPIRATION_DATE"
+				filter="STRING"
+				type="calendar"
+				format="%d-%m-%Y"
+				todaybutton="true"
+				weeknumbers="false"
+				filltable="true"
+				singleheader="false"
+				minyear="-100"
+				maxyear="+50"
+				showtime="false"
+				validate="default"
+				class=""/>
+
+		<field name="emmision"
+				alias="emmision"
+				label="GUIDEMAN_FIELD_EMISSION_ORGAN"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="image"
+				alias="image"
+				label="GUIDEMAN_FIELD_RECTO"
+				filter="STRING"
+				type="ckfile"
+				width="auto"
+				height="50"
+				view="documentsitem"
+				indirect="false"
+				root="[DIR_DOCUMENTS_IMAGE]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.bmp|*.gif|*.jpg|*.jpeg|*.png"/>
+
+		<field name="image2"
+				alias="image2"
+				label="GUIDEMAN_FIELD_VERSO"
+				filter="STRING"
+				type="ckfile"
+				width="auto"
+				height="50"
+				view="documentsitem"
+				indirect="false"
+				root="[DIR_DOCUMENTS_IMAGE2]"
+				actions="remove|thumbs|trash|delete"
+				allowedExtensions="*.bmp|*.gif|*.jpg|*.jpeg|*.png"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_label_id"
+				type="ckajax"
+				ajaxContext="guideman.countries.ajax.doc_labels"
+				label="GUIDEMAN_JSEARCH_DOCUMENT_TYPE"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GUIDEMAN_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

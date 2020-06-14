@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_PRICES">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_PRICES_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_company"
+					label="GUIDEMAN_JSEARCH_FILTER_COMPANY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CONTACT"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="contacts"
+					labelKey="name"/>
+
+			<field name="filter_currency"
+					label="GUIDEMAN_JSEARCH_FILTER_CURRENCY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CURRENCY"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_CURRENCY_ID"
+					type="modalpicker"
+					model="currencies"
+					labelKey="currency_id"/>
+
+			<field name="filter_min_time_from"
+					label="GUIDEMAN_JSEARCH_FILTER_MIN_TIME_FROM"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_MIN_TIME_FROM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_MIN_TIME"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_min_time_to"
+					label="GUIDEMAN_JSEARCH_FILTER_MIN_TIME_TO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_MIN_TIME_TO"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_MIN_TIME"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_from_date"
+					label="GUIDEMAN_JSEARCH_FILTER_FROM_DATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_FROM_DATE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_FROM_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_until_date"
+					label="GUIDEMAN_JSEARCH_FILTER_UNTIL_DATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_UNTIL_DATE"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_UNTIL_DATE"
+					format="d-m-Y"
+					type="ckcalendar"/>
+
+			<field name="filter_night_shift_from"
+					label="GUIDEMAN_JSEARCH_FILTER_NIGHT_SHIFT_FROM"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT_FROM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_night_shift_to"
+					label="GUIDEMAN_JSEARCH_FILTER_NIGHT_SHIFT_TO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT_TO"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NIGHT_SHIFT"
+					format="H:i"
+					type="cktime"/>
+
+			<field name="filter_created_by"
+					label="GUIDEMAN_JSEARCH_FILTER_CREATED_BY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_USER"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="thirdusers"
+					labelKey="name"/>
+
+			<field name="filter_creation_date_from"
+					label="GUIDEMAN_JSEARCH_FILTER_CREATION_DATE_FROM"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CREATION_DATE_FROM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_CREATION_DATE"
+					format="Y-m-d H:i"
+					type="ckcalendar"/>
+
+			<field name="filter_creation_date_to"
+					label="GUIDEMAN_JSEARCH_FILTER_CREATION_DATE_TO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CREATION_DATE_TO"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_CREATION_DATE"
+					format="Y-m-d H:i"
+					type="ckcalendar"/>
+
+			<field name="filter_modified_by"
+					label="GUIDEMAN_JSEARCH_FILTER_MODIFIED_BY_1"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_USER"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="thirdusers"
+					labelKey="name"/>
+
+			<field name="filter_modification_date_from"
+					label="GUIDEMAN_JSEARCH_FILTER_MODIFICATION_DATE_FROM"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_MODIFICATION_DATE_FROM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_MODIFICATION_DATE"
+					format="Y-m-d H:i"
+					type="ckcalendar"/>
+
+			<field name="filter_modification_date_to"
+					label="GUIDEMAN_JSEARCH_FILTER_MODIFICATION_DATE_TO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_MODIFICATION_DATE_TO"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_MODIFICATION_DATE"
+					format="Y-m-d H:i"
+					type="ckcalendar"/>
+
+			<field name="filter_access"
+					label="GUIDEMAN_JSEARCH_FILTER_ACCESS"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_VIEWLEVEL"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_TITLE"
+					type="modalpicker"
+					model="thirdviewlevels"
+					labelKey="title"/>
+		</fieldset>
+	</fields>
+</metadata>

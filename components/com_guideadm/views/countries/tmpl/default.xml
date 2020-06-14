@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEADM_LAYOUT_COUNTRIES">
+	<message>
+		<![CDATA[GUIDEADM_LAYOUT_SHOW_COUNTRIES_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEADM_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_language"
+					label="GUIDEADM_JSEARCH_FILTER_LANGUAGE"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_LANGITEM"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_TITLE"
+					type="modal_langitem"/>
+
+			<field name="filter_search_1"
+					label="GUIDEADM_JSEARCH_FILTER_ISO_2"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_ISO_2"
+					nullLabel="GUIDEADM_JSEARCH_SELECT_ISO_2"/>
+		</fieldset>
+	</fields>
+</metadata>

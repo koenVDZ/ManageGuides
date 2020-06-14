@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="component" version="1.6" method="upgrade">
+	<name><![CDATA[guideadm]]></name>
+	<author><![CDATA[Koenraad Vandezande]]></author>
+	<creationDate><![CDATA[11 Nov 2017]]></creationDate>
+	<copyright><![CDATA[ManageGuides.com]]></copyright>
+	<authorEmail><![CDATA[koen@rioguides.com]]></authorEmail>
+	<authorUrl><![CDATA[www.manageguides.com]]></authorUrl>
+	<version><![CDATA[2.2.1]]></version>
+	<license><![CDATA[GNU]]></license>
+	<description><![CDATA[Manage your guides Administrators side.]]></description>
+
+	<files folder="site">
+		<folder>_fork</folder>
+		<folder>controllers</folder>
+		<folder>css</folder>
+		<folder>files</folder>
+		<folder>images</folder>
+		<folder>layouts</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>controller.php</filename>
+		<filename>guideadm.php</filename>
+		<filename>index.html</filename>
+		<filename>menu.xml</filename>
+		<filename>router.php</filename>
+	</files>
+
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_guideadm.ini</language>
+	</languages>
+
+	<administration>
+
+		<files folder="admin">
+			<folder>_fork</folder>
+			<folder>classes</folder>
+			<folder>controllers</folder>
+			<folder>css</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>js</folder>
+			<folder>layouts</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>guideadm.php</filename>
+			<filename>index.html</filename>
+			<filename>menu.xml</filename>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_guideadm.ini</language>
+			<language tag="en-GB">language/en-GB.com_guideadm.sys.ini</language>
+		</languages>
+		<menu img="components/com_guideadm/images/icon-16-guideadm.png">GUIDEADM_MENU_GUIDEADMV2</menu>
+
+		<submenu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_accounts.png" link="option=com_guideadm&amp;view=accounts">GUIDEADM_MENU_BANK_ACCOUNTS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_addresslabels.png" link="option=com_guideadm&amp;view=addresslabels">GUIDEADM_MENU_ADDRESS_LABELS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_addresses.png" link="option=com_guideadm&amp;view=addresses">GUIDEADM_MENU_ADDRESSES</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_brands.png" link="option=com_guideadm&amp;view=brands">GUIDEADM_MENU_BRANDS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_businesstypes.png" link="option=com_guideadm&amp;view=businesstypes">GUIDEADM_MENU_BUSINESSTYPES</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_contactlang.png" link="option=com_guideadm&amp;view=contactlang">GUIDEADM_MENU_CONTACTLANG</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_currencies.png" link="option=com_guideadm&amp;view=currencies">GUIDEADM_MENU_CURRENCIES</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_countries.png" link="option=com_guideadm&amp;view=countries">GUIDEADM_MENU_COUNTRIES</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_contacts.png" link="option=com_guideadm&amp;view=contacts">GUIDEADM_MENU_CONTACTS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_doclabels.png" link="option=com_guideadm&amp;view=doclabels">GUIDEADM_MENU_DOC_LABELS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_documents.png" link="option=com_guideadm&amp;view=documents">GUIDEADM_MENU_DOCUMENTS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_jobs.png" link="option=com_guideadm&amp;view=jobs">GUIDEADM_MENU_JOBS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_jobitems.png" link="option=com_guideadm&amp;view=jobitems">GUIDEADM_MENU_JOB_ITEMS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_lang.png" link="option=com_guideadm&amp;view=lang">GUIDEADM_MENU_LANG</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_languages.png" link="option=com_guideadm&amp;view=languages">GUIDEADM_MENU_LANGUAGES</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_operators.png" link="option=com_guideadm&amp;view=operators">GUIDEADM_MENU_OPERATORS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_phonelabels.png" link="option=com_guideadm&amp;view=phonelabels">GUIDEADM_MENU_PHONE_LABELS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_phones.png" link="option=com_guideadm&amp;view=phones">GUIDEADM_MENU_PHONES</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_policies.png" link="option=com_guideadm&amp;view=policies">GUIDEADM_MENU_POLICIES</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_prices.png" link="option=com_guideadm&amp;view=prices">GUIDEADM_MENU_PRICES</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_services.png" link="option=com_guideadm&amp;view=services">GUIDEADM_MENU_SERVICES</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_servicos.png" link="option=com_guideadm&amp;view=servicos">GUIDEADM_MENU_SERVICOS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_social.png" link="option=com_guideadm&amp;view=social">GUIDEADM_MENU_SOCIAL</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_sociallabels.png" link="option=com_guideadm&amp;view=sociallabels">GUIDEADM_MENU_SOCIAL_LABELS</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_states.png" link="option=com_guideadm&amp;view=states">GUIDEADM_MENU_STATES</menu>
+			<menu img="components/com_guideadm/images/icon-16-guideadm_vehicles.png" link="option=com_guideadm&amp;view=vehicles">GUIDEADM_MENU_VEHICLES</menu>
+		</submenu>
+	</administration>
+	<scriptfile>script.php</scriptfile>
+
+	<install>
+
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<update>
+
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<uninstall>
+
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+</extension>

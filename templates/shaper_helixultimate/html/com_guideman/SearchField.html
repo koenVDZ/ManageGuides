@@ -1,0 +1,99 @@
+<div class="form-row align-items-center">
+  <div class="col my1">
+    <div class="controls">
+      <div style="border:dashed 3px #ccc; padding:5px; margin:5px;display:inline-block">
+        <img src="http://localhost/mg/images/guideman/contacts_image/_koenperu.jpg-0x50-cf.jpg" class="Foto_picker">
+      </div>
+    <div class="clearfix"></div>
+    <input type="hidden" id="jform_image-current" name="jform[image-current]" value="koenperu.jpg">
+    <input type="hidden" id="jform_image-remove" name="jform[image-remove]" value="">
+    <div class="input-group pic-group" role="group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><i class="fal fa-eye fa-pull-left" aria-hidden="true"></i></span>
+        <button id="btnGroupDrop1" type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fal fa-minus-circle" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" onclick="jQuery('input[id=jform_image-remove]').val('');jQuery('a[id=jform_image-deletebtn] i').attr('class', 'fal fa-ban fa-fw fa-pull-left');"><i style="" class="fal fa-ban fa-fw fa-pull-left " aria-hidden="true"></i>Do not apply any changes.</a>
+          <a class="dropdown-item" onclick="jQuery('input[id=jform_image-remove]').val('remove');jQuery('a[id=jform_image-deletebtn] i').attr('class', 'fal fa-step-backward fa-fw fa-pull-left');"><i style="" class="fal fa-step-backward fa-fw fa-pull-left " aria-hidden="true"></i>Unlink and keep previous image file.</a>
+          <a class="dropdown-item" onclick="jQuery('input[id=jform_image-remove]').val('thumbs');jQuery('a[id=jform_image-deletebtn] i').attr('class', 'fal fa-image fa-fw fa-pull-left');"><i style="" class="fal fa-image fa-fw fa-pull-left " aria-hidden="true"></i>Unlink and delete thumbs. Keep image file</a>
+          <a class="dropdown-item" onclick="jQuery('input[id=jform_image-remove]').val('trash');jQuery('a[id=jform_image-deletebtn] i').attr('class', 'fal fa-trash-alt fa-fw fa-pull-left');"><i style="" class="fal fa-trash-alt fa-fw fa-pull-left " aria-hidden="true"></i>Trash image</a>
+          <a class="dropdown-item" onclick="jQuery('input[id=jform_image-remove]').val('delete');jQuery('a[id=jform_image-deletebtn] i').attr('class', 'fal fa-eraser fa-fw fa-pull-left');"><i style="" class="fal fa-eraser fa-fw fa-pull-left " aria-hidden="true"></i>Delete all images and thumbs.</a>
+        </div>
+        <div class="jform_imageformError parentFormadminForm formError greenPopup" style="opacity: 0.87; position: absolute; top: 0px; left: 264px; margin-top: -28px;">
+          <div class="formErrorContent">
+            Picture of contact.
+          </div>
+        </div>
+          <input onchange="jQuery(this).closest('div').find('#jform_image-view').val(jQuery(this).val());" type="file" id="jform_image" name="jform[image]" style="display: none;" value="koenperu.jpg">
+          <input type="text" id="jform_image-view" name="" class="input-large inputfix " onfocus="jQuery(this).closest('div').find('input[id=\&quot;jform_image\&quot;]').trigger('click');" readonly="" value="koenperu.jpg" size="32">
+          <div class="input-group-append">
+            <a class="btn btn-outline-secondary buttonfix" style="cursor:pointer;" onclick="jQuery('input[id=jform_image]').trigger(&quot;click&quot;);" type="button">
+              <i class="fal fa-folder-open fa-fw fa-pull-left " aria-hidden="true"></i>
+            </a>
+          </div>
+          <label class="input-group-text" for="inputGroupSelect02"><span class="badge badge-warning">Max : 1Mb</span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class=" form-search btn-group">
+  <div class="input-append">
+    <input type="text" id="search_search" name="search_search" class="element-filter element-search search-query" title="- File Number + File Name + Client Reference -- File Number + File Name + Client Reference -" placeholder="- File Number + File Name + Client Reference -" value="" size="32">
+    <a class="btn hasTooltip" style="cursor:pointer;" title="Search" onclick="return Joomla.submitform()" type="button">
+      <i class="icon-search icomoon "></i>
+    </a>
+    <a class="btn hasTooltip" style="cursor:pointer;" title="Clear" onclick="Joomla.resetFilters();" type="button">
+      <i class="icon-remove icomoon "></i>
+    </a>
+  </div>
+</div>
+
+
+<form>
+  <div class="form-row align-items-center">
+    <div class="col-sm-4 my1">
+      <label class="sr-only" for="search_search">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+            <a class="btn btn-outline-secondary hasTooltip" style="cursor:pointer;" title="Search" onclick="return Joomla.submitform()" type="button">
+              <i class="fal fa-search"></i>
+            </a>
+        </div>
+        <input type="text" class="form-control" id="search_search" placeholder="- File Number + File Name + Client Reference -" name="search_search" >
+        <div class="input-group-append">
+            <a class="btn btn-outline-secondary hasTooltip" style="cursor:pointer;" title="Clear" onclick="Joomla.resetFilters();" type="button">
+              <i class="fal fa-minus-circle"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

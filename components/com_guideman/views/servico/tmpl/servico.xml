@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_SERVICO">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_SERVICO_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="cid"
+					type="modalpicker"
+					label="GUIDEMAN_JSEARCH_SELECT_SERVICO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_SERVICO"
+					model="servicos"
+					labelKey="internal_service_id"/>
+		</fieldset>
+	</fields>
+</metadata>

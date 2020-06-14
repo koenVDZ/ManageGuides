@@ -1,0 +1,356 @@
+/* Add your own custom css to this file. You may wish to use css !important calls to override css from the template css files.
+----------------------------------------------------------- */
+.chzn-container {
+  border-bottom: 2px solid #00ad52;
+}
+.s5_center_area1 {
+  z-index: 1;
+}
+.form-search .input-append .search-query {
+  min-height: 26px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-right-style: solid ;
+  padding: 0px 5px 2px 5px;
+}
+.form-search a.btn {
+  padding-top: 2px;
+  padding-bottom: 4px;
+  padding-left: 15px;
+  margin-left: -11px;
+  height: 20px;
+  min-width: 20px;
+}
+::-webkit-input-placeholder {
+   color: #00ad52;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #00ad52;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #00ad52;
+}
+:-ms-input-placeholder {
+   color: #00ad52;
+}
+.registration-list {
+  width: 86%;
+}
+.register_btn a {
+color:#FFFFFF !important;
+}
+.register_btn a:hover {
+color:#ffd600 !important;
+text-decoration: none;
+}
+.registration .btn {
+  margin-top: 15px;
+}
+#s5_login {
+  background-color: #ffd600;
+  color: #000000 !important;
+}
+#s5_login:hover {
+  background-color: #00ad52;
+}
+.profile-edit .btn {
+  margin-top: 15px;
+}
+.btn-primary:hover {
+  color:#000000 !important;
+}
+/* Inputboxes */
+.btn:hover {
+  background-color: #ffd600 !important;
+  color: #00ad52 !important;
+}
+#toolbar-price\.add:hover, #adminForm > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1):hover, #adminForm > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1):hover, #toolbar-jobsitem\.add:hover, #toolbar-service\.add:hover, #toolbar-phonelabelsitem\.add:hover, #toolbar-policy\.add:hover, #toolbar-addresslabel\.add:hover, #toolbar-socialitem\.add:hover, #toolbar-vehiclesitem\.add:hover, #toolbar-accountsitem\.add:hover, #toolbar-contactlangitem\.add:hover, #toolbar-documentsitem\.add:hover, #toolbar-contact\.add:hover, #toolbar-addressesitem\.add:hover, #toolbar-phonesitem\.add:hover{
+  background: #ffd600 !important;
+  color: #00ad52 !important;
+}
+#toolbar-price\.add:hover {
+  background: #ffd600 !important;
+  color: #00ad52 !important;
+}
+.inputbox {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+/* Buttons */
+.ui-sortable .btn-micro {
+  padding: 0 0 0 0;
+  line-height: 12px;
+  background-color: transparent !important;
+  -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,0),0 0 0 rgba(0,0,0,0);
+  -moz-box-shadow: inset 0 0 0 rgba(0,0,0,0),0 0 0 rgba(0,0,0,0);
+  box-shadow: inset 0 0 0 rgba(0,0,0,0),0 0 0 rgba(0,0,0,0);
+}
+
+/* icons FontAwesome */
+
+.icon-ok:before {
+  padding-top: 2px;
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f096";
+}.icon-unpublish:before {
+  padding-top: 2px;
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f096";
+}
+.icon-publish:before {
+  padding-top: 1px;
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f046";
+  color: #006400;
+}
+.icon-search:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f002";
+  font-size: 22px;
+  vertical-align: middle;
+}
+.icon-new:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f055";
+  font-size: 22px;
+  color: #006400;
+}
+.icon-edit:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f044";
+  font-size: 22px;
+  color: #006400;
+}
+.icon-trash:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f014";
+  font-size: 22px;
+  color: #006400;
+}
+.icon-delete:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f056";
+  font-size: 22px;
+  color: #006400;
+}
+.icon-archive:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f187";
+  font-size: 22px;
+  color: #006400;
+}
+.icon-menu:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f142";
+  font-size: 22px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.icon-remove:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f00d";
+  font-size: 22px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.icon-save:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f0c7";
+  color: white !important;
+  font-size: 22px;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: center;
+  background-image: none;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}
+#toolbar-contact\.save {
+  background-color: #00ad52;
+}
+/* General dimensions */
+#modlgn-username #modlgn-passwd {
+  border-color: #00ad52;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+#s5_bread_login_font_wrap {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.inputbox, input[type="search"], .cf-input-text {
+  border-color: #00ad52;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-right-style: solid ;
+}
+/* Picture selector */
+#jform_image-view, #jform_image2-view {
+  border-top: 1px solid #00ad52;
+}
+a.btn:nth-child(4), a.btn:nth-child(5), a.btn:nth-child(6), a.btn:nth-child(7) {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+#jform_image-deletebtn, #jform_image2-deletebtn {
+  margin-top: 0 !important;
+  margin-left: -24px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+/* Driver Guide Selector */
+#jform_driverguide_1 .btn {
+  font-size: 25 px !important;
+}
+/* Filters for Guideman */
+#jform_end_date, #jform_start_date, #jform_year_of_build, #filter_year_of_build, #jform_expiration_date, #jform_emission_date, #jform_birthdate, #jform_publish_down, #jform_publish_up, #filter_start_date, #filter_end_date, #filter_creation_date, #filter_modification_date, #filter_from_date, #filter_until_date, #filter_pax_01_from, #filter_pax_01_to {
+  border-color: #00ad52;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-right-style: solid ;
+  padding: 1px 4px 0 4px;
+  min-height: 32px;
+}
+#jform_end_date-btn, #jform_start_date-btn, #jform_year_of_build-btn, #filter_year_of_build-btn, #jform_expiration_date-btn, #jform_emission_date-btn, #jform_birthdate-btn, #jform_publish_up_img, #jform_publish_down_img, #filter_start_date-btn, #filter_end_date-btn, #filter_creation_date-btn, #filter_modification_date-btn, #filter_from_date-btn, #filter_until_date-btn {
+  border-color: #00ad52;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-right-style: solid ;
+  padding: 7px 5px 7px 5px;
+}
+#cb0, #cb1, #cb2, #cb3, #cb4, #cb5, #cb6, #cb7, #cb8, #cb9, #cb10, #cb11, #cb12, #cb13, #cb14, #cb15, #cb16, #cb17, #cb18, #cb19, #cb20, #cb21, #cb22, #cb23, #cb24, #cb25, #cb26, #cb27, #cb28, #cb29, #cb30, #cb31, #cb32, #cb33, #cb34, #cb35, #cb36, #cb37, #cb38, #cb39, #cb40, #cb41, #cb42, #cb43, #cb44, #cb45, #cb46, #cb47, #cb48, #cb49, #cb50 {
+  min-height: 10px;
+}
+/* Tables */
+
+/* Article Rating */
+
+/* Kunena */
+#Kunena div.kblock > div.kheader, #Kunena .kblock div.kheader {
+  background-color: #00ad52 !important;
+}
+#Kunena #ktop {
+  border-color: #00ad52 !important;
+}
+#Kunena #ktab a:hover {
+  background-color: #00ad52 !important;
+}
+#Kunena a:link {
+  color: #00ad52 !important;
+}
+#Kunena .kforum-pathway {
+  border-color: #00ad52;
+  background-color: #ffd600;
+  border-bottom: 1px solid #00ad52;
+}
+#Kunena .klist-markallcatsread {
+  border-color: #00ad52;
+}
+#Kunena tr.ksth {
+  color: #00ad52;
+}
+/* Menu */
+.s5_am_inner_li:active {
+  color: #00ad52;
+}
+/* ManageGuides very specifics */
+#toolbar-contact.add .btn:hover {
+  color: black !important;
+}
+/* jform publish block */
+#jform_published .btn {
+  color: #000000 !important;
+  background: #ffd600;
+}
+#jform_published .btn:hover {
+  color: #00ad52 !important;
+}
+#toolbar-contact\.cancel > div:nth-child(1) > i:nth-child(1) {
+  background-image:none
+}
+/* color Box */
+#jform_color {
+  border-top: 1px solid #00ad52;
+  border-left: 1px solid #00ad52;
+}
+#jform_color-pick {
+  border-top: 1px solid #00ad52;
+  border-bottom: 2px solid #00ad52;
+  width:12px;
+  height:12px;
+  display:inline-block;
+  margin-top: -14px;
+  padding-bottom: 9px;
+  padding-left: 7px;
+  margin-left: -4px;
+  padding-top: 8px;
+  padding-right: 10px;
+}
+#jform_color-btn {
+  cursor:pointer;margin-left: -5px;padding-top: 7px;padding-bottom: 7px;
+}
+#grid-contactlang > thead:nth-child(1) > tr:nth-child(1) {
+  background:#333333 !important;
+}
+table.table th {
+background:#ffd600 !important;
+color:#333333 !important;
+}
+tr.dndlist-sortable:nth-child(1) > th:nth-child(1) {
+  border-top: 2px solid #00ad52;
+}
+.grid-group {
+  border-top: 2px solid #00ad52 !important;  
+}
+table.table.th.grid-group-1 {
+  background: #ffd600 !important;
+}
+/* Accordion */
+.accordion-heading {
+  background: #ffd600;
+}
+#adminForm > div.ats-mytickets-filters > div.pull-left > a {
+  margin-left: 0;
+}
+checkall-toggle {
+  min-height:15px !important;
+}

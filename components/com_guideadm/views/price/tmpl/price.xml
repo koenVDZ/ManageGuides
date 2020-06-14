@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEADM_LAYOUT_PRICE">
+	<message>
+		<![CDATA[GUIDEADM_LAYOUT_SHOW_PRICE_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideadm/models/fields">
+
+			<field name="cid"
+					type="modal_price"
+					label="GUIDEADM_JSEARCH_SELECT_PRICE"
+					required="false"
+					default=""
+					description="GUIDEADM_JSEARCH_SELECT_PRICE"/>
+		</fieldset>
+	</fields>
+</metadata>

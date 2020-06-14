@@ -1,0 +1,223 @@
+/**                               ______________________________________________
+*                          o O   |                                              |
+*                 (((((  o      <    Generated with Cook Self Service  V3.1.9   |
+*                ( o o )         |______________________________________________|
+* --------oOOO-----(_)-----OOOo---------------------------------- www.j-cook.pro --- +
+* @version		2.2.1
+* @package		GuideAdmV2
+* @subpackage	GuideAdmV2
+* @copyright	ManageGuides.com
+* @author		Koenraad Vandezande - www.manageguides.com - koen@rioguides.com
+* @license		GNU
+*
+*             .oooO  Oooo.
+*             (   )  (   )
+* -------------\ (----) /----------------------------------------------------------- +
+*               \_)  (_/
+*/
+
+/**
+* Component icons 48px (Cpanel)
+**/
+.ico-48-guideadm, .icon-48-guideadm {
+	background-image:url('../images/icon-48-guideadm.png');
+}
+.ico-48-guideadm_accounts, .icon-48-guideadm_accounts {
+	background-image:url('../images/icon-48-guideadm_accounts.png');
+}
+.ico-48-guideadm_addresslabels, .icon-48-guideadm_addresslabels {
+	background-image:url('../images/icon-48-guideadm_addresslabels.png');
+}
+.ico-48-guideadm_addresses, .icon-48-guideadm_addresses {
+	background-image:url('../images/icon-48-guideadm_addresses.png');
+}
+.ico-48-guideadm_brands, .icon-48-guideadm_brands {
+	background-image:url('../images/icon-48-guideadm_brands.png');
+}
+.ico-48-guideadm_businesstypes, .icon-48-guideadm_businesstypes {
+	background-image:url('../images/icon-48-guideadm_businesstypes.png');
+}
+.ico-48-guideadm_categories, .icon-48-guideadm_categories {
+	background-image:url('../images/icon-48-guideadm_categories.png');
+}
+.ico-48-guideadm_contactlang, .icon-48-guideadm_contactlang {
+	background-image:url('../images/icon-48-guideadm_contactlang.png');
+}
+.ico-48-guideadm_currencies, .icon-48-guideadm_currencies {
+	background-image:url('../images/icon-48-guideadm_currencies.png');
+}
+.ico-48-guideadm_countries, .icon-48-guideadm_countries {
+	background-image:url('../images/icon-48-guideadm_countries.png');
+}
+.ico-48-guideadm_contacts, .icon-48-guideadm_contacts {
+	background-image:url('../images/icon-48-guideadm_contacts.png');
+}
+.ico-48-guideadm_doclabels, .icon-48-guideadm_doclabels {
+	background-image:url('../images/icon-48-guideadm_doclabels.png');
+}
+.ico-48-guideadm_documents, .icon-48-guideadm_documents {
+	background-image:url('../images/icon-48-guideadm_documents.png');
+}
+.ico-48-guideadm_jobs, .icon-48-guideadm_jobs {
+	background-image:url('../images/icon-48-guideadm_jobs.png');
+}
+.ico-48-guideadm_jobitems, .icon-48-guideadm_jobitems {
+	background-image:url('../images/icon-48-guideadm_jobitems.png');
+}
+.ico-48-guideadm_lang, .icon-48-guideadm_lang {
+	background-image:url('../images/icon-48-guideadm_lang.png');
+}
+.ico-48-guideadm_languages, .icon-48-guideadm_languages {
+	background-image:url('../images/icon-48-guideadm_languages.png');
+}
+.ico-48-guideadm_operators, .icon-48-guideadm_operators {
+	background-image:url('../images/icon-48-guideadm_operators.png');
+}
+.ico-48-guideadm_phonelabels, .icon-48-guideadm_phonelabels {
+	background-image:url('../images/icon-48-guideadm_phonelabels.png');
+}
+.ico-48-guideadm_phones, .icon-48-guideadm_phones {
+	background-image:url('../images/icon-48-guideadm_phones.png');
+}
+.ico-48-guideadm_policies, .icon-48-guideadm_policies {
+	background-image:url('../images/icon-48-guideadm_policies.png');
+}
+.ico-48-guideadm_prices, .icon-48-guideadm_prices {
+	background-image:url('../images/icon-48-guideadm_prices.png');
+}
+.ico-48-guideadm_services, .icon-48-guideadm_services {
+	background-image:url('../images/icon-48-guideadm_services.png');
+}
+.ico-48-guideadm_servicos, .icon-48-guideadm_servicos {
+	background-image:url('../images/icon-48-guideadm_servicos.png');
+}
+.ico-48-guideadm_social, .icon-48-guideadm_social {
+	background-image:url('../images/icon-48-guideadm_social.png');
+}
+.ico-48-guideadm_sociallabels, .icon-48-guideadm_sociallabels {
+	background-image:url('../images/icon-48-guideadm_sociallabels.png');
+}
+.ico-48-guideadm_states, .icon-48-guideadm_states {
+	background-image:url('../images/icon-48-guideadm_states.png');
+}
+.ico-48-guideadm_vehicles, .icon-48-guideadm_vehicles {
+	background-image:url('../images/icon-48-guideadm_vehicles.png');
+}
+.ico-48-guideadm_activepropertylists, .icon-48-guideadm_activepropertylists {
+	background-image:url('../images/icon-48-guideadm_activepropertylists.png');
+}
+.ico-48-guideadm_cpanel, .icon-48-guideadm_cpanel {
+	background-image:url('../images/icon-48-guideadm_cpanel.png');
+}
+
+/**
+* Component icons 16px (Sub Menu)
+**/
+.ico-16-guideadm, .icon-16-guideadm {
+	background-image:url('../images/icon-16-guideadm.png');
+}
+.ico-16-guideadm_accounts, .icon-16-guideadm_accounts {
+	background-image:url('../images/icon-16-guideadm_accounts.png');
+}
+.ico-16-guideadm_addresslabels, .icon-16-guideadm_addresslabels {
+	background-image:url('../images/icon-16-guideadm_addresslabels.png');
+}
+.ico-16-guideadm_addresses, .icon-16-guideadm_addresses {
+	background-image:url('../images/icon-16-guideadm_addresses.png');
+}
+.ico-16-guideadm_brands, .icon-16-guideadm_brands {
+	background-image:url('../images/icon-16-guideadm_brands.png');
+}
+.ico-16-guideadm_businesstypes, .icon-16-guideadm_businesstypes {
+	background-image:url('../images/icon-16-guideadm_businesstypes.png');
+}
+.ico-16-guideadm_categories, .icon-16-guideadm_categories {
+	background-image:url('../images/icon-16-guideadm_categories.png');
+}
+.ico-16-guideadm_contactlang, .icon-16-guideadm_contactlang {
+	background-image:url('../images/icon-16-guideadm_contactlang.png');
+}
+.ico-16-guideadm_currencies, .icon-16-guideadm_currencies {
+	background-image:url('../images/icon-16-guideadm_currencies.png');
+}
+.ico-16-guideadm_countries, .icon-16-guideadm_countries {
+	background-image:url('../images/icon-16-guideadm_countries.png');
+}
+.ico-16-guideadm_contacts, .icon-16-guideadm_contacts {
+	background-image:url('../images/icon-16-guideadm_contacts.png');
+}
+.ico-16-guideadm_doclabels, .icon-16-guideadm_doclabels {
+	background-image:url('../images/icon-16-guideadm_doclabels.png');
+}
+.ico-16-guideadm_documents, .icon-16-guideadm_documents {
+	background-image:url('../images/icon-16-guideadm_documents.png');
+}
+.ico-16-guideadm_jobs, .icon-16-guideadm_jobs {
+	background-image:url('../images/icon-16-guideadm_jobs.png');
+}
+.ico-16-guideadm_jobitems, .icon-16-guideadm_jobitems {
+	background-image:url('../images/icon-16-guideadm_jobitems.png');
+}
+.ico-16-guideadm_lang, .icon-16-guideadm_lang {
+	background-image:url('../images/icon-16-guideadm_lang.png');
+}
+.ico-16-guideadm_languages, .icon-16-guideadm_languages {
+	background-image:url('../images/icon-16-guideadm_languages.png');
+}
+.ico-16-guideadm_operators, .icon-16-guideadm_operators {
+	background-image:url('../images/icon-16-guideadm_operators.png');
+}
+.ico-16-guideadm_phonelabels, .icon-16-guideadm_phonelabels {
+	background-image:url('../images/icon-16-guideadm_phonelabels.png');
+}
+.ico-16-guideadm_phones, .icon-16-guideadm_phones {
+	background-image:url('../images/icon-16-guideadm_phones.png');
+}
+.ico-16-guideadm_policies, .icon-16-guideadm_policies {
+	background-image:url('../images/icon-16-guideadm_policies.png');
+}
+.ico-16-guideadm_prices, .icon-16-guideadm_prices {
+	background-image:url('../images/icon-16-guideadm_prices.png');
+}
+.ico-16-guideadm_services, .icon-16-guideadm_services {
+	background-image:url('../images/icon-16-guideadm_services.png');
+}
+.ico-16-guideadm_servicos, .icon-16-guideadm_servicos {
+	background-image:url('../images/icon-16-guideadm_servicos.png');
+}
+.ico-16-guideadm_social, .icon-16-guideadm_social {
+	background-image:url('../images/icon-16-guideadm_social.png');
+}
+.ico-16-guideadm_sociallabels, .icon-16-guideadm_sociallabels {
+	background-image:url('../images/icon-16-guideadm_sociallabels.png');
+}
+.ico-16-guideadm_states, .icon-16-guideadm_states {
+	background-image:url('../images/icon-16-guideadm_states.png');
+}
+.ico-16-guideadm_vehicles, .icon-16-guideadm_vehicles {
+	background-image:url('../images/icon-16-guideadm_vehicles.png');
+}
+.ico-16-guideadm_activepropertylists, .icon-16-guideadm_activepropertylists {
+	background-image:url('../images/icon-16-guideadm_activepropertylists.png');
+}
+.ico-16-guideadm_cpanel, .icon-16-guideadm_cpanel {
+	background-image:url('../images/icon-16-guideadm_cpanel.png');
+}
+
+/**
+* System
+**/
+span.spinner {
+	background-image:url('../images/icon-16-spinner.gif');
+}
+[class^="icon-32"], [class*=" icon-32"] {
+	background-position:0px 0px; !important;
+}
+
+/**
+* Fixes
+**/
+.jgrid span {
+	padding:0px;
+}
+

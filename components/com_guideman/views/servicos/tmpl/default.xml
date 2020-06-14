@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GUIDEMAN_LAYOUT_SERVICOS">
+	<message>
+		<![CDATA[GUIDEMAN_LAYOUT_SHOW_SERVICOS_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_guideman/models/fields">
+
+			<field name="filter_published"
+					label="GUIDEMAN_JSEARCH_FILTER_PUBLISHED"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_PUBLISHED"
+					type="ckstate"
+					display="combo"/>
+
+			<field name="filter_country"
+					label="GUIDEMAN_JSEARCH_FILTER_COUNTRY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_COUNTRY"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_COUNTRY_NAME"
+					type="modalpicker"
+					model="countries"
+					labelKey="country_name"/>
+
+			<field name="filter_state"
+					label="GUIDEMAN_JSEARCH_FILTER_STATE"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_STATE_1"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_STATE"
+					type="modalpicker"
+					model="states"
+					labelKey="state"/>
+
+			<field name="filter_policy"
+					label="GUIDEMAN_JSEARCH_FILTER_POLICY"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_POLICY"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_NAME"
+					type="modalpicker"
+					model="policies"
+					labelKey="name"/>
+
+			<field name="filter_creation_date_from"
+					label="GUIDEMAN_JSEARCH_FILTER_CREATION_DATE_FROM"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CREATION_DATE_FROM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_CREATION_DATE"
+					format="Y-m-d H:i"
+					type="ckcalendar"/>
+
+			<field name="filter_creation_date_to"
+					label="GUIDEMAN_JSEARCH_FILTER_CREATION_DATE_TO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_CREATION_DATE_TO"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_CREATION_DATE"
+					format="Y-m-d H:i"
+					type="ckcalendar"/>
+
+			<field name="filter_modification_date_from"
+					label="GUIDEMAN_JSEARCH_FILTER_MODIFICATION_DATE_FROM"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_MODIFICATION_DATE_FROM"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_MODIFICATION_DATE"
+					format="Y-m-d H:i"
+					type="ckcalendar"/>
+
+			<field name="filter_modification_date_to"
+					label="GUIDEMAN_JSEARCH_FILTER_MODIFICATION_DATE_TO"
+					required="false"
+					default=""
+					description="GUIDEMAN_JSEARCH_SELECT_MODIFICATION_DATE_TO"
+					nullLabel="GUIDEMAN_JSEARCH_SELECT_MODIFICATION_DATE"
+					format="Y-m-d H:i"
+					type="ckcalendar"/>
+		</fieldset>
+	</fields>
+</metadata>
