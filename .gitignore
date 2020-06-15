@@ -544,6 +544,9 @@
 /administrator/language/en-GB/en-GB.xml
 /administrator/language/en-GB/index.html
 /administrator/language/en-GB/install.xml
+
+/administrator/language/en-GB/en-GB.plg_system_kickdeploy.ini
+/administrator/language/en-GB/en-GB.plg_system_kickdeploy.sys.ini
 #
 # es-ES
 #
