@@ -1,12 +1,12 @@
 <?php
 /**                               ______________________________________________
 *                          o O   |                                              |
-*                 (((((  o      <    Generated with Cook Self Service  V3.1.9   |
+*                 (((((  o      <    Generated with Cook Self Service  V3.1.4   |
 *                ( o o )         |______________________________________________|
 * --------oOOO-----(_)-----OOOo---------------------------------- www.j-cook.pro --- +
-* @version		2.2.7
-* @package		GuideManV2
-* @subpackage	GuideManV2
+* @version		2.2.1
+* @package		GuideMan
+* @subpackage	GuideMan
 * @copyright	ManageGuides.com
 * @author		Koenraad Vandezande - www.manageguides.com - koen@rioguides.com
 * @license		GNU
@@ -28,7 +28,7 @@ defined('_JEXEC') or die('Restricted access');
 * @package	Guideman
 * @subpackage	Form
 */
-class JFormFieldModalpicker extends GuidemanCkFormFieldModalpicker
+class JFormFieldModalPicker extends GuidemanCkFormFieldModalPicker
 {
 
 }

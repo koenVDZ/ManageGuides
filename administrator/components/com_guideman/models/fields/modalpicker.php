@@ -1,12 +1,12 @@
 <?php
 /**                               ______________________________________________
 *                          o O   |                                              |
-*                 (((((  o      <    Generated with Cook Self Service  V3.1.9   |
+*                 (((((  o      <    Generated with Cook Self Service  V3.1.4   |
 *                ( o o )         |______________________________________________|
 * --------oOOO-----(_)-----OOOo---------------------------------- www.j-cook.pro --- +
-* @version		2.2.7
-* @package		GuideManV2
-* @subpackage	GuideManV2
+* @version		2.2.1
+* @package		GuideMan
+* @subpackage	GuideMan
 * @copyright	ManageGuides.com
 * @author		Koenraad Vandezande - www.manageguides.com - koen@rioguides.com
 * @license		GNU
@@ -30,7 +30,7 @@ if (!class_exists('GuidemanHelper'))
 * @package	Guideman
 * @subpackage	Form
 */
-class GuidemanCkFormFieldModalpicker extends JFormField
+class GuidemanCkFormFieldModalPicker extends JFormField
 {
 	/**
 	* Extension name.
@@ -44,7 +44,7 @@ class GuidemanCkFormFieldModalpicker extends JFormField
 	*
 	* @var string
 	*/
-	public $type = 'modalpicker';
+	public $type = 'modalPicker';
 
 	/**
 	* Method to get the field input markup.
@@ -371,5 +371,5 @@ class GuidemanCkFormFieldModalpicker extends JFormField
 GuidemanHelper::loadFork(__FILE__);
 
 // Fallback if no fork has been found
-if (!class_exists('JFormFieldModalpicker')){ class JFormFieldModalpicker extends GuidemanCkFormFieldModalpicker{} }
+if (!class_exists('JFormFieldModalPicker')){ class JFormFieldModalPicker extends GuidemanCkFormFieldModalPicker{} }
 
